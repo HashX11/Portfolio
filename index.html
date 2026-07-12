@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamad Hashem Dankar — Architect · Digital Twin Specialist</title>
+<meta name="description" content="Architect who builds cities twice — museums in concrete on Saadiyat Island, and Emirates in Unreal Engine for the UAE Ministry of Interior.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1417;--ink-2:#131C21;--ink-3:#1E2A31;--ink-4:#2A3840;
+  --paper:#EDE9E1;--paper-2:#E3DED2;--paper-line:#CBC3B2;
+  --signal:#4FB7C4;--signal-dim:#2C6A72;--warm:#C8873F;
+  --tx:#E9EEEF;--tx-mut:#8B959A;--tx-p:#1C2529;--tx-p-mut:#6E6659;
+  --maxw:1340px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--tx);font-family:"Spectral",Georgia,serif;font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.mono{font-family:"Space Mono",monospace}
+
+/* ---------- top bar ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(rgba(14,20,23,.92),rgba(14,20,23,.72) 70%,transparent);backdrop-filter:blur(6px)}
+.topbar .in{max-width:var(--maxw);margin:0 auto;padding:16px clamp(20px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.topbar .brand{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;letter-spacing:.02em;font-size:.95rem;color:#fff;white-space:nowrap}
+.topbar .brand b{color:var(--signal)}
+.topbar nav{display:flex;gap:22px;flex-wrap:wrap}
+.topbar nav a{font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--tx-mut);transition:color .2s}
+.topbar nav a:hover{color:var(--signal)}
+@media(max-width:900px){.topbar nav{display:none}}
+
+/* ---------- split hero: REAL | TWIN ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column}
+.hero-split{position:relative;flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:74svh;overflow:hidden}
+.hero-split .half{position:relative;overflow:hidden}
+.hero-split .half img{width:100%;height:100%;object-fit:cover}
+.hero-split .lbl{position:absolute;top:76px;font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;background:rgba(14,20,23,.82);color:#fff;display:flex;align-items:center;gap:9px;z-index:3}
+.hero-split .half:first-child .lbl{left:clamp(16px,3vw,44px)}
+.hero-split .half:last-child .lbl{right:clamp(16px,3vw,44px)}
+.hero-split .lbl .dot{width:7px;height:7px;border-radius:50%}
+.hero-split .half:first-child .lbl .dot{background:var(--warm)}
+.hero-split .half:last-child .lbl .dot{background:var(--signal);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.hero-split .seam{position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(255,255,255,.55);z-index:2}
+.hero-split::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(14,20,23,.30),rgba(14,20,23,.30)),linear-gradient(180deg,rgba(14,20,23,.42),transparent 34%,rgba(14,20,23,.14) 62%,rgba(14,20,23,.94));z-index:2;pointer-events:none}
+.hero-title{position:absolute;left:0;right:0;bottom:clamp(24px,5vh,54px);z-index:4;text-align:left}
+.hero-title .in{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.hero-title h1{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(2.5rem,8vw,6.6rem);line-height:.93;letter-spacing:-.015em;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.45)}
+.hero-title h1 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transform:none;color:var(--signal);letter-spacing:0}
+.hero-title .sub{max-width:660px;margin-top:18px;font-size:clamp(.98rem,1.4vw,1.15rem);color:#E4EAEC}
+.hero-title .sub b{font-weight:500;color:#fff}
+@media(max-width:760px){
+  .hero-split{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+  .hero-split .seam{left:0;right:0;top:50%;bottom:auto;width:auto;height:1px}
+  .hero-split .half:last-child .lbl{right:auto;left:clamp(16px,3vw,44px);top:12px}
+}
+.hero-one{position:relative;flex:1;min-height:76svh;overflow:hidden}
+.hero-one>img{width:100%;height:100%;object-fit:cover;object-position:center 22%;position:absolute;inset:0}
+.hero-one::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,20,23,.30),transparent 30%,rgba(14,20,23,.10) 58%,rgba(14,20,23,.93));pointer-events:none}
+.hero-strip{border-top:1px solid var(--ink-3);background:var(--ink)}
+.hero-strip .in{max-width:var(--maxw);margin:0 auto;padding:22px clamp(20px,4vw,56px);display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+.coords{display:flex;gap:22px;flex-wrap:wrap;font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.14em;color:var(--tx-mut);text-transform:uppercase}
+.coords b{color:var(--signal);font-weight:400}
+.stats{display:flex;gap:clamp(20px,3.4vw,48px);flex-wrap:wrap}
+.stat b{display:block;font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1;color:#fff}
+.stat span{font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-mut)}
+
+/* ---------- shared ---------- */
+section{padding:clamp(64px,9vw,130px) 0}
+.sec-head{margin-bottom:clamp(36px,5vw,64px)}
+.kicker{font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--signal);display:block;margin-bottom:16px}
+.sec-head h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.6rem);line-height:.96;letter-spacing:-.01em;color:#fff}
+.sec-head .lede{max-width:680px;margin-top:20px;color:#C7CFD2;font-size:1.05rem}
+.paper{background:var(--paper);color:var(--tx-p)}
+.paper .sec-head h2{color:var(--tx-p)}
+.paper .sec-head .lede{color:#4A4438}
+.paper .kicker{color:var(--signal-dim)}
+.datum{display:flex;align-items:center;gap:14px;margin:clamp(48px,7vw,88px) 0 26px;font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-mut)}
+.datum .tick{width:10px;height:10px;border:1px solid var(--signal);transform:rotate(45deg);flex:none}
+.datum .code{color:var(--signal)}
+.datum .nm{color:#fff;white-space:nowrap}
+.paper .datum .nm{color:var(--tx-p)}
+.datum .line{flex:1;height:1px;background:var(--ink-4);min-width:30px}
+.paper .datum .line{background:var(--paper-line)}
+.p-head{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(24px,4vw,64px);margin-bottom:32px}
+@media(max-width:860px){.p-head{grid-template-columns:1fr}}
+.p-head h3{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(1.4rem,2.8vw,2.2rem);line-height:1;letter-spacing:-.01em;color:#fff;margin-bottom:14px}
+.paper .p-head h3{color:var(--tx-p)}
+.role{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tag{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink-4);color:var(--tx-mut);padding:4px 10px;border-radius:2px}
+.paper .tag{border-color:var(--paper-line);color:var(--tx-p-mut)}
+.p-head p{color:#C7CFD2;margin-bottom:12px}
+.paper .p-head p{color:#3E382E}
+.p-head p b{font-weight:500;color:#fff}
+.paper .p-head p b{color:var(--tx-p)}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;align-content:start;border-left:1px solid var(--ink-3);padding-left:clamp(16px,2vw,30px)}
+.paper .spec{border-color:var(--paper-line)}
+.spec dt{font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.11em;text-transform:uppercase;color:var(--signal);margin-bottom:4px}
+.paper .spec dt{color:var(--signal-dim)}
+.spec dd{font-size:.9rem;color:#D5DCDE}
+.paper .spec dd{color:var(--tx-p)}
+
+/* galleries */
+.g{display:grid;gap:14px}
+.g-1{grid-template-columns:1fr}
+.g-2{grid-template-columns:1fr 1fr}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g-3,.g-4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.g-2,.g-3,.g-4{grid-template-columns:1fr}}
+figure{position:relative;overflow:hidden;background:var(--ink-2)}
+.paper figure{background:var(--paper-2)}
+figure img{transition:transform .6s ease;cursor:zoom-in}
+figure:hover img{transform:scale(1.02)}
+figure figcaption{position:absolute;left:0;bottom:0;font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#DDE5E7;background:rgba(14,20,23,.78);padding:6px 12px;pointer-events:none}
+.r169 img{aspect-ratio:16/9;object-fit:cover}
+.r32 img{aspect-ratio:3/2;object-fit:cover}
+.r43 img{aspect-ratio:4/3;object-fit:cover}
+.r219 img{aspect-ratio:21/9;object-fit:cover}
+.contain img{object-fit:contain}
+.r43.contain img{aspect-ratio:4/3}
+.r32.contain img{aspect-ratio:3/2}
+.r169.contain img{aspect-ratio:16/9}
+.natural img{aspect-ratio:auto;object-fit:unset}
+.r34 img{aspect-ratio:3/4;object-fit:contain}
+.poster{max-width:780px;margin:0 auto}
+.posterw{max-width:1020px;margin:0 auto}
+.onink{background:#000!important}
+.onwhite{background:#fff!important}
+
+/* real/twin comparison pair */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ink-4);border:1px solid var(--ink-4)}
+@media(max-width:700px){.pair{grid-template-columns:1fr}}
+.pair figure{margin:0}
+.pair .plbl{position:absolute;top:10px;left:10px;font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;background:rgba(14,20,23,.85);color:var(--warm)}
+.pair figure:last-child .plbl{color:var(--signal)}
+
+.mv{display:flex;align-items:baseline;gap:16px;margin:clamp(48px,6vw,80px) 0 22px}
+.mv .n{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--signal);line-height:1}
+.mv h3{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(1.25rem,2.4vw,1.9rem);letter-spacing:-.01em;color:#fff}
+.paper .mv h3{color:var(--tx-p)}
+.mv .ln{flex:1;height:1px;background:var(--ink-3)}
+.paper .mv .ln{background:var(--paper-line)}
+.mvp{max-width:720px;color:#C7CFD2;margin-bottom:26px}
+.paper .mvp{color:#3E382E}
+.mvp b{color:#fff;font-weight:500}
+.paper .mvp b{color:var(--tx-p)}
+
+.pipe{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:26px 0 8px}
+@media(max-width:960px){.pipe{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.pipe{grid-template-columns:repeat(2,1fr)}}
+.pipe .st{border:1px solid var(--ink-3);padding:16px 14px;position:relative;background:var(--ink-2)}
+.pipe .st .n{font-family:"Space Mono",monospace;font-size:.62rem;color:var(--signal);letter-spacing:.12em}
+.pipe .st h5{font-family:"Archivo",sans-serif;font-weight:700;font-size:.9rem;margin:8px 0 6px;letter-spacing:.01em;color:#fff;text-transform:uppercase}
+.pipe .st p{font-size:.78rem;line-height:1.45;color:var(--tx-mut);font-family:"Space Mono",monospace}
+.pipe .st::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--signal-dim);font-family:"Space Mono",monospace;z-index:2}
+.pipe .st:last-child::after{content:""}
+@media(max-width:960px){.pipe .st::after{content:""}}
+.ba-cap{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--tx-mut);padding:10px 2px 0}
+.band{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink-3);border:1px solid var(--ink-3);margin:26px 0}
+@media(max-width:700px){.band{grid-template-columns:1fr 1fr}}
+.band>div{background:var(--ink-2);padding:22px 20px}
+.band b{display:block;font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1;color:#fff}
+.band span{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-mut)}
+.band b i{font-style:normal;color:var(--signal)}
+.cat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:640px){.cat{grid-template-columns:1fr 1fr}}
+.cat figure{background:#000;border:1px solid var(--ink-3)}
+.cat img{aspect-ratio:4/3;object-fit:contain;background:#000}
+.cat figcaption{position:static;background:var(--ink-2);color:var(--tx-mut);display:flex;justify-content:space-between;gap:8px}
+.cat figcaption i{font-style:normal;color:var(--signal)}
+
+/* simple index of works */
+.idx2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
+@media(max-width:820px){.idx2{grid-template-columns:1fr}}
+.idx2 h4{font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--signal);margin-bottom:14px}
+.idx2 a{display:grid;grid-template-columns:56px 1fr auto;align-items:baseline;gap:14px;padding:13px 4px;border-bottom:1px solid var(--ink-3);transition:background .15s,padding-left .15s}
+.idx2 a:hover{background:var(--ink-2);padding-left:12px}
+.idx2 .code{font-family:"Space Mono",monospace;font-size:.66rem;color:var(--signal);letter-spacing:.08em}
+.idx2 .nm{font-family:"Archivo",sans-serif;font-weight:600;font-size:1.02rem;letter-spacing:-.01em;color:#fff}
+.idx2 .mt{font-family:"Space Mono",monospace;font-size:.6rem;color:var(--tx-mut);letter-spacing:.06em;text-transform:uppercase;text-align:right}
+@media(max-width:560px){.idx2 .mt{display:none}}
+
+.flag{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:clamp(40px,6vw,70px)}
+@media(max-width:900px){.flag{grid-template-columns:1fr}}
+.flag a{position:relative;display:block;border:1px solid var(--ink-3);overflow:hidden}
+.flag img{aspect-ratio:4/3;object-fit:cover;transition:transform .6s}
+.flag a:hover img{transform:scale(1.03)}
+.flag .ov{position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(14,20,23,.94))}
+.flag .ov .code{font-family:"Space Mono",monospace;font-size:.62rem;color:var(--signal);letter-spacing:.14em}
+.flag .ov h4{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:1.2rem;color:#fff;margin-top:4px}
+
+.thesis{border-top:1px solid var(--ink-3);border-bottom:1px solid var(--ink-3);background:var(--ink-2)}
+.thesis .big{font-family:"Spectral",serif;font-weight:300;font-size:clamp(1.35rem,3vw,2.4rem);line-height:1.4;max-width:1000px}
+.thesis .big b{font-weight:500;color:var(--signal);font-style:normal}
+.thesis .big i{color:var(--warm);font-style:normal;font-weight:500}
+.about .big{font-family:"Spectral",serif;font-weight:300;font-size:clamp(1.25rem,2.3vw,1.9rem);line-height:1.45;margin-bottom:24px;max-width:900px}
+.dgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px)}
+@media(max-width:860px){.dgrid{grid-template-columns:1fr}}
+.dtable{display:grid;grid-template-columns:1fr;gap:14px}
+.dtable>div{display:grid;grid-template-columns:150px 1fr;gap:12px;border-top:1px solid var(--paper-line);padding-top:12px}
+.dtable dt{font-family:"Space Mono",monospace;font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--tx-p-mut);padding-top:3px}
+.dtable dd{font-size:.95rem}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{font-family:"Space Mono",monospace;font-size:.63rem;border:1px solid var(--paper-line);padding:3px 9px;border-radius:2px;color:var(--tx-p)}
+.btn{display:inline-flex;align-items:center;gap:14px;font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--tx-p);padding:13px 22px;transition:background .2s,color .2s;margin-top:10px}
+.btn:hover{background:var(--tx-p);color:var(--paper)}
+.contact{background:var(--ink)}
+.contact h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;font-size:clamp(2.2rem,7vw,5.4rem);line-height:.95;letter-spacing:-.015em;color:#fff;margin-bottom:36px}
+.contact h2 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transform:none;color:var(--signal)}
+.clinks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px}
+@media(max-width:760px){.clinks{grid-template-columns:1fr}}
+.clinks .k{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--tx-mut);display:block;margin-bottom:6px}
+.clinks .v{font-family:"Archivo",sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:-.01em;color:#fff}
+.clinks a .v:hover{color:var(--signal)}
+footer{border-top:1px solid var(--ink-3);padding:26px 0;font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.09em;color:var(--tx-mut);text-transform:uppercase}
+footer .in{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,56px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- lightbox ---------- */
+#lb{position:fixed;inset:0;z-index:300;background:rgba(8,12,14,.96);display:none;overflow:hidden}
+#lb.on{display:block}
+#lb img{position:absolute;left:0;top:0;max-width:none;width:auto;height:auto;cursor:grab;transform-origin:0 0;user-select:none;-webkit-user-drag:none}
+#lb .ui{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:302}
+#lb .ui button{font-family:"Space Mono",monospace;font-size:1rem;width:44px;height:44px;border:1px solid var(--ink-4);background:rgba(19,28,33,.9);color:#fff;cursor:pointer;transition:border-color .15s}
+#lb .ui button:hover{border-color:var(--signal)}
+#lb .cap{position:fixed;left:16px;bottom:14px;font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-mut);z-index:302}
+#lb .hint{position:fixed;left:16px;top:16px;font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-mut);z-index:302}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-split .lbl .dot{animation:none}figure img{transition:none}}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="#top">MOHAMAD HASHEM <b>DANKAR</b></a>
+  <nav>
+    <a href="#moi">Digital Twin</a><a href="#fibrex">Built</a><a href="#ldrs">Practice</a>
+    <a href="#freelance">Freelance</a><a href="#academic">Academic</a><a href="#profile">Profile</a><a href="#contact">Contact</a>
+  </nav>
+</div></div>
+
+<!-- ================= HERO — REAL | TWIN ================= -->
+<header class="hero" id="top">
+  <div class="hero-one">
+    <img src="assets/img/hero_main.jpg" alt="Ajman towers — real photograph blending into the Unreal Engine digital twin of the same block" fetchpriority="high">
+    <div class="hero-title"><div class="in">
+      <h1>I build cities <em>twice.</em></h1>
+      <p class="sub">The same block. Once in the <b>real world</b> — and once inside the <b>UAE Ministry of Interior's digital twin</b>, modeled, textured and geolocated by hand. Scroll: the whole country works this way.</p>
+    </div></div>
+  </div>
+  <div class="hero-strip"><div class="in">
+    <div class="coords"><span>N 24.4539° <b>E 54.3773°</b></span><span>ABU DHABI · UAE</span><span>RIBA PART I</span></div>
+    <div class="stats">
+      <div class="stat"><b>03</b><span>Saadiyat museums</span></div>
+      <div class="stat"><b>07</b><span>Emirates in engine</span></div>
+      <div class="stat"><b>117</b><span>Buildings · Reem Island</span></div>
+      <div class="stat"><b>6+</b><span>Years in practice</span></div>
+    </div>
+  </div></div>
+</header>
+
+<!-- ================= THESIS ================= -->
+<section class="thesis">
+  <div class="wrap">
+    <p class="big reveal">Most architects stop when the model becomes a building. Mohamad Hashem also works in the other direction — <b>turning the built world back into a model</b>: georeferenced, simulated, and running in real time. The building sites gave him the discipline; <i>the game engine gave him the scale.</i></p>
+  </div>
+</section>
+
+<!-- ================= FLAGSHIPS + INDEX ================= -->
+<section id="index">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Selected works · 2016 — present</span><h2>Three flagships,<br>eighteen projects</h2></div>
+    <div class="flag reveal">
+      <a href="#moi"><img src="assets/img/reem_ue1.jpg" alt="Al Reem Island rebuilt in Unreal Engine — Gate Towers viewport"><span class="ov"><span class="code">P·01 — UAE MINISTRY OF INTERIOR</span><h4>UAE Digital Twin</h4></span></a>
+      <a href="#fibrex"><img src="assets/img/fx_zayed_done.jpg" alt="Zayed National Museum completed, wing towers against blue sky"><span class="ov"><span class="code">P·02 — FIBREX · SAADIYAT ISLAND</span><h4>Museums, Fabricated</h4></span></a>
+      <a href="#ldrs"><img src="assets/img/at_1.jpg" alt="Al Tall clock tower square regeneration render, Tripoli"><span class="ov"><span class="code">P·03 — LDRS CHEHAB &amp; PARTNERS</span><h4>The Practice Years</h4></span></a>
+    </div>
+    <div class="idx2 reveal">
+      <div>
+        <h4>Professional</h4>
+        <a href="#moi"><span class="code">P·01</span><span class="nm">UAE Digital Twin</span><span class="mt">MOI · Unreal Engine</span></a>
+        <a href="#reem"><span class="code">P·01·4</span><span class="nm">Reem Island Catalogue</span><span class="mt">117 buildings</span></a>
+        <a href="#zayed"><span class="code">P·02</span><span class="nm">Zayed National Museum</span><span class="mt">Fibrex</span></a>
+        <a href="#gugg"><span class="code">P·02·2</span><span class="nm">Guggenheim Abu Dhabi</span><span class="mt">Fibrex</span></a>
+        <a href="#nhm"><span class="code">P·02·3</span><span class="nm">Natural History Museum</span><span class="mt">Fibrex</span></a>
+        <a href="#amaala"><span class="code">P·02·4</span><span class="nm">Amaala Red Sea Village</span><span class="mt">Fibrex</span></a>
+        <a href="#ldrs"><span class="code">P·03</span><span class="nm">LDRS — The Practice Years</span><span class="mt">2020 — 22</span></a>
+        <a href="#altallproj"><span class="code">P·03·1</span><span class="nm">Al Tall Regeneration</span><span class="mt">UNDP · Tripoli</span></a>
+        <a href="#erbil"><span class="code">P·04</span><span class="nm">Royal Complex, Erbil</span><span class="mt">Competition</span></a>
+        <a href="#skyfall"><span class="code">P·05</span><span class="nm">Skyfall Pavilion</span><span class="mt">Competition</span></a>
+        <a href="#jana"><span class="code">P·06</span><span class="nm">JANA Residential</span><span class="mt">Façades</span></a>
+        <a href="#mawlawiya"><span class="code">P·03·3</span><span class="nm">Al Mawlawiya &amp; Old Souks</span><span class="mt">LDRS · Heritage</span></a>
+        <a href="#marsemaan"><span class="code">P·03·4</span><span class="nm">Mar Semaan Diagnosis</span><span class="mt">Heritage · 1878</span></a>
+        <a href="#rize"><span class="code">P·07</span><span class="nm">Bungalow Resort · Rize</span><span class="mt">Türkiye</span></a>
+        <a href="#rome"><span class="code">◆</span><span class="nm">Rome Parametric Workshop</span><span class="mt">Sapienza · 2017</span></a>
+        <a href="#bedawi"><span class="code">P·08</span><span class="nm">Bedawi Station</span><span class="mt">Freelance</span></a>
+        <a href="#interiors"><span class="code">P·09</span><span class="nm">Cinema · Library · Interiors</span><span class="mt">Freelance</span></a>
+      </div>
+      <div>
+        <h4>Academic — BAU · RIBA Part I</h4>
+        <a href="#thesisproj"><span class="code">A·01</span><span class="nm">Virtual Reality Complex</span><span class="mt">Senior project</span></a>
+        <a href="#brownfield"><span class="code">A·02</span><span class="nm">Al-Bahsas Regeneration</span><span class="mt">Design VII</span></a>
+        <a href="#skyscraper"><span class="code">A·03</span><span class="nm">Antalya Skyscraper</span><span class="mt">Design VI</span></a>
+        <a href="#fatwa"><span class="code">A·04</span><span class="nm">Dar El Fatwa Complex</span><span class="mt">Design V</span></a>
+        <a href="#mosque"><span class="code">A·05</span><span class="nm">Green Mosque</span><span class="mt">Design V</span></a>
+        <a href="#aviation"><span class="code">A·06</span><span class="nm">Aviation Centre</span><span class="mt">Studio</span></a>
+        <a href="#cinema"><span class="code">A·07</span><span class="nm">Cinema Complex</span><span class="mt">Design III</span></a>
+        <a href="#vr364"><span class="code">A·08</span><span class="nm">Virtual Reality in BAU</span><span class="mt">Unity · 2017</span></a>
+        <a href="#foundation"><span class="code">A·09</span><span class="nm">Foundation Studios</span><span class="mt">Years 1–2</span></a>
+        <a href="#internship"><span class="code">A·10</span><span class="nm">Internship — Citadel</span><span class="mt">Site works</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= P·01 UAE DIGITAL TWIN ================= -->
+<section id="moi">
+  <div class="wrap">
+    <div class="datum"><span class="tick"></span><span class="code">P·01</span><span class="nm">UAE Digital Twin</span><span class="line"></span><span>MINISTRY OF INTERIOR · 2023 — PRESENT</span></div>
+    <div class="sec-head reveal"><span class="kicker">Flagship · Tahaluf Al Emarat · Future Simulation</span><h2>A country,<br>rebuilt in real time</h2>
+      <p class="lede">A national-scale digital twin of the United Arab Emirates — georeferenced 3D cities running in Unreal Engine, where police assets, incidents and infrastructure live as interactive layers over an Arabic-first command interface. Mohamad Hashem builds the cities themselves: from satellite data to optimized, textured, geolocated urban fabric.</p>
+    </div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">3ds Max</span><span class="tag">Unreal Engine</span><span class="tag">Datasmith</span><span class="tag">GIS</span><span class="tag">Substance</span><span class="tag">Arabic / English UI</span></div>
+        <p>The platform covers the seven Emirates. Each district is reconstructed at LOD 100–200 from satellite and GIS footprints, classified into eight building categories, then pushed through Datasmith into an Unreal Engine world with live dashboards, day-night cycle and event simulation.</p>
+        <p><b>Mohamad Hashem's role:</b> the 3D city pipeline end-to-end — footprint extraction, low-poly modeling, UV mapping, texturing, geolocation, naming and tagging, collision, optimization, and delivery into engine.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Client</dt><dd>UAE Ministry of Interior</dd></div>
+        <div><dt>Scope</dt><dd>7 Emirates · national scale</dd></div>
+        <div><dt>Role</dt><dd>VR Content Creator · 3D city pipeline</dd></div>
+        <div><dt>Engine</dt><dd>Unreal Engine · real time</dd></div>
+        <div><dt>Layers</dt><dd>Dashboards · events · assets</dd></div>
+        <div><dt>Status</dt><dd>In active development</dd></div>
+      </dl>
+    </div>
+
+    <div class="mv reveal"><span class="n">1.1</span><h3>The Platform</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Command view: fly anywhere in the country and the twin answers with <b>live statistics, coordinates and readiness data</b> — every district a real place, pinned to its real latitude.</p>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/moi_dash_ad.jpg" alt="Abu Dhabi coastline inside the twin with command dashboard, Lulu Island and the Corniche" loading="lazy"><figcaption>Abu Dhabi · command view over the Corniche</figcaption></figure></div>
+    <div class="g g-3 reveal" style="margin-top:14px">
+      <figure class="r169"><img src="assets/img/moi_dash_rak.jpg" alt="Abu Dhabi Corniche inside the twin with police dashboard panels" loading="lazy"><figcaption>Abu Dhabi · the Corniche</figcaption></figure>
+      <figure class="r169"><img src="assets/img/moi_dash_coast.jpg" alt="Ras Al Khaimah coastal fabric with live coordinates readout" loading="lazy"><figcaption>Ras Al Khaimah · live coordinates</figcaption></figure>
+      <figure class="r169"><img src="assets/img/moi_dash_pen.jpg" alt="High-altitude view over Ras Al Khaimah with data overlay" loading="lazy"><figcaption>Ras Al Khaimah · high-altitude pass</figcaption></figure>
+    </div>
+
+    <div class="mv reveal"><span class="n">1.2</span><h3>Real vs Twin</h3><span class="ln"></span></div>
+    <p class="mvp reveal">The proof, one seam apart: the real Ajman corner on the left — and the same corner inside the engine on the right. <b>Same buildings, same signage lines, same curb geometry</b>, now simulation-ready with traffic splines and asset markers.</p>
+    <div class="g g-1 reveal">
+      <figure class="natural"><img src="assets/img/moi_realtwin.jpg" alt="Reality versus digital twin — the same Ajman corner photographed and rebuilt in Unreal Engine, split down the middle" loading="lazy"><figcaption>Reality | digital twin · one seam apart</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r169"><img src="assets/img/moi_city1.jpg" alt="Curved residential blocks, mosque and towers rebuilt in engine" loading="lazy"><figcaption>District fabric · curved blocks &amp; mosque</figcaption></figure>
+      <figure class="r169"><img src="assets/img/moi_city2.jpg" alt="Tower cluster and landmark hotel by the roundabout in engine" loading="lazy"><figcaption>Waterfront towers · landmark quarter</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r169"><img src="assets/img/moi_post_street.jpg" alt="Ajman Post Office in the twin with traffic simulation splines" loading="lazy"><figcaption>Ajman Post Office · traffic simulation layer</figcaption></figure>
+      <figure class="r169"><img src="assets/img/moi_post_int.jpg" alt="Inside the same post office — full interior modeled in Unreal Engine" loading="lazy"><figcaption>…and inside it — interiors are in the twin too</figcaption></figure>
+    </div>
+
+    <div class="mv reveal"><span class="n">1.3</span><h3>The Pipeline</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Every city in the twin goes through the same disciplined route — built for <b>speed, consistency and real-time performance</b> at urban scale.</p>
+    <div class="pipe reveal">
+      <div class="st"><span class="n">01</span><h5>Satellite / GIS</h5><p>Imagery + footprints, georeferenced</p></div>
+      <div class="st"><span class="n">02</span><h5>2D Extraction</h5><p>Clean building outlines per district</p></div>
+      <div class="st"><span class="n">03</span><h5>3D Low-Poly</h5><p>LOD 100–200 massing in 3ds Max</p></div>
+      <div class="st"><span class="n">04</span><h5>UV + Texture</h5><p>Box mapping · custom + emissive maps</p></div>
+      <div class="st"><span class="n">05</span><h5>Datasmith</h5><p>Pivots, naming, tags, collisions</p></div>
+      <div class="st"><span class="n">06</span><h5>Unreal Engine</h5><p>Geolocation · blueprints · events</p></div>
+    </div>
+    <p class="mvp reveal" style="margin-top:34px">When a landmark matters, it is rebuilt properly — from grey massing to <b>fully textured, night-lit asset</b>. The same building, twice.</p>
+    <div class="g g-2 reveal">
+      <div><figure class="r43 contain onink"><img src="assets/img/moi_sigma.jpg" alt="Sigma and Omega towers — grey massing beside the fully textured night version" loading="lazy"></figure><p class="ba-cap">Sigma &amp; Omega towers · massing → textured night asset</p></div>
+      <div><figure class="r43 contain onink"><img src="assets/img/moi_mangroove.jpg" alt="Mangrove complex — exploded texture set above the assembled model" loading="lazy"></figure><p class="ba-cap">Mangrove complex · exploded texture set → assembled</p></div>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <div><figure class="r32 contain onwhite"><img src="assets/img/moi_muni.jpg" alt="Municipality and Planning building rebuild, before and after texturing" loading="lazy"></figure><p class="ba-cap">Municipality &amp; Planning · LOD rebuild, before / after</p></div>
+    </div>
+
+    <div class="mv reveal" id="reem"><span class="n">1.4</span><h3>Reem Island — the catalogue</h3><span class="ln"></span></div>
+    <p class="mvp reveal">One island, delivered like a specimen archive. Mohamad Hashem built Reem Island's fabric building by building — <b>each one modeled, textured, named, tagged and collision-ready</b> — from Repton School to Reem Mall to the mosque on the corner.</p>
+    <div class="band reveal">
+      <div><b>117</b><span>Finished buildings</span></div>
+      <div><b>83<i>+8</i></b><span>Painted · + finished layouts</span></div>
+      <div><b>11 <i>km²</i></b><span>Landscape · roads · parks</span></div>
+      <div><b>23</b><span>Named main towers · Part One</span></div>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r169"><img src="assets/img/reem_ue1.jpg" alt="Al Reem Island in Unreal Engine — Gate Towers and the surrounding district" loading="lazy"><figcaption>The island in engine · Gate Towers quarter</figcaption></figure>
+      <figure class="r169"><img src="assets/img/reem_ue2.jpg" alt="Reem Island waterfront towers and marina inside the twin" loading="lazy"><figcaption>Waterfront &amp; marina · in engine</figcaption></figure>
+    </div>
+    <p class="mvp reveal" style="margin-top:30px">From the delivery archive — every asset isolated, textured and engine-ready:</p>
+    <div class="cat reveal">
+      <figure><img src="assets/img/reem_c01.jpg" alt="Al Wifaq Tower — Reem Island digital twin asset" loading="lazy"><figcaption>Al Wifaq Tower <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c02.jpg" alt="Sea Side Tower — Reem Island digital twin asset" loading="lazy"><figcaption>Sea Side Tower <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c03.jpg" alt="Shams Meera Towers — Reem Island digital twin asset" loading="lazy"><figcaption>Shams Meera Towers <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c04.jpg" alt="The Kite Residences — Reem Island digital twin asset" loading="lazy"><figcaption>The Kite Residences <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c05.jpg" alt="Horizon Towers — Reem Island digital twin asset" loading="lazy"><figcaption>Horizon Towers <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c06.jpg" alt="Hydra Towers — Reem Island digital twin asset" loading="lazy"><figcaption>Hydra Towers <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c07.jpg" alt="Mangrove Place — Reem Island digital twin asset" loading="lazy"><figcaption>Mangrove Place <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c08.jpg" alt="Reem Hospital — Reem Island digital twin asset" loading="lazy"><figcaption>Reem Hospital <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c09.jpg" alt="Repton School · Fry Campus — Reem Island digital twin asset" loading="lazy"><figcaption>Repton School · Fry Campus <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c10.jpg" alt="Sigma Omega Towers — Reem Island digital twin asset" loading="lazy"><figcaption>Sigma Omega Towers <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c11.jpg" alt="Al Reem Bay Towers — Reem Island digital twin asset" loading="lazy"><figcaption>Al Reem Bay Towers <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c12.jpg" alt="DAMAC Marina Bay — Reem Island digital twin asset" loading="lazy"><figcaption>DAMAC Marina Bay <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c13.jpg" alt="Reem Mosque — Reem Island digital twin asset" loading="lazy"><figcaption>Reem Mosque <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c14.jpg" alt="Nayala Villa — Reem Island digital twin asset" loading="lazy"><figcaption>Nayala Villa <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c15.jpg" alt="Reem Mall — Reem Island digital twin asset" loading="lazy"><figcaption>Reem Mall <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c16.jpg" alt="Sorbonne University — Reem Island digital twin asset" loading="lazy"><figcaption>Sorbonne University <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c17.jpg" alt="Y Tower — Reem Island digital twin asset" loading="lazy"><figcaption>Y Tower <i>ASSET</i></figcaption></figure>
+      <figure><img src="assets/img/reem_c18.jpg" alt="ADNOC Station — Reem Island digital twin asset" loading="lazy"><figcaption>ADNOC Station <i>ASSET</i></figcaption></figure>
+    </div>
+
+    <div class="mv reveal"><span class="n">1.5</span><h3>City Pulse — simulation &amp; the app</h3><span class="ln"></span></div>
+    <p class="mvp reveal">The twin extends into <b>CITY PULSE</b>: crowd management, dynamic traffic and environmental simulation — and an MOI facility-management app that controls CCTV, lighting, occupancy and air quality straight from the model.</p>
+    <div class="g g-3 reveal">
+      <figure class="r169"><img src="assets/img/moi_cp_crowd.jpg" alt="CITY PULSE slide — crowd management simulation and dynamic traffic" loading="lazy"><figcaption>Crowd &amp; traffic simulation</figcaption></figure>
+      <figure class="r169"><img src="assets/img/moi_cp_app.jpg" alt="MOI FM App — facility management from the twin" loading="lazy"><figcaption>MOI FM App</figcaption></figure>
+      <figure class="r169"><img src="assets/img/moi_cp_fm.jpg" alt="MOI FM App — temperature, CCTV, lights, occupancy, air quality control" loading="lazy"><figcaption>CCTV · lights · occupancy · air quality</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= P·02 FIBREX ================= -->
+<section id="fibrex" class="paper">
+  <div class="wrap">
+    <div class="datum"><span class="tick"></span><span class="code">P·02</span><span class="nm">Museums, Fabricated</span><span class="line"></span><span>FIBREX · SAADIYAT ISLAND · 2022 — 23</span></div>
+    <div class="sec-head reveal"><span class="kicker">Flagship · Production engineering</span><h2>Three museums,<br>panel by panel</h2>
+      <p class="lede">Before the digital twin, the physical ones. At Fibrex Construction Group, Mohamad Hashem worked on production 3D and shop-drawing packages for the façade and structure elements of Saadiyat Island's cultural district — turning signature geometry by Foster + Partners, Gehry Partners and Mecanoo into buildable, castable, deliverable pieces.</p>
+    </div>
+
+    <div class="mv reveal" id="zayed"><span class="n">2.1</span><h3>Zayed National Museum</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Production 3D</span><span class="tag">Steel wings</span><span class="tag">GRC</span><span class="tag">Shop drawings</span></div>
+        <p>The museum's falcon-wing towers pass through the factory as thousands of unique elements. Mohamad Hashem produced the <b>production 3D models, panel breakdowns and steel shop-drawing sheets</b> — the geometry that lets a curved monument be cast flat, tracked, trucked and re-assembled on site. The museum opened on Saadiyat in 2025.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Architect</dt><dd>Foster + Partners</dd></div>
+        <div><dt>Employer</dt><dd>Fibrex Construction Group</dd></div>
+        <div><dt>Scope</dt><dd>Production 3D · panels · steel sheets</dd></div>
+        <div><dt>Status</dt><dd>Built · open</dd></div>
+      </dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/fx_zayed_done.jpg" alt="Zayed National Museum standing complete — five wing towers against the sky" loading="lazy"><figcaption>Standing on Saadiyat · the finished museum</figcaption></figure></div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/fx_zayed_struct.jpg" alt="Zayed National Museum wing steel structure production model" loading="lazy"><figcaption>Wing steel · production model</figcaption></figure>
+      <figure class="r32 contain onwhite"><img src="assets/img/fx_zayed_dwg.jpg" alt="Steel shop drawing sheet for wing element Z8-018" loading="lazy"><figcaption>Steel shop sheet · Z8-018</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/fx_zayed_brack.jpg" alt="Bracket connection system 3D detail" loading="lazy"><figcaption>Bracket system</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fx_zayed_all.jpg" alt="Full panel mapping of the museum fabric, color-coded" loading="lazy"><figcaption>Panel mapping · full fabric</figcaption></figure>
+    </div>
+    <div class="g g-4 reveal" style="margin-top:14px">
+      <figure class="r43"><img src="assets/img/fx_zayed_fact1.jpg" alt="Steel wing rib assemblies in the production hall" loading="lazy"><figcaption>Factory · wing assemblies</figcaption></figure>
+      <figure class="r43"><img src="assets/img/fx_zayed_fact2.jpg" alt="Steel assembly in the production hall" loading="lazy"><figcaption>Steel assembly</figcaption></figure>
+      <figure class="r43"><img src="assets/img/fx_zayed_fact3.jpg" alt="Wrapped elements ready for delivery" loading="lazy"><figcaption>Ready for delivery</figcaption></figure>
+      <figure class="r43"><img src="assets/img/fx_zayed_fact4.jpg" alt="Hand-annotated triangulation sheets beside a ruler" loading="lazy"><figcaption>Triangulation take-offs</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="gugg"><span class="n">2.2</span><h3>Guggenheim Abu Dhabi</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">GRC panels</span><span class="tag">Point verification</span><span class="tag">Production 3D</span></div>
+        <p>For Gehry's colliding cones, Mohamad Hashem prepared <b>panel production models and point-cloud verification geometry</b> — the survey-grade 3D that proves each cast GRC panel matches the design surface before it leaves the yard.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Architect</dt><dd>Gehry Partners</dd></div>
+        <div><dt>Scope</dt><dd>GRC panel production · verification</dd></div>
+      </dl>
+    </div>
+    <div class="g g-3 reveal">
+      <figure class="r32"><img src="assets/img/fx_gug_3d1.jpg" alt="Guggenheim Abu Dhabi massing production model" loading="lazy"><figcaption>Production massing</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fx_gug_prod5.jpg" alt="Cone panel rows with fixing points" loading="lazy"><figcaption>Panel rows · fixings</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fx_gug_prod3.jpg" alt="Panel fixing detail model" loading="lazy"><figcaption>Fixing detail</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <figure class="r219"><img src="assets/img/fx_gug_panel.jpg" alt="Segmented cone geometry, color-coded by panel" loading="lazy"><figcaption>Cone geometry · panel segmentation</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="nhm"><span class="n">2.3</span><h3>Natural History Museum Abu Dhabi</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">GRC production</span><span class="tag">Panel drawings</span><span class="tag">Saadiyat</span></div>
+        <p>Mecanoo's crystalline museum, taken through the mill panel by panel — Mohamad Hashem worked on the <b>production 3D models and GRC panel drawing sheets</b> behind the faceted rock-like fabric, then followed the panels onto the factory floor: molds, demolding, checking, shipping.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Architect</dt><dd>Mecanoo</dd></div>
+        <div><dt>Employer</dt><dd>Fibrex Construction Group</dd></div>
+        <div><dt>Scope</dt><dd>Production 3D · GRC panel sheets</dd></div>
+        <div><dt>Site</dt><dd>Saadiyat Island · Abu Dhabi</dd></div>
+      </dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/fx_nhm_hero.jpg" alt="Natural History Museum Abu Dhabi — crystalline massing render" loading="lazy"><figcaption>The museum · crystalline fabric</figcaption></figure></div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/fx_nhm_3.jpg" alt="Production model of the faceted museum geometry" loading="lazy"><figcaption>Production model</figcaption></figure>
+      <figure class="r32 contain onwhite"><img src="assets/img/fx_nhm_1.jpg" alt="Panel production study model" loading="lazy"><figcaption>Panel study</figcaption></figure>
+    </div>
+    <div class="g g-4 reveal" style="margin-top:14px">
+      <figure class="r43"><img src="assets/img/fx_nhm_f1.jpg" alt="Demolded GRC panel on the factory floor" loading="lazy"><figcaption>Demolded panel</figcaption></figure>
+      <figure class="r43"><img src="assets/img/fx_nhm_f2.jpg" alt="Panel molds in production" loading="lazy"><figcaption>Molds in production</figcaption></figure>
+      <figure class="r43"><img src="assets/img/fx_nhm_f3.jpg" alt="GRC casting works in the factory" loading="lazy"><figcaption>Casting works</figcaption></figure>
+      <figure class="r43"><img src="assets/img/fx_nhm_f4.jpg" alt="Finished panels checked in the yard" loading="lazy"><figcaption>Checked in the yard</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <figure class="natural onwhite posterw"><img src="assets/img/fx_nhm_dwg.jpg" alt="GRC panel production drawing sheet — tap to zoom" loading="lazy"><figcaption>GRC panel sheet · tap to zoom in</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="amaala"><span class="n">2.4</span><h3>Amaala Red Sea Village</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Grasshopper</span><span class="tag">Cellular pods</span><span class="tag">KSA</span></div>
+        <p>On the Red Sea coast, a village of cellular pods — a <b>Grasshopper definition drives the cluster</b> from design surface to castable production units, so every pod can vary while staying buildable from the same family of molds.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Site</dt><dd>Amaala · Red Sea coast · KSA</dd></div>
+        <div><dt>Tooling</dt><dd>Grasshopper · Rhino · 3ds Max</dd></div>
+      </dl>
+    </div>
+    <div class="g g-3 reveal">
+      <figure class="r32"><img src="assets/img/fx_amala_1.jpg" alt="Amaala cellular pod cluster 3D" loading="lazy"><figcaption>Pod cluster</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fx_amala_v1.jpg" alt="Amaala village on the shoreline, aerial" loading="lazy"><figcaption>Shoreline aerial</figcaption></figure>
+      <figure class="r32 contain onwhite"><img src="assets/img/fx_amala_gh.jpg" alt="Grasshopper definition driving the pod geometry" loading="lazy"><figcaption>The Grasshopper definition</figcaption></figure>
+    </div>
+  </div>
+</section>
+<!-- ================= P·03 — P·06 LDRS ================= -->
+<section id="ldrs">
+  <div class="wrap" id="altall">
+    <div class="datum"><span class="tick"></span><span class="code">P·03</span><span class="nm">LDRS · The Practice Years</span><span class="line"></span><span>LDRS CHEHAB &amp; PARTNERS · BEIRUT — TRIPOLI · 2020 — 22</span></div>
+    <div class="sec-head reveal"><span class="kicker">Flagship · LDRS Chehab &amp; Partners</span><h2>The practice<br>years</h2>
+      <p class="lede">Two years as an architectural engineer at LDRS — regeneration for UNDP, heritage rehabilitation, structural diagnosis, competitions for Erbil, and façade studies. Al Tall is the flagship of the chapter; it was one project of many.</p>
+    </div>
+    <div class="mv reveal" id="altallproj"><span class="n">3.1</span><h3>Al Tall Regeneration — UNDP</h3><span class="ln"></span></div>
+    <p class="mvp reveal">A UNDP-backed regeneration of the Ottoman clock-tower square at the heart of Tripoli. Mohamad Hashem authored the full 3D reconstruction and every visualisation, then ran the science underneath: solar comfort, wind, shadow and pedestrian simulations that shaped where people would actually sit, walk and stay.</p>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">3ds Max</span><span class="tag">Corona</span><span class="tag">Ladybug / Honeybee</span><span class="tag">Photogrammetry</span></div>
+        <p>The model was rebuilt from drone photogrammetry of the real district; proposals were tested against annual comfort and wind data before a single render was framed. <b>All modeling and all renders on this page are Mohamad Hashem's.</b></p>
+      </div>
+      <dl class="spec">
+        <div><dt>Client</dt><dd>UNDP · Municipality of Tripoli</dd></div>
+        <div><dt>Practice</dt><dd>LDRS Architects</dd></div>
+        <div><dt>Role</dt><dd>Full 3D · visualisation · analysis</dd></div>
+        <div><dt>Site</dt><dd>Al Tall square · Tripoli, Lebanon</dd></div>
+      </dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/at_1.jpg" alt="Al Tall clock tower square, regenerated — day view down the main axis" loading="lazy"><figcaption>The square, regenerated · clock-tower axis</figcaption></figure></div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/at_3.jpg" alt="Square panorama with fountain colonnade" loading="lazy"><figcaption>Fountain colonnade</figcaption></figure>
+      <figure class="r32"><img src="assets/img/at_4.jpg" alt="Night view of the square under moonlight" loading="lazy"><figcaption>The square at night</figcaption></figure>
+    </div>
+    <div class="g g-3 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/at_2.jpg" alt="Street-level view with heritage facades and jacaranda" loading="lazy"><figcaption>Heritage frontage</figcaption></figure>
+      <figure class="r32"><img src="assets/img/at_6.jpg" alt="Terraced gardens toward the clock tower" loading="lazy"><figcaption>Terraced gardens</figcaption></figure>
+      <figure class="r32"><img src="assets/img/at_5.jpg" alt="Pedestrian promenade render" loading="lazy"><figcaption>Promenade</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/at_7.jpg" alt="Clock tower and pool, evening" loading="lazy"><figcaption>Evening · tower &amp; pool</figcaption></figure>
+      <figure class="r32"><img src="assets/img/at_x.jpg" alt="Aerial overview of the full regeneration" loading="lazy"><figcaption>Aerial · full scheme</figcaption></figure>
+    </div>
+    <div class="mv reveal"><span class="n">3.2</span><h3>The evidence layer</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Design decisions were argued with data — annual comfort zones, solstice shadows, wind velocity, pedestrian stay-places, commercial heat — down to <b>algorithmically placed café locations</b> scored against the comfort map. Some layers were built the slow way — walking the site, counting, measuring, then turning the field notes into diagrams; others were simulated computationally in Grasshopper with Ladybug and Honeybee.</p>
+    <div class="g g-3 reveal">
+      <figure class="r43 contain onwhite"><img src="assets/img/at_comfort.jpg" alt="Comfort zone analysis, summer solstice" loading="lazy"><figcaption>Comfort zones · summer</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/at_annual.jpg" alt="Annual sunlight comfort chart" loading="lazy"><figcaption>Annual comfort</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/at_wind.jpg" alt="Wind speed and pressure analysis" loading="lazy"><figcaption>Wind velocity</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/at_shadow.jpg" alt="Sunlight shadow analysis, summer solstice" loading="lazy"><figcaption>Shadow hours · solstice</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/at_ped.jpg" alt="Pedestrian analysis — stay places and connections" loading="lazy"><figcaption>Pedestrian stay-places</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/at_cafe.jpg" alt="Auto-generated cafeteria locations from comfort data" loading="lazy"><figcaption>Auto-placed cafés</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32 contain onwhite"><img src="assets/img/at_heat.jpg" alt="Commercial-to-residential heatmap of the district" loading="lazy"><figcaption>Commercial heatmap</figcaption></figure>
+      <figure class="r32 contain onwhite"><img src="assets/img/at_massplan.jpg" alt="Drone photogrammetry mass plan of the real district" loading="lazy"><figcaption>Photogrammetry base · the real district</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="mawlawiya"><span class="n">3.3</span><h3>Al Mawlawiya &amp; Old Souks</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Rehabilitation</span><span class="tag">Heritage</span><span class="tag">Site works</span></div>
+        <p>Rehabilitation of the Mevlevi lodge gardens and the old souk edge in Tripoli — stone terraces, water channels and planting brought back around the historic tekke. Mohamad Hashem worked the project from drawings to the ground: detailed design, BOQs, and supervision of the works on site.</p>
+      </div>
+      <dl class="spec"><div><dt>Practice</dt><dd>LDRS Chehab &amp; Partners</dd></div><div><dt>Scope</dt><dd>Design drawings · BOQ · supervision</dd></div><div><dt>Site</dt><dd>Al Mawlawiya · Tripoli</dd></div><div><dt>Type</dt><dd>Heritage garden rehabilitation</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r32"><img src="assets/img/mw_1.jpg" alt="Al Mawlawiya garden restoration study view" loading="lazy"><figcaption>The garden · restoration study</figcaption></figure>
+      <figure class="r32"><img src="assets/img/mw_2.jpg" alt="Terraces and planting restoration study" loading="lazy"><figcaption>Terraces · study view</figcaption></figure>
+    </div>
+    <div class="g g-4 reveal" style="margin-top:14px">
+      <figure class="r43"><img src="assets/img/mw_3.jpg" alt="Garden court restoration study" loading="lazy"><figcaption>Garden court</figcaption></figure>
+      <figure class="r43"><img src="assets/img/mw_site.jpg" alt="Site overview of the Mawlawiya complex" loading="lazy"><figcaption>Site overview</figcaption></figure>
+      <figure class="r43"><img src="assets/img/mw_p1.jpg" alt="Works on site — stone terraces" loading="lazy"><figcaption>On site · works record</figcaption></figure>
+      <figure class="r43"><img src="assets/img/mw_p2.jpg" alt="Works on site — garden taking shape" loading="lazy"><figcaption>On site · taking shape</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="marsemaan"><span class="n">3.4</span><h3>Mar Semaan Monastery — diagnosis</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Heritage</span><span class="tag">Structural diagnosis</span><span class="tag">1878</span></div>
+        <p>A field diagnosis of the 1878 Monastery of Mar Semaan in Zghorta — walking the vaults and walls to document cracks, settlement, water infiltration and fire damage, then mapping the pathologies and recommending anchoring and tie-rod interventions to hold the stone together.</p>
+      </div>
+      <dl class="spec"><div><dt>Building</dt><dd>Monastery of Mar Semaan · 1878</dd></div><div><dt>Site</dt><dd>Zghorta · North Lebanon</dd></div><div><dt>Output</dt><dd>Pathology map · intervention plan</dd></div><div><dt>Method</dt><dd>On-foot survey · photo record</dd></div></dl>
+    </div>
+    <div class="g g-3 reveal">
+      <figure class="r43"><img src="assets/img/ms_1.jpg" alt="Approach to Mar Semaan monastery" loading="lazy"><figcaption>The monastery</figcaption></figure>
+      <figure class="r43"><img src="assets/img/ms_2.jpg" alt="Stone vaults during the survey" loading="lazy"><figcaption>The vaults</figcaption></figure>
+      <figure class="r43"><img src="assets/img/ms_3.jpg" alt="Masonry condition record" loading="lazy"><figcaption>Masonry record</figcaption></figure>
+      <figure class="r43"><img src="assets/img/ms_4.jpg" alt="Crack and settlement documentation" loading="lazy"><figcaption>Cracks &amp; settlement</figcaption></figure>
+      <figure class="r43"><img src="assets/img/ms_5.jpg" alt="Interior survey of the monastery" loading="lazy"><figcaption>Interior survey</figcaption></figure>
+      <figure class="r43"><img src="assets/img/ms_6.jpg" alt="Monastery grounds during the visit" loading="lazy"><figcaption>The grounds</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="wrap" id="erbil">
+    <div class="datum"><span class="tick"></span><span class="code">P·04</span><span class="nm">Royal Complex, Erbil</span><span class="line"></span><span>LDRS · COMPETITION · KURDISTAN</span></div>
+    <div class="p-head reveal">
+      <div>
+        <h3>Royal Complex — mall &amp; twin towers</h3>
+        <div class="role"><span class="tag">Competition</span><span class="tag">44-page book</span><span class="tag">Retail + towers</span></div>
+        <p>A lakeside "eyelid" mall crowned by a cable-stayed canopy, paired with twin perforated towers holding a suspended sphere — delivered as a full 44-page competition book: masterplan, program acts, structure studies and the renders below.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Client</dt><dd>Iraq Head of Ministry</dd></div>
+        <div><dt>Program</dt><dd>Mall · towers · waterfront</dd></div>
+        <div><dt>Deliverable</dt><dd>Competition book · visuals</dd></div>
+      </dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/rm_hero.jpg" alt="The mall across the lake at dusk, canopy glowing" loading="lazy"><figcaption>Across the lake · dusk</figcaption></figure></div>
+    <div class="g g-3 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/rm_esc.jpg" alt="Interior atrium with escalators under the ribbed canopy" loading="lazy"><figcaption>Atrium · under the canopy</figcaption></figure>
+      <figure class="r32"><img src="assets/img/rm_roof.jpg" alt="Roof garden with planting and seating" loading="lazy"><figcaption>Roof garden</figcaption></figure>
+      <figure class="r32"><img src="assets/img/rm_towers.jpg" alt="Twin perforated towers with suspended sphere at night" loading="lazy"><figcaption>The twin towers · night</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="wrap" id="skyfall">
+    <div class="datum"><span class="tick"></span><span class="code">P·05</span><span class="nm">Skyfall Pavilion</span><span class="line"></span><span>LDRS · COMPETITION · ERBIL</span></div>
+    <div class="p-head reveal">
+      <div>
+        <h3>Skyfall Pavilion</h3>
+        <div class="role"><span class="tag">Competition</span><span class="tag">VVIP palace</span><span class="tag">Perforated canopy</span></div>
+        <p>A VVIP palace beneath a single perforated canopy — "a waterfall of sky" — filtering Kurdistan's light into a palm court. Sixteen boards carried the philosophy, sun studies, terraced gardens and plans; the centrepiece court render below is the argument in one image.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Concept</dt><dd>شلال السماء · waterfall of sky</dd></div>
+        <div><dt>Program</dt><dd>Palace · gardens · reception</dd></div>
+      </dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/sky_court.jpg" alt="Palm court beneath the perforated canopy, light falling through" loading="lazy"><figcaption>The court · light through the canopy</figcaption></figure></div>
+    <div class="g g-3 reveal" style="margin-top:14px">
+      <figure class="r32"><img src="assets/img/sky_lawn.jpg" alt="Exterior render across the lawn" loading="lazy"><figcaption>Across the lawn</figcaption></figure>
+      <figure class="r32"><img src="assets/img/sky_ext.jpg" alt="Pavilion elevation over the water" loading="lazy"><figcaption>Over the water</figcaption></figure>
+      <figure class="r32"><img src="assets/img/sky_dark.jpg" alt="Night aerial of the pavilion, canopy as a glowing eye" loading="lazy"><figcaption>Night aerial</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="r219"><img src="assets/img/sky_pano.jpg" alt="Wide panorama of the pavilion at dusk" loading="lazy"><figcaption>Dusk panorama</figcaption></figure></div>
+  </div>
+
+  <div class="wrap" id="jana">
+    <div class="datum"><span class="tick"></span><span class="code">P·06</span><span class="nm">JANA Residential</span><span class="line"></span><span>LDRS · FAÇADE STUDY</span></div>
+    <div class="p-head reveal">
+      <div>
+        <h3>JANA Residential</h3>
+        <div class="role"><span class="tag">Façade proposals</span><span class="tag">Visualisation</span></div>
+        <p>Two complete façade characters for one residential tower — a warm masonry reading and a white sculpted reading — modeled and rendered for the client to choose between, apartment for apartment identical behind the skin.</p>
+      </div>
+      <dl class="spec"><div><dt>Role</dt><dd>Modeling · both proposals · renders</dd></div><div><dt>Type</dt><dd>Residential mid-rise</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="natural"><img src="assets/img/jana_1.jpg" alt="JANA proposal one — warm masonry facade, full tower" loading="lazy"><figcaption>Proposal 01 · masonry</figcaption></figure>
+      <figure class="natural"><img src="assets/img/jana_2.jpg" alt="JANA proposal two — white sculpted facade, full tower" loading="lazy"><figcaption>Proposal 02 · sculpted white</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="wrap" id="rize">
+    <div class="datum"><span class="tick"></span><span class="code">P·07</span><span class="nm">Bungalow Resort · Rize</span><span class="line"></span><span>DESIGN PROPOSAL · TÜRKIYE</span></div>
+    <div class="p-head reveal">
+      <div>
+        <h3>Bungalow Resort — Rize, Türkiye</h3>
+        <div class="role"><span class="tag">Hospitality</span><span class="tag">Mountain site</span><span class="tag">Concept → client</span></div>
+        <p>A mountain resort on a working tea plantation above Rize — bungalows stepped along the terraced slope around an iconic main building, so every roof reads as another contour of the hillside. Developed from site strategy through concept alternatives to client presentation visuals.</p>
+      </div>
+      <dl class="spec"><div><dt>Site</dt><dd>Tea terraces · Rize, Türkiye</dd></div><div><dt>Program</dt><dd>Bungalows · main lodge · spa</dd></div><div><dt>Role</dt><dd>Design · visualisation</dd></div><div><dt>Stage</dt><dd>Concept → client presentation</dd></div></dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="r219"><img src="assets/img/tk_1.jpg" alt="The resort stepped along the tea terraces" loading="lazy"><figcaption>On the tea terraces</figcaption></figure></div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r43"><img src="assets/img/tk_main.jpg" alt="Masterplan aerial — teapot main lodge, barrel bungalows, funicular and waterfall stream on the tea terraces" loading="lazy"><figcaption>The masterplan · lodge, bungalows, funicular</figcaption></figure>
+      <figure class="r43"><img src="assets/img/tk_4.jpg" alt="Resort view across the valley" loading="lazy"><figcaption>Across the valley</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r43 contain onink"><img src="assets/img/tk_plan1.jpg" alt="Small bungalow — cabin concept plan, client presentation" loading="lazy"><figcaption>Small bungalow · cabin plan</figcaption></figure>
+      <figure class="r43 contain onink"><img src="assets/img/tk_plan2.jpg" alt="Big bungalow — the Hourglass Pavilion ground floor plan" loading="lazy"><figcaption>Big bungalow · Hourglass Pavilion plan</figcaption></figure>
+    </div>
+    <div class="g g-4 reveal" style="margin-top:14px">
+      <figure class="r43"><img src="assets/img/tk_3.jpg" alt="Bungalow cluster on the slope" loading="lazy"><figcaption>Bungalows on the slope</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/tk_5.jpg" alt="Site strategy study" loading="lazy"><figcaption>Site strategy</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/tk_6.jpg" alt="Concept study" loading="lazy"><figcaption>Concept study</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/tk_7.jpg" alt="Scheme study drawing" loading="lazy"><figcaption>Scheme study</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="wrap" id="rome">
+    <div class="datum"><span class="tick"></span><span class="code">◆</span><span class="nm">Rome — Parametric Workshop</span><span class="line"></span><span>ALGORITM × SAPIENZA · JULY 2017 · 80 HRS</span></div>
+    <div class="p-head reveal">
+      <div>
+        <h3>Algoritm Rome — kinetic façade lab</h3>
+        <div class="role"><span class="tag">Grasshopper</span><span class="tag">Arturo Tedeschi · AAD</span><span class="tag">Fabrication</span></div>
+        <p>Two weeks at Sapienza University of Rome: forty hours of Algorithmic-Aided Design under Arturo Tedeschi, then forty hours designing and physically fabricating a <b>smart kinetic façade</b> — the first contact with the computational tools that now anchor the national twin.</p>
+      </div>
+      <dl class="spec"><div><dt>Host</dt><dd>Sapienza University of Rome</dd></div><div><dt>Program</dt><dd>AAD + kinetic design · 8 credit hrs</dd></div></dl>
+    </div>
+    <div class="g g-4 reveal">
+      <figure class="r43"><img src="assets/img/rome_1.jpg" alt="Workshop studio at Sapienza" loading="lazy"><figcaption>The studio</figcaption></figure>
+      <figure class="r43"><img src="assets/img/rome_2.jpg" alt="Kinetic facade prototype in fabrication" loading="lazy"><figcaption>Fabricating the façade</figcaption></figure>
+      <figure class="r43"><img src="assets/img/rome_3.jpg" alt="Prototype assembly" loading="lazy"><figcaption>Prototype assembly</figcaption></figure>
+      <figure class="r43"><img src="assets/img/rome_4.jpg" alt="Final presentation evening" loading="lazy"><figcaption>Final jury</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= P·08 — 09 FREELANCE ================= -->
+<section id="freelance" class="paper" style="border-top:1px solid var(--paper-line)">
+  <div class="wrap">
+    <div class="datum"><span class="tick"></span><span class="code">P·08 — 09</span><span class="nm">Freelance Practice</span><span class="line"></span><span>DESIGN-BUILD CLIENTS · LEBANON</span></div>
+    <div class="sec-head reveal"><span class="kicker">Independent practice</span><h2>Client work,<br>delivered</h2>
+      <p class="lede">Design and visualisation commissions carried alone from brief to final image — each with its own client, site and character.</p>
+    </div>
+
+    <div class="mv reveal" id="bedawi"><span class="n">8.1</span><h3>Bedawi Station</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Design + viz</span><span class="tag">Animation</span><span class="tag">3ds Max · V-Ray</span></div>
+        <p>A hillside gas station wrapping a stone tower and green roof around the forecourt on a tight sloped site — taken through full design, stills, and a delivered 98-second marketing animation.</p>
+      </div>
+      <dl class="spec"><div><dt>Deliverables</dt><dd>Design · stills · animation</dd></div><div><dt>Site</dt><dd>Bedawi · North Lebanon</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r32"><img src="assets/img/fr_gas1.jpg" alt="Bedawi station forecourt with stone tower" loading="lazy"><figcaption>The forecourt</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fr_gascanopy.jpg" alt="Station approach in autumn planting" loading="lazy"><figcaption>The approach</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <figure class="r219"><img src="assets/img/fr_gas3.jpg" alt="Aerial of the station green roof" loading="lazy"><figcaption>Green roof · aerial</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="fcinema"><span class="n">8.2</span><h3>Cinema</h3><span class="ln"></span></div>
+    <p class="mvp reveal">A cinema drum with a glowing crown — the night identity does the marketing.</p>
+    <div class="g g-2 reveal">
+      <figure class="r32"><img src="assets/img/fr_cinema1.jpg" alt="Cinema drum glowing red at night" loading="lazy"><figcaption>Night crown</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fr_cinema2.jpg" alt="Cinema at dusk from the boulevard" loading="lazy"><figcaption>From the boulevard</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="flibrary"><span class="n">8.3</span><h3>Library</h3><span class="ln"></span></div>
+    <p class="mvp reveal">A winter library scheme in two structural characters — cantilevered entry against a pitched reading hall.</p>
+    <div class="g g-3 reveal">
+      <figure class="r32"><img src="assets/img/fr_lib1.jpg" alt="Library scheme in winter landscape" loading="lazy"><figcaption>Winter set</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fr_lib2.jpg" alt="Library cantilever entrance" loading="lazy"><figcaption>Cantilever entry</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fr_lib3.jpg" alt="Library across the lawn" loading="lazy"><figcaption>Across the lawn</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="interiors"><span class="n">8.4</span><h3>Interiors</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Residential and retail interiors — two living-room characters and a mall atrium.</p>
+    <div class="g g-3 reveal">
+      <figure class="r32"><img src="assets/img/fr_int_min.jpg" alt="Minimal living room interior render" loading="lazy"><figcaption>Living · minimal</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fr_int_eur.jpg" alt="European style living room render" loading="lazy"><figcaption>Living · European</figcaption></figure>
+      <figure class="r32"><img src="assets/img/fr_int_mall.jpg" alt="Retail mall interior with red core" loading="lazy"><figcaption>Retail atrium</figcaption></figure>
+    </div>
+  </div>
+</section>
+<!-- ================= ACADEMIC ================= -->
+<section id="academic">
+  <div class="wrap">
+    <div class="datum"><span class="tick"></span><span class="code">A·01 — 09</span><span class="nm">Academic Archive</span><span class="line"></span><span>BEIRUT ARAB UNIVERSITY · 2015 — 20</span></div>
+    <div class="sec-head reveal"><span class="kicker">Five years · RIBA Part I</span><h2>The academic arc</h2>
+      <p class="lede">From hand-built models to an urban-scale VR thesis — the range underneath the specialisation, ending exactly where the professional work begins: architecture designed to be walked in real time.</p>
+    </div>
+
+    <!-- A·01 thesis -->
+    <div class="mv reveal" id="thesisproj"><span class="n">A·01</span><h3>Virtual Reality Complex — senior project</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">ARCH540</span><span class="tag">Mixed use</span><span class="tag">Data-driven</span><span class="tag">97 pages</span></div>
+        <p>A VR entertainment and education complex — the first of its scale proposed in the region — argued with a 60-person survey, demographic infographics and program analysis before a line was drawn, then delivered as a full urban set-piece with towers, arena ring and public realm.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Course</dt><dd>ARCH540 · Senior Project</dd></div>
+        <div><dt>Method</dt><dd>Survey · data · then design</dd></div>
+        <div><dt>Extras</dt><dd>Animation · research booklet</dd></div>
+      </dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="natural"><img src="assets/img/y5_th1.jpg" alt="VR complex aerial at night — arena ring and tower, full frame" loading="lazy"><figcaption>The complex · night aerial</figcaption></figure></div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r32 contain onink"><img src="assets/img/y5_th3.jpg" alt="Arena interior bowl, full frame" loading="lazy"><figcaption>Arena bowl</figcaption></figure>
+      <figure class="r32 contain onink"><img src="assets/img/y5_th4.jpg" alt="Complex from the boulevard at dusk, full frame" loading="lazy"><figcaption>Boulevard · dusk</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r34 contain onink"><img src="assets/img/y5_th2.jpg" alt="Street approach to the complex, full frame" loading="lazy"><figcaption>Street approach</figcaption></figure>
+      <figure class="r34 contain onink"><img src="assets/img/y5_plans.jpg" alt="Floor plans column — basement to fourth floor" loading="lazy"><figcaption>Plans · basement → fourth floor</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="natural onwhite"><img src="assets/img/y5_poster.jpg" alt="Complete senior project presentation board — tap to zoom" loading="lazy"><figcaption>The full board · tap to zoom in</figcaption></figure></div>
+
+    <!-- A·02 brownfield -->
+    <div class="mv reveal" id="brownfield"><span class="n">A·02</span><h3>Al-Bahsas Brownfield Regeneration</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Design VII</span><span class="tag">Urban → façade</span></div>
+        <p>Tripoli's industrial edge reorganised on a radial grid pulling the city to the sea — closed from masterplan down to a faceted modular tower envelope, tested through explicit alternatives, sections and full elevations.</p>
+      </div>
+      <dl class="spec"><div><dt>Scale</dt><dd>Masterplan → detail</dd></div><div><dt>Site</dt><dd>Al-Bahsas · Tripoli</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r32 contain onink"><img src="assets/img/y5_brown.jpg" alt="Faceted tower cluster, full frame" loading="lazy"><figcaption>The tower cluster</figcaption></figure>
+      <figure class="r32 contain onink"><img src="assets/img/y5_braer.jpg" alt="Aerial of the radial masterplan, full frame" loading="lazy"><figcaption>Radial masterplan · aerial</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <figure class="r219 contain onink"><img src="assets/img/y5_brown2.jpg" alt="Street view between the faceted towers, full frame" loading="lazy"><figcaption>Between the towers</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="natural onwhite poster"><img src="assets/img/y5_bposter.jpg" alt="Complete Al-Bahsas presentation board — tap to zoom" loading="lazy"><figcaption>The full board · tap to zoom in</figcaption></figure></div>
+
+    <!-- A·03 antalya -->
+    <div class="mv reveal" id="skyscraper"><span class="n">A·03</span><h3>Antalya Skyscraper — the cliff edge</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Design VI</span><span class="tag">High-rise</span><span class="tag">Sea + sky tower</span></div>
+        <p>Antalya's cliffs, missing their marker. The tower fuses a sky tower and a sea tower into one stratified monolith grown out of the rock face — anchored horizontally back into the cliff, drawn to 1/800 below the waterline in sea elevation and sea section.</p>
+      </div>
+      <dl class="spec"><div><dt>Course</dt><dd>ARCH432 · Design VI</dd></div><div><dt>Structure</dt><dd>Core shell + cliff anchors</dd></div></dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="natural"><img src="assets/img/y4_sky_hero.jpg" alt="The skyscraper rising from the Antalya cliff beside the Düden waterfall" loading="lazy"><figcaption>In-site shot · Düden cliffs</figcaption></figure></div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="natural"><img src="assets/img/y4_sky_persp.jpg" alt="Two perspectives of the stratified tower — snowfield and waterfall wall" loading="lazy"><figcaption>Perspectives</figcaption></figure></div>
+
+    <!-- A·04 fatwa -->
+    <div class="mv reveal" id="fatwa"><span class="n">A·04</span><h3>Dar El Fatwa Complex</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Design V</span><span class="tag">Civic + religious</span><span class="tag">Halba · Akkar</span></div>
+        <p>A linear civic-religious complex along a bending site spine — mosque, offices, library and courts sequenced behind a <b>mashrabiya-patterned skin</b>. The renders walk the spine the way a visitor would: through the arched gate, along the patterned wall, past the minaret, into the courts.</p>
+      </div>
+      <dl class="spec"><div><dt>Program</dt><dd>Mosque · civic · library</dd></div><div><dt>Course</dt><dd>ARCH431 · Design V</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r169 contain onwhite"><img src="assets/img/y4_fatwa_a.jpg" alt="Approach along the complex spine" loading="lazy"><figcaption>The spine · approach</figcaption></figure>
+      <figure class="r169 contain onwhite"><img src="assets/img/y4_fatwa_b.jpg" alt="Courts and sports terrace against the patterned wall" loading="lazy"><figcaption>Courts terrace</figcaption></figure>
+    </div>
+    <div class="g g-3 reveal" style="margin-top:14px">
+      <figure class="r43 contain onwhite"><img src="assets/img/y4_fatwa_c.jpg" alt="The arched gateway and pergola walk" loading="lazy"><figcaption>Gateway · pergola walk</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/y4_fatwa_d.jpg" alt="Entry sequence renders" loading="lazy"><figcaption>Entry sequence</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/y4_fatwa_e.jpg" alt="Mashrabiya wall with figures" loading="lazy"><figcaption>The mashrabiya wall</figcaption></figure>
+    </div>
+    <div class="g g-2 reveal" style="margin-top:14px">
+      <figure class="r169 contain onwhite"><img src="assets/img/y4_fatwa_f.jpg" alt="Minaret and patterned screens along the walk" loading="lazy"><figcaption>Minaret walk</figcaption></figure>
+      <figure class="r169 contain onwhite"><img src="assets/img/y4_fatwaposter.jpg" alt="Complete Dar El Fatwa presentation board — tap to zoom" loading="lazy"><figcaption>The full board · tap to zoom in</figcaption></figure>
+    </div>
+
+    <!-- A·05 mosque -->
+    <div class="mv reveal" id="mosque"><span class="n">A·05</span><h3>Green Mosque</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Design V</span><span class="tag">El Mina waterfront</span></div>
+        <p>A mosque folded into a green star on the El Mina corniche — prayer hall, amphitheatre plaza and landscape terraces resolved in one faceted ground between the road and the sea.</p>
+      </div>
+      <dl class="spec"><div><dt>Course</dt><dd>ARCH431 · Design V</dd></div><div><dt>Site</dt><dd>El Mina · Tripoli</dd></div></dl>
+    </div>
+    <div class="g g-1 reveal"><figure class="natural"><img src="assets/img/y4_mosque_hero.jpg" alt="Aerial of the Green Mosque — faceted star plan on the waterfront point" loading="lazy"><figcaption>The star on the corniche · aerial</figcaption></figure></div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="natural onwhite posterw"><img src="assets/img/y4_mosqueposter.jpg" alt="Complete Green Mosque presentation board — tap to zoom" loading="lazy"><figcaption>The full board · tap to zoom in</figcaption></figure></div>
+
+    <!-- A·06 aviation -->
+    <div class="mv reveal" id="aviation"><span class="n">A·06</span><h3>Aviation Centre</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Studio</span><span class="tag">Long-span</span><span class="tag">Flight as form</span></div>
+        <p>An aviation centre where the section is the argument — a long-span dome over the main hall, wing-profile canopies over the approach, and the exhibition sequence organised like a runway. Studied from concept geometry to full technical elevations.</p>
+      </div>
+      <dl class="spec"><div><dt>Feature</dt><dd>Long-span dome + wing canopies</dd></div><div><dt>Focus</dt><dd>Structure as form</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r169 contain onink"><img src="assets/img/y4_av1.jpg" alt="Aviation centre render, dusk" loading="lazy"><figcaption>The centre · dusk</figcaption></figure>
+      <figure class="r169 contain onink"><img src="assets/img/y4_av2.jpg" alt="Aviation centre render, night" loading="lazy"><figcaption>Night set</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="r169 contain onink"><img src="assets/img/y4_av3.jpg" alt="Aviation centre approach render" loading="lazy"><figcaption>The approach</figcaption></figure></div>
+    <div class="g g-1 reveal" style="margin-top:14px"><figure class="natural onwhite"><img src="assets/img/y4_av_elev.jpg" alt="Full technical elevation strip of the aviation centre" loading="lazy"><figcaption>Technical section · full strip</figcaption></figure></div>
+
+    <!-- A·07 cinema -->
+    <div class="mv reveal" id="cinema"><span class="n">A·07</span><h3>Cinema Complex</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">Design III</span><span class="tag">IMAX</span><span class="tag">Unity VR</span></div>
+        <p>A cinema whose concept is the projector itself — a cylinder fired through the mass at 55° — carried by open-web joists and space frame over the IMAX hall. The projector cylinder organises everything — hall, lobby, and the sign the building makes on the coast road.</p>
+      </div>
+      <dl class="spec"><div><dt>Course</dt><dd>ARCH331 · Design III</dd></div><div><dt>Structure</dt><dd>Open-web joists · space frame</dd></div></dl>
+    </div>
+    <div class="g g-1 reveal">
+      <figure class="natural onwhite posterw"><img src="assets/img/y3_poster.jpg" alt="Complete cinema complex presentation board — tap to zoom" loading="lazy"><figcaption>The full board · tap to zoom in</figcaption></figure>
+    </div>
+
+    <!-- A·08 foundation -->
+    <div class="mv reveal" id="vr364"><span class="n">A·08</span><h3>Virtual Reality in BAU</h3><span class="ln"></span></div>
+    <div class="p-head reveal">
+      <div>
+        <div class="role"><span class="tag">ARCH364</span><span class="tag">Unity</span><span class="tag">Grade A</span></div>
+        <p>A dedicated Virtual Reality course, 2017 — building interactive architectural experiences in <b>Unity</b>, from enabling VR in the engine to sculpting, level design and a playable VR game built by the team. The first bridge to real time, eight years before the national twin.</p>
+      </div>
+      <dl class="spec"><div><dt>Course</dt><dd>ARCH364 · Virtual Reality</dd></div><div><dt>Engine</dt><dd>Unity · Oculus</dd></div></dl>
+    </div>
+    <div class="g g-2 reveal">
+      <figure class="r169 contain onwhite"><img src="assets/img/y3_vrp1.jpg" alt="ARCH364 board — enabling VR in Unity projects" loading="lazy"><figcaption>Enabling VR in Unity · course board</figcaption></figure>
+      <figure class="r169 contain onwhite"><img src="assets/img/y3_vrp2.jpg" alt="ARCH364 board — sculpting and prototyping in Unity" loading="lazy"><figcaption>Sculpting &amp; prototyping · course board</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <figure class="natural"><img src="assets/img/y3_vr.jpg" alt="Unity VR walkthrough render" loading="lazy"><figcaption>Inside the Unity walkthrough</figcaption></figure>
+    </div>
+
+    <div class="mv reveal" id="foundation"><span class="n">A·09</span><h3>Foundation studios</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Before any software: hand drafting, ink plans, and physical models — space understood by building it at small scale first.</p>
+    <div class="g g-3 reveal">
+      <figure class="r43"><img src="assets/img/y1_model1.jpg" alt="Year one physical study model" loading="lazy"><figcaption>Y1 · study model</figcaption></figure>
+      <figure class="r43"><img src="assets/img/y1_house.jpg" alt="Year one house model on site base" loading="lazy"><figcaption>Y1 · house model</figcaption></figure>
+      <figure class="r43"><img src="assets/img/y1_pod.jpg" alt="Year one furnished pod interior model" loading="lazy"><figcaption>Y1 · pod interiors</figcaption></figure>
+      <figure class="r43"><img src="assets/img/y1_model2.jpg" alt="Year one sectional model" loading="lazy"><figcaption>Y1 · sectional model</figcaption></figure>
+      <figure class="r43"><img src="assets/img/y2_wood.jpg" alt="Year two timber study model" loading="lazy"><figcaption>Y2 · timber study</figcaption></figure>
+      <figure class="r43"><img src="assets/img/y2_draft.jpg" alt="Year two hand-drafted construction sheet" loading="lazy"><figcaption>Y2 · hand drafting</figcaption></figure>
+    </div>
+    <div class="g g-1 reveal" style="margin-top:14px">
+      <figure class="r219"><img src="assets/img/y2_model.jpg" alt="Year two site model in dark card" loading="lazy"><figcaption>Y2 · site model</figcaption></figure>
+    </div>
+
+    <!-- A·09 internship -->
+    <div class="mv reveal" id="internship"><span class="n">A·10</span><h3>Internship — Citadel site works</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Site supervision on the Abu Ali river restoration beneath <b>Tripoli Citadel</b> — execution drawings, reinforcement checks, slump tests and BOQs, learning concrete the way it is actually poured.</p>
+    <div class="g g-3 reveal">
+      <figure class="r43"><img src="assets/img/cc_1.jpg" alt="Reinforcement works on the Abu Ali river site" loading="lazy"><figcaption>Reinforcement checks</figcaption></figure>
+      <figure class="r43"><img src="assets/img/cc_2.jpg" alt="Concrete works below the Citadel" loading="lazy"><figcaption>Concrete works</figcaption></figure>
+      <figure class="r43"><img src="assets/img/cc_3.jpg" alt="Cast bench element on site" loading="lazy"><figcaption>Cast in place</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFILE + CREDENTIALS ================= -->
+<section id="profile" class="paper about" style="border-top:1px solid var(--paper-line)">
+  <div class="wrap">
+    <div class="datum"><span class="tick"></span><span class="code">◆</span><span class="nm">Profile</span><span class="line"></span><span>ABU DHABI · UAE</span></div>
+    <div class="sec-head reveal"><span class="kicker">About</span><h2>Profile &amp; credentials</h2></div>
+    <p class="big reveal">Mohamad Hashem Dankar — architect (BAU, RIBA Part I), based in Abu Dhabi. Six years across design practice, museum fabrication and government simulation, working in English and Arabic, at every scale from a GRC bracket to a national twin.</p>
+    <div class="dgrid reveal">
+      <dl class="dtable">
+        <div><dt>Current</dt><dd>VR Content Creator — UAE Ministry of Interior (Tahaluf Al Emarat), Abu Dhabi</dd></div>
+        <div><dt>Previously</dt><dd>Fibrex Construction Group (Saadiyat museums) · LDRS Chehab &amp; Partners, Beirut–Tripoli · freelance practice</dd></div>
+        <div><dt>Education</dt><dd>B.Arch, Beirut Arab University — validated at RIBA Part 1 level</dd></div>
+        <div><dt>Credentials</dt><dd>Autodesk Certified User — 3ds Max &amp; AutoCAD · IC3 GS5 · Sapienza Rome parametric program</dd></div>
+        <div><dt>Languages</dt><dd>Arabic · English · French</dd></div>
+      </dl>
+      <div>
+        <p style="margin-bottom:14px"><b style="font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--tx-p-mut)">Toolchain</b></p>
+        <div class="chips">
+          <span class="chip">Unreal Engine</span><span class="chip">3ds Max</span><span class="chip">Datasmith</span><span class="chip">Substance</span>
+          <span class="chip">Rhino + Grasshopper</span><span class="chip">Revit</span><span class="chip">AutoCAD</span><span class="chip">Corona / V-Ray</span>
+          <span class="chip">Twinmotion</span><span class="chip">Unity</span><span class="chip">Ladybug / Honeybee</span><span class="chip">Photoshop</span><span class="chip">GIS workflows</span>
+        </div>
+        <a class="btn" href="assets/Hashem-Dankar-CV.pdf" download>Download CV — PDF ↓</a>
+      </div>
+    </div>
+
+    <div class="mv reveal"><span class="n">◆</span><h3>The paper trail</h3><span class="ln"></span></div>
+    <p class="mvp reveal">Verifiable, dated, signed — tap any document to read it in full.</p>
+    <div class="g g-4 reveal">
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_riba.jpg" alt="RIBA statement of recognised architectural qualification, Part 1" loading="lazy"><figcaption>RIBA · Part 1 statement</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_bau.jpg" alt="Beirut Arab University Bachelor of Architecture certificate" loading="lazy"><figcaption>BAU · B.Arch certificate</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_fibrex.jpg" alt="Fibrex Contracting experience certificate" loading="lazy"><figcaption>Fibrex · experience certificate</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_ldrs.jpg" alt="LDRS Chehab and Partners employment reference letter" loading="lazy"><figcaption>LDRS · employment reference</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_max.jpg" alt="Autodesk Certified User 3ds Max certificate" loading="lazy"><figcaption>Autodesk · 3ds Max</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_acad.jpg" alt="Autodesk Certified User AutoCAD certificate" loading="lazy"><figcaption>Autodesk · AutoCAD</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_rome.jpg" alt="Algoritm Rome Summer School certificate hosted by Sapienza University" loading="lazy"><figcaption>Sapienza Rome · parametric program</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_ic3.jpg" alt="IC3 GS5 Digital Literacy certification" loading="lazy"><figcaption>IC3 GS5 · digital literacy</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_revit.jpg" alt="LinkedIn Learning Revit 2023 certificate" loading="lazy"><figcaption>Revit 2023 · course</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_revfam.jpg" alt="LinkedIn Learning Revit Families certificate" loading="lazy"><figcaption>Revit Families · course</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_rhino.jpg" alt="Rhino 7 Essential Training certificate" loading="lazy"><figcaption>Rhino 7 · course</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_faihaa.jpg" alt="Al-Faihaa Vocational Center computer languages certificate" loading="lazy"><figcaption>Al-Faihaa · computer languages</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_zmerly.jpg" alt="Zmerly Academy heating technology certificate" loading="lazy"><figcaption>Zmerly · heating technology</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_callig.jpg" alt="Arabic calligraphy competition certificate" loading="lazy"><figcaption>Arabic calligraphy · Jinan &amp; IF Tripoli</figcaption></figure>
+      <figure class="r43 contain onwhite"><img src="assets/img/cert_ourcity.jpg" alt="Our City Our Way design-build workshop certificate" loading="lazy"><figcaption>Our City Our Way · design-build</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="datum"><span class="tick"></span><span class="code">◆</span><span class="nm">Contact</span><span class="line"></span><span>AVAILABLE FOR SELECT ROLES</span></div>
+    <h2 class="reveal">Let's build it <em>twice.</em></h2>
+    <div class="clinks reveal">
+      <a href="mailto:hashemx98@gmail.com"><span class="k">Email</span><span class="v">hashemx98@gmail.com</span></a>
+      <a href="tel:+971509702901"><span class="k">Phone / WhatsApp</span><span class="v">+971 50 970 2901</span></a>
+      <div><span class="k">Base</span><span class="v">Abu Dhabi · UAE</span></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="in"><span>© 2026 Mohamad Hashem Dankar</span><span>Real · Twin · N 24.4539° E 54.3773°</span></div></footer>
+
+<!-- lightbox -->
+<div id="lb" role="dialog" aria-label="Image viewer">
+  <span class="hint">SCROLL / PINCH TO ZOOM · DRAG TO PAN · DOUBLE-TAP TO RESET</span>
+  <div class="ui">
+    <button id="lbminus" aria-label="Zoom out">−</button>
+    <button id="lbplus" aria-label="Zoom in">+</button>
+    <button id="lbreset" aria-label="Reset">⟳</button>
+    <button id="lbclose" aria-label="Close">✕</button>
+  </div>
+  <img id="lbimg" alt="">
+  <span class="cap" id="lbcap"></span>
+</div>
+
+<script>
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* lightbox with zoom + pan */
+(()=>{
+const lb=document.getElementById('lb'),im=document.getElementById('lbimg'),cap=document.getElementById('lbcap');
+let s=1,tx=0,ty=0,drag=null,pinch=null;
+const apply=()=>{im.style.transform=`translate(${tx}px,${ty}px) scale(${s})`};
+function fit(){
+  const vw=innerWidth,vh=innerHeight,iw=im.naturalWidth,ih=im.naturalHeight;
+  const k=Math.min(vw*0.92/iw,vh*0.9/ih,1);
+  im.style.width=iw*k+'px';im.style.height=ih*k+'px';
+  s=1;tx=(vw-iw*k)/2;ty=(vh-ih*k)/2;apply();
+}
+function open(src,alt,caption){
+  im.src=src;im.alt=alt||'';cap.textContent=caption||alt||'';
+  lb.classList.add('on');document.body.style.overflow='hidden';
+  if(im.complete)fit();else im.onload=fit;
+}
+function close(){lb.classList.remove('on');document.body.style.overflow='';im.src=''}
+function zoom(f,cx,cy){
+  const ns=Math.min(8,Math.max(.4,s*f));
+  cx=cx??innerWidth/2;cy=cy??innerHeight/2;
+  tx=cx-(cx-tx)*(ns/s);ty=cy-(cy-ty)*(ns/s);s=ns;apply();
+}
+document.querySelectorAll('figure img').forEach(el=>{
+  el.addEventListener('click',()=>{
+    const fig=el.closest('figure');const fc=fig&&fig.querySelector('figcaption');
+    open(el.currentSrc||el.src,el.alt,fc?fc.textContent:'');
+  });
+});
+document.getElementById('lbclose').onclick=close;
+document.getElementById('lbplus').onclick=()=>zoom(1.4);
+document.getElementById('lbminus').onclick=()=>zoom(1/1.4);
+document.getElementById('lbreset').onclick=fit;
+lb.addEventListener('click',e=>{if(e.target===lb)close()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')close();if(e.key==='+'||e.key==='=')zoom(1.3);if(e.key==='-')zoom(1/1.3);});
+lb.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY<0?1.18:1/1.18,e.clientX,e.clientY)},{passive:false});
+im.addEventListener('pointerdown',e=>{e.preventDefault();im.setPointerCapture(e.pointerId);
+  if(pinch===null)drag={x:e.clientX-tx,y:e.clientY-ty};im.style.cursor='grabbing'});
+im.addEventListener('pointermove',e=>{if(drag){tx=e.clientX-drag.x;ty=e.clientY-drag.y;apply()}});
+['pointerup','pointercancel'].forEach(ev=>im.addEventListener(ev,()=>{drag=null;im.style.cursor='grab'}));
+im.addEventListener('dblclick',fit);
+/* pinch */
+let touches={};
+lb.addEventListener('touchstart',e=>{if(e.touches.length===2){drag=null;
+  pinch={d:Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY),s}}},{passive:true});
+lb.addEventListener('touchmove',e=>{if(pinch&&e.touches.length===2){e.preventDefault();
+  const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+  const cx=(e.touches[0].clientX+e.touches[1].clientX)/2,cy=(e.touches[0].clientY+e.touches[1].clientY)/2;
+  const f=(pinch.s*(d/pinch.d))/s;zoom(f,cx,cy)}},{passive:false});
+lb.addEventListener('touchend',e=>{if(e.touches.length<2)pinch=null},{passive:true});
+})();
+</script>
+</body>
+</html>
