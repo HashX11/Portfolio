@@ -1,0 +1,255 @@
+/* =====================================================================
+   MOBILE BUILD  —  everything below is scoped to html[data-view="mobile"]
+   The desktop build is untouched by this block.
+   ===================================================================== */
+html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
+[data-view="mobile"] body{font-size:16px;line-height:1.7;overflow-x:hidden}
+[data-view="mobile"] .wrap{padding:0 18px}
+[data-view="mobile"] p{text-wrap:pretty}
+
+/* ---- desktop-only chrome, gone ---- */
+[data-view="mobile"] #rail,
+[data-view="mobile"] #cur,
+[data-view="mobile"] #orbit .reticle,
+[data-view="mobile"] #orbit .enter-hint,
+[data-view="mobile"] #orbit .grid-ov,
+[data-view="mobile"] .scrub .shint,
+[data-view="mobile"] .contact .cbg{display:none!important}
+[data-view="mobile"] *{cursor:auto}
+[data-view="mobile"] figure:hover img{transform:none}
+[data-view="mobile"] #grain{opacity:.035}
+
+/* ---- type scale: tuned for a 390 px column ---- */
+[data-view="mobile"] .sec-head h2{font-size:clamp(1.75rem,8.6vw,2.5rem);line-height:1}
+[data-view="mobile"] .sec-head .lede,
+[data-view="mobile"] .big{font-size:1.02rem;line-height:1.68}
+[data-view="mobile"] .mv{margin:44px 0 18px;gap:12px}
+[data-view="mobile"] .mv h3{font-size:clamp(1.12rem,5.2vw,1.45rem)}
+[data-view="mobile"] .mv .n{font-size:1.25rem}
+[data-view="mobile"] .mvp{font-size:1rem;margin-bottom:20px}
+[data-view="mobile"] .datum{gap:9px;font-size:.58rem;margin:52px 0 20px;flex-wrap:wrap}
+[data-view="mobile"] .datum .nm{white-space:normal}
+[data-view="mobile"] figure figcaption{font-size:.6rem;padding:6px 10px;letter-spacing:.06em}
+
+/* ---- top bar: brand + one 44 px menu target ---- */
+[data-view="mobile"] .topbar{padding-top:env(safe-area-inset-top)}
+[data-view="mobile"] .topbar .in{padding:8px 12px 8px 16px;gap:12px}
+[data-view="mobile"] .topbar .brand{font-size:.74rem;letter-spacing:.01em}
+.m-burger{display:none}
+[data-view="mobile"] .m-burger{display:flex;align-items:center;justify-content:center;gap:8px;
+  min-width:44px;min-height:44px;padding:0 12px;background:none;border:1px solid var(--ink-4);
+  color:var(--tx);font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.16em;
+  text-transform:uppercase;cursor:pointer;flex:none;-webkit-tap-highlight-color:transparent}
+[data-view="mobile"] .m-burger:active{border-color:var(--signal);color:var(--signal)}
+[data-view="mobile"] .m-burger .bars{display:flex;flex-direction:column;gap:3px}
+[data-view="mobile"] .m-burger .bars i{display:block;width:15px;height:1.5px;background:currentColor}
+
+/* ---- orbit intro: the same descent as desktop, cropped 9:16 for the phone ---- */
+[data-view="mobile"] #orbit{height:88svh;min-height:480px}
+[data-view="mobile"] #orbit .stage{inset:0;transform:none!important;transition:none}
+[data-view="mobile"] #orbit video{opacity:1;transform:none;object-fit:cover}
+[data-view="mobile"] #orbit #orbitFallback{display:none}
+[data-view="mobile"] #orbit .in{padding:0 18px calc(30px + env(safe-area-inset-bottom));transform:none!important}
+[data-view="mobile"] #orbit h1{font-size:clamp(2rem,11.5vw,3.4rem);line-height:.98}
+[data-view="mobile"] #orbit .sub{font-size:.98rem;opacity:1}
+[data-view="mobile"] #orbit .tele{font-size:.55rem;gap:8px}
+.m-cue{display:none}
+[data-view="mobile"] .m-cue{position:absolute;z-index:4;left:0;right:0;bottom:calc(8px + env(safe-area-inset-bottom));
+  display:flex;justify-content:center;pointer-events:none;
+  font-family:"Space Mono",monospace;font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+[data-view="mobile"] .m-cue span{animation:mCue 2.4s ease-in-out infinite}
+@keyframes mCue{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(4px);opacity:1}}
+@media(prefers-reduced-motion:reduce){[data-view="mobile"] .m-cue span{animation:none}}
+
+/* ---- 300vh scroll-scrub band collapses to one held frame ---- */
+[data-view="mobile"] .scrub{height:auto}
+[data-view="mobile"] .scrub .ss{position:relative;height:clamp(260px,48svh,420px)}
+[data-view="mobile"] .scrub canvas{display:none}
+
+/* ---- one column everywhere; galleries become swipe strips ---- */
+[data-view="mobile"] .g-2,
+[data-view="mobile"] .g-3,
+[data-view="mobile"] .g-4,
+[data-view="mobile"] .pair,
+[data-view="mobile"] .p-head,
+[data-view="mobile"] .idx2,
+[data-view="mobile"] .flag,
+[data-view="mobile"] .dgrid,
+[data-view="mobile"] .clinks,
+[data-view="mobile"] .munigrid{grid-template-columns:1fr}
+[data-view="mobile"] .band{grid-template-columns:1fr 1fr}
+[data-view="mobile"] .pipe{grid-template-columns:1fr 1fr;gap:8px}
+[data-view="mobile"] .pipe .st::after{content:""}
+[data-view="mobile"] .cat{grid-template-columns:1fr 1fr;gap:10px}
+[data-view="mobile"] .idx2 .mt{display:none}
+[data-view="mobile"] .mgrid2{grid-template-columns:1fr 1fr!important;gap:10px}
+[data-view="mobile"] .contact h2{font-size:clamp(1.9rem,9vw,2.6rem);line-height:1.04;margin-bottom:30px}
+[data-view="mobile"] .posterw,[data-view="mobile"] .poster{max-width:100%}
+
+/* swipe strip: a bounded horizontal region, never the page itself */
+[data-view="mobile"] .mstrip{display:flex;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  margin:0 -18px;padding:0 18px 2px;scrollbar-width:none}
+[data-view="mobile"] .mstrip::-webkit-scrollbar{display:none}
+[data-view="mobile"] .mstrip>*{flex:0 0 87%;min-width:0;scroll-snap-align:center;margin:0}
+[data-view="mobile"] .mstrip figure{margin:0}
+[data-view="mobile"] .mstrip .ba-cap{padding-top:8px}
+.m-dots{display:none}
+[data-view="mobile"] .m-dots{display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 0 2px}
+[data-view="mobile"] .m-dots i{width:5px;height:5px;border-radius:50%;background:var(--ink-4);
+  transition:background .2s,width .2s}
+[data-view="mobile"] .m-dots i.on{background:var(--signal);width:16px;border-radius:3px}
+[data-view="mobile"] .paper .m-dots i{background:var(--paper-line)}
+[data-view="mobile"] .paper .m-dots i.on{background:var(--signal-dim)}
+[data-view="mobile"] .m-dots .lab{font-family:"Space Mono",monospace;font-size:.55rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--tx-mut);margin-left:8px}
+[data-view="mobile"] .paper .m-dots .lab{color:var(--tx-p-mut)}
+/* the curtain reveal fights horizontal scrolling — drop it inside strips */
+[data-view="mobile"] .g.reveal figure,[data-view="mobile"] .cat.reveal figure{clip-path:none!important}
+[data-view="mobile"] .reveal{transform:none;transition:opacity .45s ease}
+
+/* ---- rebuild sheet + its two frames, stacked ---- */
+[data-view="mobile"] .munigrid > .sheet{position:relative}
+[data-view="mobile"] .munigrid > .sheet img{position:static;width:100%;height:auto;object-fit:contain}
+[data-view="mobile"] .munistack figure img{aspect-ratio:16/9}
+
+/* ---- film: poster until tapped, then it plays ---- */
+[data-view="mobile"] .vidfig video{opacity:1}
+/* ambient bands stay a still on a phone — the clip alone is 2–8 MB of decoration */
+[data-view="mobile"] .moi-band video{opacity:1;transform:scale(1.14)}
+[data-view="mobile"] .moi-band.fullframe video{transform:scale(1.22)}
+.m-play{display:none}
+[data-view="mobile"] .m-play{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:12px;border:0;background:rgba(14,20,23,.28);
+  color:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent;padding:0;
+  font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase}
+[data-view="mobile"] .m-play .ring{width:62px;height:62px;border-radius:50%;border:1px solid var(--signal);
+  background:rgba(14,20,23,.55);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 26px rgba(0,0,0,.45)}
+[data-view="mobile"] .m-play .ring svg{width:20px;height:20px;margin-left:3px;color:var(--signal)}
+[data-view="mobile"] .m-play:active .ring{border-color:#fff;transform:scale(.96)}
+[data-view="mobile"] .m-play.off{opacity:0;pointer-events:none;transition:opacity .35s ease}
+[data-view="mobile"] .m-play .sz{opacity:.7}
+
+/* ---- photogrammetry scan: 7 MB stays put until it's asked for ---- */
+[data-view="mobile"] .pgscan{height:auto}
+[data-view="mobile"] .pgscan .pgsticky{position:relative;height:auto;min-height:0}
+[data-view="mobile"] .pgscan .pghint{display:none}
+.m-scan{display:none}
+[data-view="mobile"] .m-scan{display:block;position:relative;background:var(--ink-2);border:1px solid var(--ink-3)}
+[data-view="mobile"] .m-scan img{width:100%;height:auto;display:block;opacity:.62}
+[data-view="mobile"] .m-scan .in{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;text-align:center;padding:22px}
+[data-view="mobile"] .m-scan .t{font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.2em;
+  text-transform:uppercase;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+[data-view="mobile"] .m-scan button{min-height:46px;padding:0 20px;background:rgba(14,20,23,.8);
+  border:1px solid var(--signal);color:var(--signal);font-family:"Space Mono",monospace;font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;cursor:pointer;-webkit-tap-highlight-color:transparent}
+[data-view="mobile"] .m-scan button:active{background:var(--signal);color:var(--ink)}
+[data-view="mobile"] .pgscan.m-live{height:320vh}
+[data-view="mobile"] .pgscan.m-live .pgsticky{position:sticky;top:0;height:100svh}
+[data-view="mobile"] .pgscan.m-live .pghint{display:block}
+
+/* ---- 3D tiles: bigger tap targets, badge always visible ---- */
+[data-view="mobile"] .cat figure.has3d .b3d{font-size:.56rem;padding:5px 8px;top:6px;right:6px}
+[data-view="mobile"] .cat figcaption{font-size:.55rem;padding:7px 9px;flex-direction:column;
+  align-items:flex-start;gap:2px;min-height:44px;justify-content:center}
+
+/* ---- contents sheet (the bottom chapter chip opens this) ---- */
+.m-chip{display:none}
+[data-view="mobile"] .m-chip{position:fixed;z-index:130;left:50%;transform:translateX(-50%);
+  bottom:calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px;
+  min-height:44px;padding:0 8px 0 14px;max-width:calc(100vw - 36px);
+  background:rgba(19,28,33,.92);backdrop-filter:blur(10px);border:1px solid var(--ink-4);
+  border-radius:999px;color:var(--tx);cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);
+  -webkit-tap-highlight-color:transparent;
+  opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+[data-view="mobile"] .m-chip.on{opacity:1;pointer-events:auto}
+[data-view="mobile"] .m-chip .cd{font-family:"Space Mono",monospace;font-size:.56rem;letter-spacing:.14em;
+  color:var(--signal);flex:none}
+[data-view="mobile"] .m-chip .nm{font-family:"Archivo",sans-serif;font-weight:600;font-size:.76rem;
+  letter-spacing:.01em;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+[data-view="mobile"] .m-chip .ic{width:30px;height:30px;border-radius:50%;background:var(--ink-3);
+  display:flex;align-items:center;justify-content:center;flex:none}
+[data-view="mobile"] .m-chip .ic svg{width:12px;height:12px;color:var(--signal)}
+
+.m-sheet{display:none}
+[data-view="mobile"] .m-sheet{display:block;position:fixed;inset:0;z-index:400;visibility:hidden}
+[data-view="mobile"] .m-sheet .scrim{position:absolute;inset:0;background:rgba(6,10,12,.62);
+  opacity:0;transition:opacity .3s ease}
+[data-view="mobile"] .m-sheet .panel{position:absolute;left:0;right:0;bottom:0;max-height:88svh;
+  display:flex;flex-direction:column;background:var(--ink);border-top:1px solid var(--ink-4);
+  transform:translateY(100%);transition:transform .34s cubic-bezier(.22,.61,.36,1)}
+[data-view="mobile"] .m-sheet.on{visibility:visible}
+[data-view="mobile"] .m-sheet.on .scrim{opacity:1}
+[data-view="mobile"] .m-sheet.on .panel{transform:none}
+@media(prefers-reduced-motion:reduce){
+  [data-view="mobile"] .m-sheet .panel,[data-view="mobile"] .m-sheet .scrim{transition:none}}
+[data-view="mobile"] .m-sheet .grab{width:38px;height:4px;border-radius:2px;background:var(--ink-4);
+  margin:10px auto 4px;flex:none}
+[data-view="mobile"] .m-sheet .head{display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:10px 16px 12px;border-bottom:1px solid var(--ink-3);flex:none}
+[data-view="mobile"] .m-sheet .head h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;
+  text-transform:uppercase;font-size:.9rem;color:#fff}
+[data-view="mobile"] .m-sheet .x{min-width:44px;min-height:44px;background:none;border:1px solid var(--ink-4);
+  color:var(--tx);font-size:1rem;cursor:pointer;-webkit-tap-highlight-color:transparent}
+[data-view="mobile"] .m-sheet .body{overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:6px 16px calc(20px + env(safe-area-inset-bottom));overscroll-behavior:contain}
+[data-view="mobile"] .m-sheet .ch{padding:14px 0 4px;font-family:"Space Mono",monospace;font-size:.56rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--signal)}
+[data-view="mobile"] .m-sheet a.row{display:grid;grid-template-columns:44px 1fr;align-items:center;gap:10px;
+  min-height:48px;padding:7px 0;border-bottom:1px solid var(--ink-3);color:var(--tx);
+  -webkit-tap-highlight-color:transparent}
+[data-view="mobile"] .m-sheet a.row:active{color:var(--signal)}
+[data-view="mobile"] .m-sheet a.row .n{font-family:"Space Mono",monospace;font-size:.6rem;color:var(--tx-mut)}
+[data-view="mobile"] .m-sheet a.row.here .n,[data-view="mobile"] .m-sheet a.row.here .t{color:var(--signal)}
+[data-view="mobile"] .m-sheet a.row .t{font-family:"Archivo",sans-serif;font-weight:600;font-size:.92rem;
+  letter-spacing:.005em}
+[data-view="mobile"] .m-sheet a.row.chrow{margin-top:16px;border-bottom-color:var(--ink-4);min-height:54px}
+[data-view="mobile"] .m-sheet a.row.chrow .n{color:var(--signal)}
+[data-view="mobile"] .m-sheet a.row.chrow .t{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:800;
+  text-transform:uppercase;font-size:.86rem;letter-spacing:.02em;color:#fff}
+[data-view="mobile"] .m-sheet a.row.chrow.here .t{color:var(--signal)}
+[data-view="mobile"] .m-sheet .tools{display:grid;gap:8px;margin-top:18px}
+[data-view="mobile"] .m-sheet .tools a,[data-view="mobile"] .m-sheet .tools button{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;padding:0 14px;
+  background:var(--ink-2);border:1px solid var(--ink-3);color:var(--tx);width:100%;text-align:left;
+  font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  cursor:pointer;-webkit-tap-highlight-color:transparent}
+[data-view="mobile"] .m-sheet .tools a:active,[data-view="mobile"] .m-sheet .tools button:active{
+  border-color:var(--signal);color:var(--signal)}
+[data-view="mobile"] .m-sheet .tools .go{color:var(--signal)}
+
+/* ---- lightbox + 3D viewport: keep controls clear of the notch / home bar ---- */
+[data-view="mobile"] #lb .ui{top:calc(12px + env(safe-area-inset-top));right:12px}
+[data-view="mobile"] #lb .hint{top:calc(12px + env(safe-area-inset-top));left:12px;max-width:44vw;line-height:1.35}
+[data-view="mobile"] #lb .cap{bottom:calc(14px + env(safe-area-inset-bottom))}
+[data-view="mobile"] #av .avtop{padding-top:calc(12px + env(safe-area-inset-top))}
+[data-view="mobile"] #av .avside{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+[data-view="mobile"] #av .avclose{width:44px;height:44px}
+
+/* ---- misc touch sizing ---- */
+[data-view="mobile"] .btn{min-height:48px;padding:0 20px;align-items:center}
+[data-view="mobile"] .idx2 a{padding:14px 4px;min-height:48px;grid-template-columns:46px 1fr auto}
+[data-view="mobile"] .clinks a{min-height:48px;display:flex;flex-direction:column;justify-content:center}
+[data-view="mobile"] .chips{gap:6px}
+[data-view="mobile"] .chip{font-size:.62rem}
+[data-view="mobile"] .stats{gap:22px;flex-wrap:wrap}
+[data-view="mobile"] .hero-split{min-height:52svh}
+[data-view="mobile"] .moi-band:not(.fullframe){height:clamp(200px,54vw,300px)}
+[data-view="mobile"] section:last-of-type{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+[data-view="mobile"] footer{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+/* landscape on a phone: the hero must not eat the whole screen */
+@media(max-height:520px) and (orientation:landscape){
+  [data-view="mobile"] #orbit{height:auto;min-height:0;aspect-ratio:16/9}
+  [data-view="mobile"] #orbit h1{font-size:clamp(1.5rem,6vw,2.2rem)}
+  [data-view="mobile"] .m-cue{display:none}
+}
+
+/* ---- the desktop build gets one quiet way back to the gate ---- */
+.m-switch{display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+  font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tx-mut);border-bottom:1px solid var(--ink-4);padding-bottom:6px;cursor:pointer;
+  background:none;border-top:0;border-left:0;border-right:0}
+.m-switch:hover{color:var(--signal);border-color:var(--signal)}
+.m-switch svg{width:13px;height:13px}

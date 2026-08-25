@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mohamad Hashem Dankar — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Mono:wght@400;700&display=block" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1417; --ink-2:#131C21; --ink-3:#1E2A31;
+  --paper:#EDE9E1; --paper-2:#E3DED2; --line:#C9C1B0;
+  --sig:#2C6A72; --sig-br:#4FB7C4; --warm:#A9722F;
+  --tx:#1C2529; --tx-mut:#5D5747;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:297mm 210mm;margin:0}
+html,body{background:#fff}
+body{font-family:"Spectral",Georgia,serif;color:var(--tx);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+.pg{position:relative;width:297mm;height:210mm;overflow:hidden;background:var(--paper);
+    page-break-after:always;break-after:page}
+.pg:last-child{page-break-after:auto;break-after:auto}
+.pg.dark{background:var(--ink);color:#EDF2F3}
+
+.mono{font-family:"Space Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+.arch{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
+
+/* ---------- running furniture ---------- */
+.foot{position:absolute;left:14mm;right:14mm;bottom:7mm;display:flex;justify-content:space-between;
+  align-items:center;font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--tx-mut)}
+.dark .foot{color:#7C8A91}
+.foot .pn{color:var(--sig)}
+.dark .foot .pn{color:var(--sig-br)}
+
+/* ---------- page header band ---------- */
+.hd{position:absolute;left:14mm;right:14mm;top:12mm;display:flex;align-items:baseline;gap:5mm}
+.hd .cd{font-family:"Space Mono",monospace;font-size:7pt;letter-spacing:.16em;color:var(--sig);flex:none}
+.hd h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;
+  font-size:15pt;line-height:1;letter-spacing:-.01em;color:var(--tx);flex:none}
+.dark .hd h2{color:#fff}
+.hd .rule{flex:1;height:.35mm;background:var(--line)}
+.dark .hd .rule{background:var(--ink-3)}
+.hd .tag{font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.16em;color:var(--tx-mut);
+  text-transform:uppercase;flex:none;text-align:right;max-width:78mm}
+
+/* ---------- body region under the header ---------- */
+.bd{position:absolute;left:14mm;right:14mm;top:22mm;bottom:15mm}
+
+/* ---------- text column ---------- */
+.col{width:66mm;float:left;padding-right:7mm}
+.col p{font-size:8.4pt;line-height:1.5;color:var(--tx);margin-bottom:3.4mm}
+.dark .col p{color:#D6DDDF}
+.col p b{font-weight:500}
+.col .tags{display:flex;flex-wrap:wrap;gap:1.6mm;margin-bottom:3.6mm}
+.col .tags span{font-family:"Space Mono",monospace;font-size:5.4pt;letter-spacing:.12em;text-transform:uppercase;
+  border:.3mm solid var(--line);padding:1mm 2mm;color:var(--tx-mut)}
+.dark .col .tags span{border-color:var(--ink-3);color:#94A2A8}
+.col dl{margin-top:4mm;border-top:.3mm solid var(--line)}
+.dark .col dl{border-color:var(--ink-3)}
+.col dl div{display:grid;grid-template-columns:20mm 1fr;gap:2mm;padding:1.5mm 0;border-bottom:.3mm solid var(--line)}
+.dark .col dl div{border-color:var(--ink-3)}
+.col dt{font-family:"Space Mono",monospace;font-size:5.4pt;letter-spacing:.13em;text-transform:uppercase;color:var(--sig)}
+.col dd{font-size:7.4pt;line-height:1.35;color:var(--tx)}
+.dark .col dd{color:#D6DDDF}
+
+/* ---------- figures ---------- */
+figure{position:relative;overflow:hidden;background:var(--paper-2)}
+.dark figure{background:var(--ink-2)}
+figure figcaption{position:absolute;left:0;bottom:0;font-family:"Space Mono",monospace;font-size:5pt;
+  letter-spacing:.1em;text-transform:uppercase;color:#F0F4F5;background:rgba(14,20,23,.82);padding:1.1mm 2.2mm;
+  max-width:100%}
+figure.contain{background:#fff}
+figure.contain img{object-fit:contain}
+figure.sheetbg{background:#E9E8E4}
+figure.sheetbg img{object-fit:contain}
+figure.contain2{background:var(--paper-2)}
+figure.contain2 img{object-fit:contain}
+figure.onink{background:#000}
+figure.onink img{object-fit:contain}
+
+/* any figure used as a fill layer must take its box, not its natural height */
+.bgimg>figure,.stack .hero>figure,.plate .bgimg>figure{width:100%;height:100%}
+
+/* image stack to the right of a text column */
+.stack{margin-left:66mm;height:100%;display:flex;flex-direction:column;gap:3mm}
+.stack .hero{flex:1;min-height:0;position:relative;overflow:hidden}
+.stack .hero>figure{width:100%;height:100%}
+.stack .row{height:36mm;display:grid;gap:3mm}
+.stack .row>figure{min-width:0;min-height:0}
+.stack .row.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stack .row.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.stack .row.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+/* full-width grids — minmax(0,…) everywhere, or an image's intrinsic
+   height inflates the track and the page overflows its trim */
+.grid{height:100%;display:grid;gap:3mm}
+.grid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.grid.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.grid.r1{grid-template-rows:minmax(0,1fr)}
+.grid.r2{grid-template-rows:repeat(2,minmax(0,1fr))}
+.grid.r3{grid-template-rows:repeat(3,minmax(0,1fr))}
+.grid figure{width:100%;height:100%;min-width:0;min-height:0}
+
+/* ---------- cover ---------- */
+.cover .bgimg{position:absolute;inset:0}
+.cover .scrim{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(14,20,23,.86) 0%,rgba(14,20,23,.26) 24%,rgba(14,20,23,.34) 44%,rgba(14,20,23,.84) 76%,rgba(14,20,23,.97) 100%)}
+.cover .in>.tt{margin-top:auto;margin-bottom:7mm}
+.cover .in{position:absolute;left:16mm;right:16mm;top:14mm;bottom:14mm;display:flex;flex-direction:column;
+  justify-content:space-between;color:#fff}
+.cover .kick{font-family:"Space Mono",monospace;font-size:6.4pt;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--sig-br);display:flex;align-items:center;gap:3mm}
+.cover .kick i{width:2.6mm;height:2.6mm;border:.3mm solid var(--sig-br);transform:rotate(45deg);display:block}
+.cover h1{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;
+  font-size:44pt;line-height:.9;letter-spacing:-.02em;text-shadow:0 1.5mm 9mm rgba(6,10,12,.72)}
+.cover h1 b{color:var(--sig-br);font-weight:900}
+.cover .role{font-size:12pt;margin-top:5mm;color:#DCE4E6;font-weight:300;text-shadow:0 1mm 6mm rgba(6,10,12,.8)}
+.cover .role em{font-style:italic;color:var(--sig-br)}
+.cover .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:8mm;
+  border-top:.3mm solid rgba(255,255,255,.28);padding-top:4mm;
+  font-family:"Space Mono",monospace;font-size:6pt;letter-spacing:.16em;text-transform:uppercase;color:#C3CDD1}
+.cover .meta b{color:#fff;font-weight:400;display:block;margin-bottom:1mm;letter-spacing:.16em}
+
+/* ---------- chapter divider ---------- */
+.div .bgimg{position:absolute;inset:0}
+.div .scrim{position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(14,20,23,.96) 0%,rgba(14,20,23,.86) 40%,rgba(14,20,23,.20) 100%),
+  linear-gradient(0deg,rgba(14,20,23,.90) 0%,rgba(14,20,23,.45) 12%,rgba(14,20,23,0) 26%)}
+.div .in{position:absolute;left:16mm;top:16mm;bottom:16mm;width:150mm;display:flex;flex-direction:column;
+  justify-content:center;color:#fff}
+.div .cd{font-family:"Space Mono",monospace;font-size:6.4pt;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--sig-br);margin-bottom:5mm;display:flex;align-items:center;gap:3mm}
+.div .cd i{width:2.4mm;height:2.4mm;border:.3mm solid var(--sig-br);transform:rotate(45deg);display:block}
+.div h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;
+  font-size:30pt;line-height:.94;letter-spacing:-.015em}
+.div p{margin-top:6mm;font-size:10pt;line-height:1.5;color:#D8E0E2;max-width:118mm;font-weight:300}
+.div p b{color:#fff;font-weight:500}
+.div .strip{position:absolute;left:16mm;bottom:11mm;right:16mm;display:flex;gap:9mm;align-items:baseline;
+  border-top:.3mm solid rgba(255,255,255,.25);padding-top:3.5mm;
+  font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;color:#9FADB3}
+.div .strip b{color:var(--sig-br);font-weight:400}
+.div .strip .pn{margin-left:auto;color:var(--sig-br)}
+
+/* ---------- profile ---------- */
+.prof .lead{font-size:14pt;line-height:1.42;font-weight:300;max-width:180mm;margin-bottom:7mm}
+.prof .lead b{font-weight:500}
+.prof .two{display:grid;grid-template-columns:1fr 88mm;gap:10mm}
+.prof dl{border-top:.3mm solid var(--line)}
+.prof dl div{display:grid;grid-template-columns:26mm 1fr;gap:3mm;padding:1.9mm 0;border-bottom:.3mm solid var(--line)}
+.prof dt{font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.13em;text-transform:uppercase;color:var(--sig)}
+.prof dd{font-size:8pt;line-height:1.4}
+.prof .kk{font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sig);margin-bottom:3mm}
+.prof .chips{display:flex;flex-wrap:wrap;gap:1.6mm}
+.prof .chips span{font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.1em;
+  border:.3mm solid var(--line);padding:1.2mm 2.2mm;color:var(--tx-mut)}
+.prof .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:7mm;
+  border:.3mm solid var(--line)}
+.prof .stats div{padding:3.5mm 3mm;border-right:.3mm solid var(--line)}
+.prof .stats div:last-child{border-right:0}
+.prof .stats b{display:block;font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:17pt;
+  line-height:1;color:var(--tx)}
+.prof .stats span{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tx-mut);display:block;margin-top:1.6mm}
+.prof .band{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3mm;margin-top:7mm;height:62mm}
+.prof .band figure{width:100%;height:100%}
+
+/* ---------- contents ---------- */
+.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:12mm;height:96mm}
+.toc h3{display:flex;justify-content:space-between;align-items:baseline;gap:4mm;
+  font-family:"Space Mono",monospace;font-size:5.8pt;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--sig);margin:4.5mm 0 1.5mm;padding-bottom:1.2mm;border-bottom:.3mm solid var(--line)}
+.toc h3:first-child{margin-top:0}
+.toc h3 .pp{font-size:6pt;letter-spacing:.1em}
+.toc .idxband{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3mm;height:62mm;margin-top:7mm}
+.toc .idxband figure{width:100%;height:100%;position:relative;overflow:hidden}
+.toc .idxband .lbl{position:absolute;left:0;right:0;bottom:0;padding:3mm 3mm 2.6mm;
+  background:linear-gradient(0deg,rgba(14,20,23,.96) 0%,rgba(14,20,23,.74) 46%,rgba(14,20,23,0) 100%);
+  font-family:"Archivo",sans-serif;font-weight:700;font-size:8pt;text-transform:uppercase;
+  letter-spacing:.01em;color:#fff;line-height:1.2}
+.toc .idxband .lbl b{display:block;font-family:"Space Mono",monospace;font-size:5.4pt;font-weight:400;
+  letter-spacing:.22em;color:var(--sig-br);margin-bottom:1.4mm}
+.toc a,.toc .row{display:grid;grid-template-columns:11mm 1fr 8mm;gap:2mm;align-items:baseline;
+  padding:1.25mm 0;font-size:8pt;color:var(--tx);text-decoration:none}
+.toc .n{font-family:"Space Mono",monospace;font-size:5.8pt;color:var(--tx-mut);letter-spacing:.08em}
+.toc .t{font-family:"Archivo",sans-serif;font-weight:600;font-size:8pt;letter-spacing:0}
+.toc .p{font-family:"Space Mono",monospace;font-size:6pt;color:var(--sig);text-align:right}
+
+/* ---------- full-bleed plate ---------- */
+.plate .bgimg{position:absolute;inset:0}
+.plate .cap{position:absolute;left:14mm;bottom:12mm;right:14mm;
+  font-family:"Space Mono",monospace;font-size:5.8pt;letter-spacing:.16em;text-transform:uppercase;color:#EDF2F3;
+  text-shadow:0 0 4mm rgba(0,0,0,.9)}
+.plate .cap b{color:var(--sig-br);font-weight:400}
+
+/* ---------- pipeline strip ---------- */
+.pipe{display:grid;grid-template-columns:repeat(6,1fr);gap:2.5mm;margin-bottom:4mm}
+.pipe .st{border:.3mm solid var(--line);padding:3mm 2.6mm;background:var(--paper-2)}
+.pipe .st .n{font-family:"Space Mono",monospace;font-size:5.4pt;color:var(--sig);letter-spacing:.12em}
+.pipe .st h5{font-family:"Archivo",sans-serif;font-weight:700;font-size:7pt;text-transform:uppercase;margin:1.4mm 0 1mm}
+.pipe .st p{font-family:"Space Mono",monospace;font-size:5pt;line-height:1.4;color:var(--tx-mut);letter-spacing:0}
+
+/* ---------- back cover ---------- */
+.back .in{position:absolute;left:16mm;right:16mm;top:16mm;bottom:16mm;display:flex;flex-direction:column;
+  justify-content:space-between}
+.back h2{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;
+  font-size:34pt;line-height:.94;color:#fff}
+.back h2 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transform:none;color:var(--sig-br)}
+.back .links{display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;
+  border-top:.3mm solid rgba(255,255,255,.24);padding-top:5mm;margin-top:6mm}
+.back .links .k{font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;
+  color:#8FA0A6;display:block;margin-bottom:1.8mm}
+.back .links .v{font-family:"Archivo",sans-serif;font-weight:600;font-size:11pt;color:#fff;letter-spacing:-.005em}
+.back .note{font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;
+  color:#7C8A91;line-height:1.9}
+.back .note b{color:var(--sig-br);font-weight:400}
+</style>
+</head>
+<body>
+<div id="doc"></div>
+
+<script>
+const IMG='img/';
+const F=(src,cap,cls)=>`<figure class="${cls||''}"><img src="${IMG}${src}" alt="">${cap?`<figcaption>${cap}</figcaption>`:''}</figure>`;
+
+/* ---------------------------------------------------------------- pages */
+const PAGES=[
+
+/* 1 — cover */
+{t:'cover'},
+
+/* 2 — profile */
+{t:'profile'},
+
+/* 3 — contents (filled in after numbering) */
+{t:'toc'},
+
+/* ============================ P·01 ============================ */
+{t:'div', img:'moi_dash_ad.jpg', code:'Chapter P·01 · Flagship', tocCode:'P·01',
+ title:'UAE Digital<br>Twin',
+ lede:'A national-scale digital twin of the United Arab Emirates, running in real time in <b>Unreal Engine</b>. I build the cities themselves — modelled in 3ds Max, textured in Substance, delivered through Datasmith, geolocated with GIS data.',
+ strip:['Client <b>UAE Ministry of Interior</b>','Scope <b>7 Emirates · national scale</b>','Role <b>VR content creator · 3D city pipeline</b>','Status <b>In active development</b>'],
+ toc:'UAE Digital Twin'},
+
+{t:'pipeline'},
+
+{t:'work', code:'1.2', title:'Abu Dhabi', toc:'Abu Dhabi · Reem Island',
+ tags:['Unreal Engine','3ds Max','Datasmith','GIS'],
+ text:['One island, delivered like a specimen archive. Reem Island\'s fabric was built <b>building by building</b> — each one modelled, textured, named, tagged and collision-ready — from Repton School to Reem Mall to the mosque on the corner.',
+       'The same disciplined route runs under every city in the twin: footprint extraction, low-poly massing, UV and texture, Datasmith delivery, then geolocation and blueprints in engine.'],
+ spec:[['Delivered','117 buildings · Reem Island'],['LOD','100 — 200'],['Layers','Dashboards · events · assets']],
+ hero:['reem_ue1.jpg','The island in engine · Gate Towers quarter'],
+ row:[['auh_tw3.jpg','Reem &amp; Al Maryah · in engine'],['auh_tw5.jpg','Reem Mall &amp; Gate Towers'],['auh_tw2.jpg','The tower quarter']]},
+
+{t:'gallery', code:'◆', title:'The asset vault', toc:'The asset vault · Reem Island',
+ note:'Eighteen of Reem Island\'s named buildings, pulled straight from the delivery archive — each a real engine asset with materials, night lights and collision.',
+ cols:5, rows:2, dark:true, contain:'onink',
+ items:[['reem_c01.jpg','Al Wifaq Tower'],['reem_c19.jpg','Amaya Towers'],['reem_c03.jpg','Shams Meera Towers'],
+        ['reem_c04.jpg','The Kite Residences'],['reem_c20.jpg','Marina Rise Tower'],['reem_c06.jpg','Hydra Towers'],
+        ['reem_c07.jpg','Mangrove Place'],['reem_c08.jpg','Reem Hospital'],['reem_c22.jpg','Repton School · Rose Campus'],
+        ['reem_c15.jpg','Reem Mall']]},
+
+{t:'work', code:'1.3', title:'Ajman', toc:'Ajman',
+ tags:['Reality capture','Traffic splines','Interiors'],
+ text:['The proof, one seam apart: the real Ajman corner on the left — and the same corner inside the engine on the right. <b>Same buildings, same signage lines, same curb geometry</b>, now simulation-ready.',
+       'Deeper than façades: the Ajman Museum fort and its heritage souk are walkable spaces in the twin, and the post office is modelled inside as well as out.'],
+ spec:[['Depth','Exteriors + interiors'],['Layers','Traffic simulation · asset markers']],
+ hero:['moi_realtwin.jpg','Reality | digital twin · one seam apart'], heroH:'92mm', heroCls:'contain2',
+ row:[['ajm_tw1.jpg','The city from the air'],['ajm_tw3.jpg','Resort &amp; marina quarter'],['ajm_tw2.jpg','Dhow monument · street level']],
+ row2:[['moi_post_street.jpg','Post office · traffic layer'],['moi_post_int.jpg','…and inside it'],['twin_ajm_souk_poster.jpg','Museum fort &amp; heritage souk · walked in engine']]},
+
+{t:'trio', code:'1.3', title:'One building, three ways', toc:'Ajman · the rebuild sheet',
+ note:'The same municipality building as a before-and-after rebuild sheet, as it really stands on the street, and as a finished asset inside the twin.',
+ sheet:['moi_muni.jpg','The rebuild sheet · before & after'],
+ pair:[['ajm_muni_real.jpg','Reality · photographed on the street'],['ajm_muni.jpg','The twin · standing in engine']]},
+
+{t:'gallery', code:'1.4 / 1.5', title:'Ras Al Khaimah & Fujairah', toc:'Ras Al Khaimah & Fujairah',
+ note:'The northern emirate from the mountains to the lagoon, and the east coast from the Hajar foothills to the port — every block extracted from GIS footprints, massed, textured and pinned to its real latitude.',
+ cols:3, rows:2,
+ items:[['rak_tw9.jpg','RAK · the coastal strip, high-altitude pass'],['rak_tw1.jpg','RAK · lagoon & corniche'],['rak_tw2.jpg','RAK · the peninsula'],
+        ['fjr_tw4.jpg','Fujairah · Grand Mosque axis'],['fjr_hero.jpg','Fujairah · the boulevard'],['fjr_port.jpg','Fujairah · the oil terminal']]},
+
+/* ============================ P·02 ============================ */
+{t:'div', img:'fx_gug_model2.jpg', code:'Chapter P·02 · Flagship', tocCode:'P·02',
+ title:'Museums,<br>fabricated',
+ lede:'Three Saadiyat museums taken from design surface to cast panel at <b>Fibrex Construction Group</b> — production 3D, GRC panel drawings, steel shop sheets and point verification, then onto the factory floor.',
+ strip:['Employer <b>Fibrex Construction Group</b>','Site <b>Saadiyat Island · Abu Dhabi</b>','Years <b>2022 — 23</b>','Scope <b>Production 3D · GRC · shop drawings</b>'],
+ toc:'Museums, Fabricated'},
+
+{t:'work', code:'2.1', title:'Zayed National Museum', toc:'Zayed National Museum',
+ tags:['Production 3D','Steel wings','GRC','Shop drawings'],
+ text:['The museum\'s falcon-wing towers pass through the factory as thousands of unique elements. I produced the <b>production 3D models, panel breakdowns and steel shop-drawing sheets</b> — the geometry that lets a curved monument be cast flat, tracked, trucked and re-assembled on site.',
+       'The museum opened on Saadiyat in 2025.'],
+ spec:[['Architect','Foster + Partners'],['Employer','Fibrex Construction Group'],['Status','Built · open']],
+ hero:['fx_zayed_done.jpg','Standing on Saadiyat · the finished museum'],
+ row:[['fx_zayed_struct.jpg','Wing steel · production model'],['fx_zayed_dwg.jpg','Steel shop sheet · Z8-018'],['fx_zayed_all.jpg','Panel mapping · full fabric']]},
+
+{t:'gallery', code:'2.1', title:'Down the line', toc:'Zayed · the factory floor',
+ note:'From the numbered layout to the saw, to the anchor, to the finished faceted stone — the same panel followed all the way through the works.',
+ cols:3, rows:2,
+ items:[['fx_zayed_layout.jpg','The panel layout'],['fx_zayed_brack.jpg','Bracket system'],['fx_zayed_rows.jpg','Racked in rows'],
+        ['fx_zayed_anchor.jpg','Anchor sizing · marked in review'],['fx_zayed_fact2.jpg','Steel assembly'],['fx_zayed_fact1.jpg','Factory · wing assemblies']]},
+
+{t:'work', code:'2.2', title:'Guggenheim Abu Dhabi', toc:'Guggenheim Abu Dhabi',
+ tags:['GRC panels','Point verification','Production 3D'],
+ text:['For Gehry\'s colliding cones I prepared <b>panel production models and point-cloud verification geometry</b> — the survey-grade 3D that proves each cast GRC panel matches the design surface before it leaves the yard.',
+       'Behind a single panel sits the GRC sheet, its steel sub-frame, the fixing points and the survey table that proves the cast piece lands exactly where the design says it should.'],
+ spec:[['Architect','Gehry Partners'],['Scope','GRC panel production · verification']],
+ hero:['fx_gug_model.jpg','The presentation model · colliding cones'],
+ row:[['fx_gug_3d1.jpg','Production massing'],['fx_gug_dwg_grc.jpg','GRC panel sheet'],['fx_gug_dwg_points.jpg','Fixing points']]},
+
+{t:'work', code:'2.3', title:'Natural History Museum', toc:'Natural History Museum Abu Dhabi',
+ tags:['GRC production','Panel drawings','Mecanoo'],
+ text:['Mecanoo\'s crystalline museum, taken through the mill panel by panel. I worked on the <b>production 3D models and GRC panel drawing sheets</b> behind the faceted rock-like fabric, then followed the panels onto the factory floor: molds, demolding, checking, shipping.'],
+ spec:[['Architect','Mecanoo'],['Scope','Production 3D · GRC panel sheets'],['Site','Saadiyat Island']],
+ hero:['fx_nhm_render.jpg','From the water · the stepped terraces'],
+ row:[['fx_nhm_3.jpg','Production model'],['fx_nhm_dwg.jpg','GRC panel sheet','contain2'],['fx_nhm_f1.jpg','Demolded panel','contain2']]},
+
+{t:'work', code:'2.4', title:'Amaala Red Sea Village', toc:'Amaala Red Sea Village',
+ tags:['Grasshopper','Cellular pods','KSA'],
+ text:['On the Red Sea coast, a village of cellular pods. A <b>Grasshopper definition drives the cluster</b> from design surface to castable production units, so every pod can vary while staying buildable from the same family of molds.'],
+ spec:[['Site','Amaala · Red Sea coast · KSA'],['Tooling','Grasshopper · Rhino · 3ds Max']],
+ hero:['fx_amala_1.jpg','The pod cluster'],
+ row:[['fx_amala_v1.jpg','Shoreline aerial'],['fx_amala_gh.jpg','The Grasshopper definition']]},
+
+/* ============================ P·03 ============================ */
+{t:'div', img:'rz_fix.jpg', code:'Chapter P·03 · Independent', tocCode:'P·03',
+ title:'Freelance<br>practice',
+ lede:'Design and visualisation commissions carried alone from brief to final image — each with its own client, site and character.',
+ strip:['Clients <b>Design-build · private</b>','Role <b>Design · visualisation</b>','Stage <b>Concept → client presentation</b>'],
+ toc:'Freelance Practice'},
+
+{t:'work', code:'3.1', title:'Bungalow Resort — Rize', toc:'Bungalow Resort — Rize, Türkiye',
+ tags:['Hospitality','Mountain site','Concept → client'],
+ text:['A mountain resort on a working tea plantation above Rize, drawn entirely from the tea service it sits in. The main lodge is a <b>teapot</b>; every guest unit is <b>a Turkish teacup cut in half lengthwise and laid on its side</b> — not a barrel — its curved shell stepped along the terraced slope so each roof reads as another contour of the hillside.',
+       'Developed from drone site survey through concept alternatives and eight client submissions to full presentation visuals.'],
+ spec:[['Site','Tea terraces · Rize, Türkiye'],['Program','Teacup bungalows · teapot lodge · tea workshop'],['Stage','Concept → client presentation']],
+ hero:['tk_main.jpg','The resort · on the tea terraces'],
+ row:[['tk_1.jpg','The site as found'],['rz_top.jpg','Units plotted on it'],['rz_master.jpg','Schematic sketch']]},
+
+{t:'tea', code:'3.1', title:'Teapot, teacup, workshop', toc:'Rize · the tea service'},
+
+{t:'gallery', code:'3.2 — 3.4', title:'Cinema · Library · Interiors', toc:'Cinema, Library & Interiors',
+ note:'A cinema drum with a glowing crown, a winter library in two structural characters, and residential and retail interiors.',
+ cols:3, rows:2,
+ items:[['fr_cinema1.jpg','Cinema · night crown'],['fr_cinema2.jpg','Cinema · from the boulevard'],['fr_lib1.jpg','Library · winter set'],
+        ['fr_lib2.jpg','Library · cantilever entry'],['fr_int_eur.jpg','Living · European'],['fr_int_mall.jpg','Retail atrium']]},
+
+/* ============================ P·04 ============================ */
+{t:'div', img:'at_x.jpg', code:'Chapter P·04 · Practice years', tocCode:'P·04',
+ title:'Practice<br>years',
+ lede:'Before the Gulf: architectural engineer at <b>LDRS Chehab & Partners</b>, and the university flagships that pointed straight at real time — regeneration for UNDP, heritage diagnosis, competitions for Erbil, and a virtual-reality complex before VR was the job.',
+ strip:['Practice <b>LDRS Chehab & Partners</b>','Place <b>Tripoli · Beirut · Erbil</b>','Work <b>Regeneration · heritage · competitions</b>'],
+ toc:'Practice Years'},
+
+{t:'work', code:'4.3', title:'Al Tall Regeneration — UNDP', toc:'Al Tall Regeneration — UNDP',
+ tags:['3ds Max','Corona','Ladybug / Honeybee','Photogrammetry'],
+ text:['A UNDP-backed regeneration of the Ottoman clock-tower square at the heart of Tripoli. I authored the <b>full 3D reconstruction and every visualisation</b>, then ran the science underneath: solar comfort, wind, shadow and pedestrian simulations that shaped where people would actually sit, walk and stay.',
+       'The model was rebuilt from drone photogrammetry of the real district; proposals were tested against annual comfort and wind data before a single render was framed.'],
+ spec:[['Client','UNDP · Municipality of Tripoli'],['Practice','LDRS Architects'],['Role','Full 3D · visualisation · analysis']],
+ hero:['at_1.jpg','The square, regenerated · clock-tower axis'],
+ row:[['at_3.jpg','Fountain colonnade'],['at_7.jpg','Evening · tower & pool'],['at_5.jpg','Promenade']]},
+
+{t:'gallery', code:'4.3', title:'The evidence layer', toc:'Al Tall · the evidence layer',
+ note:'Design decisions argued with data — annual comfort zones, solstice shadows, wind velocity, pedestrian stay-places and commercial heat, down to algorithmically placed café locations scored against the comfort map.',
+ cols:4, rows:2, contain:'contain',
+ items:[['at_comfort.jpg','Comfort zones · summer'],['at_annual.jpg','Annual comfort'],['at_wind.jpg','Wind velocity'],['at_shadow.jpg','Shadow hours · solstice'],
+        ['at_ped.jpg','Pedestrian stay-places'],['at_cafe.jpg','Auto-placed cafés'],['at_heat.jpg','Commercial heatmap'],['at_massplan.jpg','Photogrammetry base · the real district']]},
+
+{t:'work', code:'4.1', title:'Skyfall Pavilion', toc:'Skyfall Pavilion — Erbil',
+ tags:['Competition','VVIP palace','Perforated canopy'],
+ text:['A VVIP palace beneath a single perforated canopy — <b>“a waterfall of sky”</b> — filtering Kurdistan\'s light into a palm court. Sixteen boards carried the philosophy, sun studies, terraced gardens and plans; the court render is the argument in one image.'],
+ spec:[['Concept','شلال السماء · waterfall of sky'],['Program','Palace · gardens · reception']],
+ hero:['sky_court.jpg','The court · light through the canopy'],
+ row:[['sky_lawn.jpg','Across the lawn'],['sky_dark.jpg','Night aerial'],['sky_pano.jpg','Dusk panorama']]},
+
+{t:'work', code:'4.2', title:'Royal Complex — Erbil', toc:'Royal Complex — mall & twin towers',
+ tags:['Competition','44-page book','Retail + towers'],
+ text:['A lakeside “eyelid” mall crowned by a cable-stayed canopy, paired with <b>twin perforated towers holding a suspended sphere</b> — delivered as a full 44-page competition book: masterplan, program acts, structure studies and the renders.'],
+ spec:[['Client','Iraq Head of Ministry'],['Deliverable','Competition book · visuals']],
+ hero:['rm_hero.jpg','Across the lake · dusk'],
+ row:[['rm_esc.jpg','Atrium · under the canopy'],['rm_roof.jpg','Roof garden'],['rm_towers.jpg','The twin towers · night']]},
+
+{t:'gallery', code:'4.4 / 4.5', title:'Heritage: Mawlawiya & Mar Semaan', toc:'Mawlawiya & Mar Semaan',
+ note:'Rehabilitation of the Mevlevi lodge gardens and the old souk edge in Tripoli — drawings, BOQs and site supervision. And a field diagnosis of the 1878 Monastery of Mar Semaan in Zghorta: cracks, settlement, water and fire damage mapped on foot, then an anchoring and tie-rod plan.',
+ cols:3, rows:2,
+ items:[['mw_1.jpg','Mawlawiya · the garden, restoration study'],['mw_3.jpg','Mawlawiya · the garden court'],['mw_2.jpg','Mawlawiya · terraces, study view'],
+        ['ms_1.jpg','Mar Semaan · the monastery','contain2'],['ms_3.jpg','Mar Semaan · masonry record','contain2'],['ms_5.jpg','Mar Semaan · interior survey']]},
+
+{t:'gallery', code:'4.6 — 4.8', title:'University flagships', toc:'University flagships',
+ note:'A VR entertainment and education complex argued from a 60-person survey before a line was drawn; a stratified tower grown out of the Antalya cliff face; and a mosque folded into a green star on the El Mina corniche.',
+ cols:3, rows:2,
+ items:[['y5_th1.jpg','VR complex · night aerial'],['y5_th3.jpg','VR complex · the arena bowl'],['y5_th4.jpg','VR complex · boulevard at dusk'],
+        ['y4_sky_hero.jpg','Antalya · in site, the Düden cliffs'],['y4_sky_persp.jpg','Antalya · the two perspectives'],['y4_mosque_hero.jpg','Green Mosque · the star on the corniche']]},
+
+{t:'gallery', code:'4.9 / 4.10', title:'Rome, and the paper trail', toc:'Algoritm Rome & credentials',
+ note:'Two weeks at Sapienza University of Rome — forty hours of Algorithmic-Aided Design under Arturo Tedeschi, then forty hours designing and fabricating a smart kinetic façade. Below: the documents behind the CV.',
+ cols:4, rows:2, contain:'contain',
+ items:[['rome_1.jpg','Sapienza · the studio'],['rome_2.jpg','Fabricating the façade'],['cert_riba.jpg','RIBA · Part 1 statement'],['cert_bau.jpg','BAU · B.Arch certificate'],
+        ['cert_fibrex.jpg','Fibrex · experience certificate'],['cert_ldrs.jpg','LDRS · employment reference'],['cert_max.jpg','Autodesk · 3ds Max'],['cert_rome.jpg','Sapienza Rome · parametric program']]},
+
+/* back */
+{t:'back'}
+];
+
+/* ---------------------------------------------------------------- render */
+const R={};
+
+R.cover=()=>`
+  <div class="bgimg">${F('hero_main.jpg')}</div><div class="scrim"></div>
+  <div class="in">
+    <div>
+      <div class="kick"><i></i>Portfolio · selected works 2016 — 2026</div>
+    </div>
+    <div class="tt">
+      <h1>Mohamad Hashem<br><b>Dankar</b></h1>
+      <p class="role">Architect · VR &amp; digital twin specialist — <em>an architect who builds cities twice.</em></p>
+    </div>
+    <div class="meta">
+      <span><b>Abu Dhabi · UAE</b>hashemx98@gmail.com · +971 50 970 2901</span>
+      <span><b>Currently</b>VR Content Creator — UAE Ministry of Interior</span>
+      <span><b>Previously</b>Fibrex Construction Group · LDRS Chehab &amp; Partners</span>
+    </div>
+  </div>`;
+
+R.profile=()=>`
+  <div class="hd"><span class="cd">◆</span><h2>Profile &amp; credentials</h2><span class="rule"></span>
+    <span class="tag">Abu Dhabi · United Arab Emirates</span></div>
+  <div class="bd prof">
+    <p class="lead">Mohamad Hashem Dankar — architect (BAU, RIBA Part I), based in Abu Dhabi. <b>Six years across design practice, museum fabrication and government simulation</b>, working in English and Arabic, at every scale from a GRC bracket to a national twin.</p>
+    <div class="two">
+      <dl>
+        <div><dt>Current</dt><dd>VR Content Creator — UAE Ministry of Interior (Tahaluf Al Emarat), Abu Dhabi</dd></div>
+        <div><dt>Previously</dt><dd>Fibrex Construction Group (Saadiyat museums) · LDRS Chehab &amp; Partners, Beirut–Tripoli · freelance practice</dd></div>
+        <div><dt>Education</dt><dd>B.Arch, Beirut Arab University — validated at RIBA Part 1 level</dd></div>
+        <div><dt>Credentials</dt><dd>Autodesk Certified User — 3ds Max &amp; AutoCAD · IC3 GS5 · Sapienza Rome parametric program</dd></div>
+        <div><dt>Languages</dt><dd>Arabic · English · French</dd></div>
+        <div><dt>Contact</dt><dd>hashemx98@gmail.com · +971 50 970 2901</dd></div>
+      </dl>
+      <div>
+        <div class="kk">Toolchain</div>
+        <div class="chips">${['Unreal Engine','3ds Max','Datasmith','Substance','Rhino + Grasshopper','Revit','AutoCAD','Corona / V-Ray','Twinmotion','Unity','Ladybug / Honeybee','Photoshop','GIS workflows'].map(c=>`<span>${c}</span>`).join('')}</div>
+      </div>
+    </div>
+    <div class="stats">
+      <div><b>03</b><span>Saadiyat museums</span></div>
+      <div><b>07</b><span>Emirates in engine</span></div>
+      <div><b>117</b><span>Buildings · Reem Island</span></div>
+      <div><b>6+</b><span>Years in practice</span></div>
+    </div>
+    <div class="band">
+      ${F('moi_realtwin.jpg','P·01 · Reality | digital twin, one seam apart')}
+      ${F('fx_zayed_done.jpg','P·02 · Zayed National Museum, cast and standing')}
+      ${F('tk_main.jpg','P·03 · Bungalow resort on the tea terraces, Rize')}
+      ${F('at_1.jpg','P·04 · Al Tall square regenerated, Tripoli')}
+    </div>
+  </div>`;
+
+R.toc=(p,i,all)=>{
+  const groups=[];let cur=null;
+  all.forEach((pg,n)=>{
+    if(!pg.toc)return;
+    if(pg.t==='div'){cur={name:pg.toc,code:pg.tocCode,img:pg.img,page:n+1,items:[]};groups.push(cur)}
+    else if(cur)cur.items.push({n:pg.code,t:pg.toc,p:n+1});
+  });
+  const half=Math.ceil(groups.length/2);
+  const col=g=>g.map(gr=>
+      `<h3><span>${gr.code} · ${gr.name}</span><span class="pp">${gr.page}</span></h3>`+
+      gr.items.map(it=>`<div class="row"><span class="n">${it.n}</span><span class="t">${it.t}</span><span class="p">${it.p}</span></div>`).join('')).join('');
+  return `
+  <div class="hd"><span class="cd">◆</span><h2>Contents</h2><span class="rule"></span>
+    <span class="tag">Four chapters · twenty-two projects</span></div>
+  <div class="bd toc">
+    <div class="cols">
+      <div>${col(groups.slice(0,half))}</div>
+      <div>${col(groups.slice(half))}</div>
+    </div>
+    <div class="idxband">
+      ${groups.map(gr=>`<figure><img src="${IMG}${gr.img}" alt="">
+        <span class="lbl"><b>${gr.code}</b>${gr.name}</span></figure>`).join('')}
+    </div>
+  </div>`;
+};
+
+R.div=p=>`
+  <div class="bgimg">${F(p.img)}</div><div class="scrim"></div>
+  <div class="in">
+    <div class="cd"><i></i>${p.code}</div>
+    <h2>${p.title}</h2>
+    <p>${p.lede}</p>
+  </div>
+  <div class="strip">${p.strip.map(s=>`<span>${s}</span>`).join('')}<span class="pn">${String(p.__n).padStart(2,'0')}</span></div>`;
+
+R.work=p=>`
+  <div class="hd"><span class="cd">${p.code}</span><h2>${p.title}</h2><span class="rule"></span>
+    <span class="tag">${(p.tags||[]).join(' · ')}</span></div>
+  <div class="bd">
+    <div class="col">
+      ${p.text.map(t=>`<p>${t}</p>`).join('')}
+      ${p.spec?`<dl>${p.spec.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>`:''}
+    </div>
+    <div class="stack">
+      <div class="hero"${p.heroH?` style="flex:none;height:${p.heroH}"`:''}>${F(p.hero[0],p.hero[1],p.heroCls||'')}</div>
+      ${p.row?`<div class="row c${p.row.length}"${p.rowH?` style="height:${p.rowH}"`:''}>${p.row.map(r=>F(r[0],r[1],r[2]||'')).join('')}</div>`:''}
+      ${p.row2?`<div class="row c${p.row2.length}">${p.row2.map(r=>F(r[0],r[1],r[2]||'')).join('')}</div>`:''}
+    </div>
+  </div>`;
+
+R.gallery=p=>`
+  <div class="hd"><span class="cd">${p.code}</span><h2>${p.title}</h2><span class="rule"></span></div>
+  ${p.note?`<div style="position:absolute;left:14mm;right:14mm;top:19mm;font-size:8pt;line-height:1.45;max-width:210mm;color:${p.dark?'#C8D2D6':'var(--tx-mut)'}">${p.note}</div>`:''}
+  <div class="bd" style="top:${p.note?'30mm':'22mm'}">
+    <div class="grid g${p.cols} r${p.rows}">
+      ${p.items.map(it=>F(it[0],it[1],it[2]||p.contain||'')).join('')}
+    </div>
+  </div>`;
+
+R.trio=p=>`
+  <div class="hd"><span class="cd">${p.code}</span><h2>${p.title}</h2><span class="rule"></span></div>
+  <div style="position:absolute;left:14mm;right:14mm;top:19mm;font-size:8pt;line-height:1.45;max-width:215mm;color:var(--tx-mut)">${p.note}</div>
+  <div class="bd" style="top:31mm">
+    <div class="grid g2 r1" style="grid-template-columns:${p.cols||'118mm minmax(0,1fr)'}">
+      ${F(p.sheet[0],p.sheet[1],p.sheet[2]!==undefined?p.sheet[2]:'sheetbg')}
+      <div style="display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:3mm;min-height:0">${p.pair.map(x=>F(x[0],x[1],x[2]||'')).join('')}</div>
+    </div>
+  </div>`;
+
+R.pipeline=()=>`
+  <div class="hd"><span class="cd">1.1</span><h2>The pipeline</h2><span class="rule"></span>
+    <span class="tag">Satellite → GIS → 3ds Max → Datasmith → Unreal</span></div>
+  <div style="position:absolute;left:14mm;right:14mm;top:19mm;font-size:8pt;line-height:1.45;max-width:210mm;color:var(--tx-mut)">
+    Every city in the twin goes through the same disciplined route — built for speed, consistency and real-time performance at urban scale. When a landmark matters, it is rebuilt properly: grey massing to fully textured, night-lit asset.</div>
+  <div class="bd" style="top:30mm">
+    <div class="pipe">
+      ${[['01','Satellite / GIS','Imagery + footprints, georeferenced'],
+         ['02','2D extraction','Clean building outlines per district'],
+         ['03','3D low-poly','LOD 100–200 massing in 3ds Max'],
+         ['04','UV + texture','Box mapping · custom + emissive maps'],
+         ['05','Datasmith','Pivots, naming, tags, collisions'],
+         ['06','Unreal Engine','Geolocation · blueprints · events']]
+        .map(([n,h,t])=>`<div class="st"><span class="n">${n}</span><h5>${h}</h5><p>${t}</p></div>`).join('')}
+    </div>
+    <div class="grid g2 r1" style="height:84mm;margin-top:5mm">
+      ${F('moi_sigma.jpg','Sigma &amp; Omega towers · massing → textured night asset','onink')}
+      ${F('moi_mangroove.jpg','Mangrove complex · exploded texture set → assembled','onink')}
+    </div>
+    <div style="margin-top:6mm;font-family:'Space Mono',monospace;font-size:5.6pt;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--sig);padding-bottom:2.5mm;border-bottom:.3mm solid var(--line)">
+      The same route, emirate after emirate</div>
+    <div class="grid g3 r1" style="height:44mm;margin-top:3mm">
+      ${F('auh_tw4.jpg','Abu Dhabi · marina quarter')}
+      ${F('ajm_tw3.jpg','Ajman · resort &amp; marina quarter')}
+      ${F('fjr_center.jpg','Fujairah · city centre, in engine')}
+    </div>
+  </div>`;
+
+R.tea=p=>`
+  <div class="hd"><span class="cd">${p.code}</span><h2>${p.title}</h2><span class="rule"></span></div>
+  <div class="bd" style="top:22mm">
+    <div style="height:100%;display:grid;grid-template-columns:133mm minmax(0,1fr);grid-template-rows:100mm minmax(0,1fr);gap:3mm">
+      ${F('rz_workshop.jpg','Tea workshop · on the river terrace')}
+      <div style="grid-row:1 / span 2;display:grid;grid-template-rows:1fr 1fr;gap:3mm">
+        ${F('rz_teapot_3d.jpg','The Teapot Lodge · engine asset','contain')}
+        ${F('rz_bungalow.jpg','The Teacup Bungalow · engine asset','contain')}
+      </div>
+      <div style="padding:5mm 6mm 0 0">
+        <p style="font-size:8.6pt;line-height:1.5;margin-bottom:3.5mm">The whole resort is drawn from the tea service itself. The main lodge is a <b>teapot</b>; every guest unit is <b>a Turkish teacup cut in half lengthwise and laid on its side</b> — not a barrel — its curved shell stepped along the terraced slope so each roof reads as another contour of the hillside.</p>
+        <p style="font-size:8.6pt;line-height:1.5;color:var(--tx-mut)">The tea workshop sits lowest, on the river terrace, where the leaf comes off the slope. Both the lodge and the teacup unit exist as real 3D models — in the live portfolio you can orbit them.</p>
+        <dl style="margin-top:5mm;border-top:.3mm solid var(--line)">
+          <div style="display:grid;grid-template-columns:22mm 1fr;gap:2mm;padding:1.6mm 0;border-bottom:.3mm solid var(--line)"><dt style="font-family:'Space Mono',monospace;font-size:5.4pt;letter-spacing:.13em;text-transform:uppercase;color:var(--sig)">Site</dt><dd style="font-size:7.4pt">Tea terraces · Rize, Türkiye</dd></div>
+          <div style="display:grid;grid-template-columns:22mm 1fr;gap:2mm;padding:1.6mm 0;border-bottom:.3mm solid var(--line)"><dt style="font-family:'Space Mono',monospace;font-size:5.4pt;letter-spacing:.13em;text-transform:uppercase;color:var(--sig)">Program</dt><dd style="font-size:7.4pt">Teacup bungalows · teapot lodge · tea workshop</dd></div>
+          <div style="display:grid;grid-template-columns:22mm 1fr;gap:2mm;padding:1.6mm 0;border-bottom:.3mm solid var(--line)"><dt style="font-family:'Space Mono',monospace;font-size:5.4pt;letter-spacing:.13em;text-transform:uppercase;color:var(--sig)">Stage</dt><dd style="font-size:7.4pt">Concept → eight client submissions</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>`;
+
+R.back=()=>`
+  <div class="in">
+    <div>
+      <div class="cover kick" style="font-family:'Space Mono',monospace;font-size:6.4pt;letter-spacing:.3em;text-transform:uppercase;color:var(--sig-br)">◆ &nbsp;Contact</div>
+      <h2 style="margin-top:8mm">Let's build it <em>twice.</em></h2>
+      <div class="links">
+        <div><span class="k">Email</span><span class="v">hashemx98@gmail.com</span></div>
+        <div><span class="k">Phone / WhatsApp</span><span class="v">+971 50 970 2901</span></div>
+        <div><span class="k">Base</span><span class="v">Abu Dhabi · UAE</span></div>
+      </div>
+    </div>
+    <div class="note">
+      The live portfolio runs the same work in the browser — walkthrough film, scroll-driven photogrammetry<br>
+      and <b>real engine assets you can orbit in 3D</b>.<br><br>
+      © 2026 Mohamad Hashem Dankar &nbsp;·&nbsp; Real · Twin · N 24.4539° E 54.3773°
+    </div>
+  </div>`;
+
+/* ---------------------------------------------------------------- build */
+const doc=document.getElementById('doc');
+PAGES.forEach((p,i)=>{p.__n=i+1});
+PAGES.forEach((p,i)=>{
+  const el=document.createElement('div');
+  const dark = p.t==='cover'||p.t==='div'||p.t==='back'||p.dark;
+  el.className='pg '+p.t+(dark?' dark':'');
+  el.innerHTML=R[p.t](p,i,PAGES);
+  const plain = p.t!=='cover' && p.t!=='back' && p.t!=='div';
+  if(plain){
+    const f=document.createElement('div');
+    f.className='foot';
+    f.innerHTML=`<span>Mohamad Hashem Dankar · Architect · Portfolio 2026</span><span class="pn">${String(i+1).padStart(2,'0')}</span>`;
+    el.appendChild(f);
+  }
+  doc.appendChild(el);
+});
+document.documentElement.dataset.pages=PAGES.length;
+</script>
+</body>
+</html>
