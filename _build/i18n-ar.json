@@ -542,9 +542,6 @@
   "Switch to the desktop build": "انتقل إلى نسخة سطح المكتب",
   "Switch to the mobile build": "انتقل إلى نسخة الهاتف",
   "Scroll ▾": "مرّر ▾",
-  "Swipe · 1/2": "اسحب · 1/2",
-  "Swipe · 1/3": "اسحب · 1/3",
-  "Swipe · 1/4": "اسحب · 1/4",
   "View in 3D": "{{0}} اعرض بالأبعاد الثلاثة",
   "TAP FOR 3D": "انقر للأبعاد الثلاثة",
   "Booting 3D engine…": "جارٍ تشغيل محرّك الأبعاد الثلاثة…",
@@ -563,7 +560,11 @@
   "The base the entire regeneration was designed onto": "الأساس الذي صُمّم عليه مشروع الإحياء كله",
   "Recommended": "موصى به",
   "Fullest experience": "التجربة الأكمل",
-  "Best for your device": "الأنسب لجهازك"
+  "Best for your device": "الأنسب لجهازك",
+  "Pinch to zoom · drag to pan · double-tap to reset": "اقرص للتكبير · اسحب للتحريك · انقر مرّتين لإعادة الضبط",
+  "Download the portfolio — PDF": "{{0}} حمّل ملف الأعمال — PDF",
+  "Download the CV — PDF": "{{0}} حمّل السيرة الذاتية — PDF",
+  "47 pages · A4 landscape · twenty-two projects": "٤٧ صفحة · A4 أفقي · اثنان وعشرون مشروعًا"
  },
  "attrs": {
   "Cinematic approach from orbit into Abu Dhabi": "هبوط سينمائي من المدار إلى أبوظبي",
@@ -746,6 +747,13 @@
   "Reem Mall — Reem Island digital twin asset": "ريم مول — مجسّم التوأم الرقمي لجزيرة الريم",
   "Sorbonne University — Reem Island digital twin asset": "جامعة السوربون — مجسّم التوأم الرقمي لجزيرة الريم",
   "Y Tower — Reem Island digital twin asset": "برج Y — مجسّم التوأم الرقمي لجزيرة الريم",
-  "ADNOC Station — Reem Island digital twin asset": "محطة أدنوك — مجسّم التوأم الرقمي لجزيرة الريم"
+  "ADNOC Station — Reem Island digital twin asset": "محطة أدنوك — مجسّم التوأم الرقمي لجزيرة الريم",
+  "Previous": "السابق",
+  "Next": "التالي",
+  "Pause the reel": "إيقاف العرض مؤقتًا",
+  "Play the reel": "تشغيل العرض",
+  "Open full screen": "فتح بملء الشاشة",
+  "Open the film full screen": "فتح الفيلم بملء الشاشة",
+  "Video viewer": "عارض الفيديو"
  }
 }

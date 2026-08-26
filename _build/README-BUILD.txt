@@ -19,7 +19,9 @@ and re-run the build, or your change is lost on the next rebuild.
   i18n_extract.py   pulls the English strings out of the built index.html
   i18n_status.py    what is still English, what is runtime-only
   _mobile.css       the mobile build's stylesheet
-  _mobile.js        the mobile build's behaviour
+  _mobile.js        the mobile build's behaviour, plus two things both
+                    builds get: the "switch build" link, and the viewer
+                    that opens the film full screen
   imgdims.py        reads the pixel size of every bitmap in assets/
                     and writes img-dims.json
   img-dims.json     that map - regenerate it whenever assets change
@@ -57,6 +59,36 @@ image on it has loaded, in both builds.
 
 If you add pictures, re-run imgdims.py. build.py refuses to build if
 any <img> has no entry in the map.
+
+THE MOBILE BUILD'S THREE HABITS
+-------------------------------
+Galleries are STORY REELS, not swipe strips. A gallery used to be a row of
+87 %-wide cards you dragged through one at a time, with the next card always
+half in frame, so no single plate was ever seen whole. Each plate now takes
+the full width of the screen and the reel walks itself, a segmented bar
+across the top counting the plate down. It is still a real scroll container
+underneath — a flick works, the snap points are the browser's own, and the
+timer never does anything more exotic than call scrollTo. Hold the plate to
+freeze it, tap the pause button to stop it for good, tap the plate to open it
+full screen. A plate carrying a film is given the film's own length to run in.
+Reels stop while off-screen and while the tab is hidden. (_mobile.js §5)
+
+The FILM ENLARGES, in both builds. Every still on the page opened full screen
+when you tapped it; the clips did not, which made the film the one thing on
+the page you could not actually look at — a 16:9 band 200 px tall on a phone,
+with no transport bar, because the inline loops are deliberately chromeless.
+Each clip now carries an expand control and opens into a viewer that does have
+one, picking the clip up where the inline loop had reached and handing the
+time back on the way out. (_mobile.js initVideoViewer)
+
+The SCRUB BAND SWEEPS on a phone too. It used to collapse to one held frame
+and the caption was rewritten to admit it, which read as a band that had
+failed rather than one that was never meant to move. Sixty 100 KB JPEGs
+painted to a canvas is less work than the film two screens further down, and
+nothing is fetched until the band is within 2.5 screens. On a phone the plate
+is letterboxed at 1.16 rather than filling a portrait screen: `cover` threw
+away two thirds of every frame's width and blew the rest up three times over,
+so the band moved, but it moved as a smear. (build.py §4, _mobile.css)
 
 ARABIC
 ------
@@ -100,23 +132,73 @@ Not translated: the two PDFs and the CV, which are English documents.
 
 pdf/ - the portfolio PDF
 ------------------------
-  print.html    an older 29-page draft; the shipped document is the
-                45-page ../_pdf/print.html + ../_pdf/pages.js
-  resize.py     downsamples assets/img into ../_pdf/img via headless
-                Chrome:  python resize.py 1250 0.66   (share build)
-                         python resize.py 1650 0.82   (print build)
-  mkpdf.py      renders _pdf/print.html to PDF:
-                         python mkpdf.py Hashem-Dankar-Portfolio.pdf
-  cdp.py        minimal Chrome DevTools Protocol driver (stdlib only)
+The document is ../_pdf/print.html (the design system) + ../_pdf/pages.js
+(the pages themselves, and the two checks below). 47 pages, A4 landscape.
 
-Both scripts need print.html served over http (they load
-http://localhost:8777/_pdf/print.html), so serve the portfolio folder:
+  imgprep.py    builds ../_pdf/img — one file per picture, each one sized
+                to the box it is actually drawn into
+  mkpdf.py      renders _pdf/print.html to PDF, but only if the document
+                passes its own audit
+  dupes.py      checks every plate against every other by perceptual hash
+  cdp.py        minimal Chrome DevTools Protocol driver (stdlib only)
+  resize.py     the old flat downsampler, kept only for reference
+  print.html    an older 29-page draft, likewise
+
+Both scripts need print.html served over http, so serve the folder:
 
   python -m http.server 8777
 
-The share PDF and the print PDF differ only in the image set in
-_pdf/img, so the order is: resize at 1250/0.66, render the share PDF,
-resize at 1650/0.82, render the print PDF, then resize back to
-1250/0.66 so the folder ships with the share set.
+  cd _build/pdf
+  python imgprep.py 300 0.93   &&  python mkpdf.py Hashem-Dankar-Portfolio-print.pdf
+  python imgprep.py 200 0.89   &&  python mkpdf.py Hashem-Dankar-Portfolio.pdf
 
-Requires Python 3 and Google Chrome. Nothing else.
+The share and print editions differ only in the image set in _pdf/img, so
+build print first and finish on the share pass — that way the folder ships
+with the share set, which is what index.html links to.
+
+Requires Python 3, Pillow, and Google Chrome.
+
+THE TWO CHECKS
+--------------
+A page is a fixed canvas: text that grows has nowhere to grow into. Every
+box on every layout is therefore declared, and every grid row is computed
+from the space actually left rather than flowed and hoped for.
+
+  window.__audit()   walks the finished document and reports three faults:
+                     content that has grown out of a box with a declared
+                     height, anything that has left the page, and anything
+                     printed across the folio. mkpdf.py refuses to render
+                     while any of them is true (--force overrides).
+
+  pdf/dupes.py       the archive holds a dozen renders exported more than
+                     once under different names — auh_gate, auh_marina and
+                     auh_tw4 are one picture — so every plate is checked
+                     against every other by perceptual hash before it ships.
+
+WHY EVERY PICTURE IS SIZED SEPARATELY
+-------------------------------------
+The old pipeline shrank every picture to the same 1250 px at the same
+quality, whatever it was for: a 42 mm thumbnail carried four times the
+pixels it could show and a 297 mm full-bleed plate carried a third of what
+it needed. The document was heavy AND soft.
+
+imgprep.py asks the layout first. print.html?src=raw draws the whole
+document against the original assets and window.__boxes() reports the
+millimetre box every <img> actually occupies, plus the plate it is mounted
+on. Each file is then cut and scaled for that box and nothing else:
+
+  * a `cover` picture is pre-cropped to its box's proportion, so no pixel
+    is stored that CSS would only throw away
+  * a `contain` picture is fitted whole, after a uniform baked-in border
+    is trimmed off it — several plates arrive letterboxed in black or
+    floating in a field of studio grey, which reads as a second frame
+    drawn inside the first
+  * a render on a dark ground mounted on a dark plate is matted out to
+    the box in its own ground colour, so `contain` has nothing left to
+    letterbox and no seam can show
+  * upscaling is allowed to 2x and is followed by an unsharp mask; these
+    are nearly all renders, and a clean render upscales far better than a
+    photograph would
+  * a few frames still carry the Unreal viewport's axis gizmo in the
+    corner, and one carries the editor toolbar. Both are trimmed here
+    rather than left in a portfolio.

@@ -197,6 +197,13 @@ html.lang-ar .pgcap{text-shadow:0 2px 20px rgba(0,0,0,.6)}
 
 /* arrows point the other way when the reading direction does */
 html.lang-ar .go,html.lang-ar .lab{display:inline-block}
+/* the story reel: the strip itself is held LTR above, so the plates advance
+   in the same direction the script counts. The chrome around it is Arabic —
+   the rail flows from the right, so its chevrons and its countdown have to
+   turn round with it, or "next" points back the way you came. */
+html.lang-ar .m-rail .pv svg,html.lang-ar .m-rail .nx svg{transform:scaleX(-1)}
+html.lang-ar .m-segs i b{transform-origin:100% 50%}
+html.lang-ar .m-rail .ct{direction:ltr;unicode-bidi:isolate}
 
 /* ---- the language switch ------------------------------------------ */
 #hd-lang{

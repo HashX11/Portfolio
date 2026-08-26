@@ -60,10 +60,29 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
 @keyframes mCue{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(4px);opacity:1}}
 @media(prefers-reduced-motion:reduce){[data-view="mobile"] .m-cue span{animation:none}}
 
-/* ---- 300vh scroll-scrub band collapses to one held frame ---- */
-[data-view="mobile"] .scrub{height:auto}
-[data-view="mobile"] .scrub .ss{position:relative;height:clamp(260px,48svh,420px)}
-[data-view="mobile"] .scrub canvas{display:none}
+/* ---- 300vh scroll-scrub band: the phone sweeps the grid too ----
+   It used to collapse to one held frame here. It no longer does: the sequence
+   is 60 small JPEGs painted to a canvas, which a phone handles perfectly well,
+   and the held frame read as a mistake — a band that plainly wanted to move
+   and didn't. Same sticky viewport, same 300vh of travel, same frames. */
+[data-view="mobile"] .scrub{height:300vh}
+[data-view="mobile"] .scrub .ss{position:sticky;top:0;height:100svh}
+/* The frames are 900x506. Filling a portrait screen with `cover` throws away
+   two thirds of every frame's width and blows the remaining strip up three
+   times over — the band moved, but it moved as a smear. Letterboxed at its
+   own 16:9 the plate is close to pixel-for-pixel on a phone, and reads as a
+   piece of film held in the dark rather than as a photograph cropped wrong. */
+[data-view="mobile"] .scrub canvas,
+[data-view="mobile"] .scrub #scrubPoster{display:block;top:50%;height:auto;aspect-ratio:1.16;
+  transform:translateY(-50%);border-top:1px solid rgba(79,183,196,.20);
+  border-bottom:1px solid rgba(79,183,196,.20)}
+[data-view="mobile"] .scrub .sveil{background:linear-gradient(180deg,var(--ink) 6%,rgba(14,20,23,0) 30%,
+  rgba(14,20,23,0) 70%,var(--ink) 94%)}
+[data-view="mobile"] .scrub .cap{bottom:calc(84px + env(safe-area-inset-bottom))}
+[data-view="mobile"] .scrub .cap .in{font-size:.55rem;letter-spacing:.13em;line-height:1.7}
+@media(prefers-reduced-motion:reduce){
+  [data-view="mobile"] .scrub{height:auto}
+  [data-view="mobile"] .scrub .ss{position:relative;height:clamp(260px,48svh,420px)}}
 
 /* ---- one column everywhere; galleries become swipe strips ---- */
 [data-view="mobile"] .g-2,
@@ -85,24 +104,93 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
 [data-view="mobile"] .contact h2{font-size:clamp(1.9rem,9vw,2.6rem);line-height:1.04;margin-bottom:30px}
 [data-view="mobile"] .posterw,[data-view="mobile"] .poster{max-width:100%}
 
-/* swipe strip: a bounded horizontal region, never the page itself */
-[data-view="mobile"] .mstrip{display:flex;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;
+/* =====================================================================
+   THE STORY REEL  —  what used to be a swipe strip
+   ---------------------------------------------------------------------
+   A gallery on a phone was a row of 87 %-wide cards you had to drag one
+   at a time, and the next card always peeked in from the right, so no
+   single image was ever whole. It now runs itself: each plate takes the
+   full width of the screen, edge to edge, and the reel walks to the next
+   one on a timer with a segmented progress bar across the top — the
+   grammar every reader already knows from a phone's story viewer.
+
+   It stays a real scroller underneath, so a flick still works and the
+   snap points are the browser's own. The timer only ever calls scrollTo.
+   ===================================================================== */
+/* align-items:center, not the default stretch: the plates in one reel are
+   rarely the same height, and a stretched figure leaves its caption stranded
+   at the foot of the tallest plate in the set rather than on the picture it
+   belongs to. Centred, the stage keeps one height and each plate sits in the
+   middle of it with its caption on its own bottom edge. */
+[data-view="mobile"] .mstrip{display:flex;align-items:center;gap:0;
+  overflow-x:auto;overscroll-behavior-x:contain;
   scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
-  margin:0 -18px;padding:0 18px 2px;scrollbar-width:none}
+  margin:0 -18px;padding:0;scrollbar-width:none;background:#080C0E}
 [data-view="mobile"] .mstrip::-webkit-scrollbar{display:none}
-[data-view="mobile"] .mstrip>*{flex:0 0 87%;min-width:0;scroll-snap-align:center;margin:0}
+[data-view="mobile"] .mstrip>*{flex:0 0 100%;min-width:0;scroll-snap-align:start;margin:0}
 [data-view="mobile"] .mstrip figure{margin:0}
-[data-view="mobile"] .mstrip .ba-cap{padding-top:8px}
-.m-dots{display:none}
-[data-view="mobile"] .m-dots{display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 0 2px}
-[data-view="mobile"] .m-dots i{width:5px;height:5px;border-radius:50%;background:var(--ink-4);
-  transition:background .2s,width .2s}
-[data-view="mobile"] .m-dots i.on{background:var(--signal);width:16px;border-radius:3px}
-[data-view="mobile"] .paper .m-dots i{background:var(--paper-line)}
-[data-view="mobile"] .paper .m-dots i.on{background:var(--signal-dim)}
-[data-view="mobile"] .m-dots .lab{font-family:"Space Mono",monospace;font-size:.55rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--tx-mut);margin-left:8px}
-[data-view="mobile"] .paper .m-dots .lab{color:var(--tx-p-mut)}
+[data-view="mobile"] .mstrip .ba-cap{padding:8px 18px 0}
+[data-view="mobile"] .paper .mstrip{background:var(--paper-2)}
+
+/* the stage: the reel plus its own chrome, bled to the screen edges */
+.m-reel{display:contents}
+[data-view="mobile"] .m-reel{display:block;position:relative;margin:0 -18px}
+[data-view="mobile"] .m-reel .mstrip{margin:0}
+
+/* segmented progress, laid over the top edge of the plate */
+[data-view="mobile"] .m-segs{position:absolute;z-index:4;left:0;right:0;top:0;display:flex;gap:3px;
+  padding:8px 10px 14px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,10,12,.62),rgba(6,10,12,0))}
+[data-view="mobile"] .m-segs i{flex:1;height:2px;background:rgba(255,255,255,.28);overflow:hidden;
+  border-radius:2px;display:block}
+[data-view="mobile"] .m-segs i b{display:block;height:100%;width:0;background:var(--signal);
+  transform-origin:0 50%}
+[data-view="mobile"] .m-segs i.done b{width:100%}
+[data-view="mobile"] .m-segs i.live b{width:100%;transform:scaleX(0);
+  animation:mSeg linear forwards;animation-duration:var(--dwell,4200ms)}
+@keyframes mSeg{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+[data-view="mobile"] .m-reel.hold .m-segs i.live b{animation-play-state:paused}
+/* a light section needs a light scrim, or the bar lays a grey smudge across
+   the top of a drawing that is mostly white */
+[data-view="mobile"] .paper .m-segs{background:linear-gradient(180deg,rgba(237,233,225,.78),rgba(237,233,225,0))}
+[data-view="mobile"] .paper .m-segs i{background:rgba(28,37,41,.20)}
+[data-view="mobile"] .paper .m-segs i b{background:var(--signal-dim)}
+
+/* the live plate drifts, very slightly, for as long as it is the live plate.
+   Four seconds of a dead-still photograph is four seconds in which nothing on
+   the screen is alive; a 4 % push over the same four seconds is barely visible
+   frame to frame and unmistakable across the whole dwell. Only ever on plates
+   that already crop (`cover`) — a drawing set to `contain` would lose its own
+   edges to it. */
+@keyframes mKen{from{transform:scale(1.012)}to{transform:scale(1.055)}}
+[data-view="mobile"] .m-live figure:not(.contain):not(.natural) img,
+[data-view="mobile"] figure.m-live:not(.contain):not(.natural) img{
+  animation:mKen linear forwards;animation-duration:var(--dwell,4200ms);will-change:transform}
+[data-view="mobile"] .m-reel.hold .m-live img,
+[data-view="mobile"] .m-reel.stopped .m-live img{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){[data-view="mobile"] .m-live img{animation:none}}
+
+/* the control rail under the plate */
+[data-view="mobile"] .m-rail{display:flex;align-items:center;gap:4px;padding:9px 18px 0}
+[data-view="mobile"] .m-rail button{width:36px;height:36px;flex:none;display:flex;align-items:center;
+  justify-content:center;background:none;border:1px solid var(--ink-4);color:var(--tx-mut);
+  cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .18s,border-color .18s}
+[data-view="mobile"] .m-rail button:active{color:var(--signal);border-color:var(--signal)}
+[data-view="mobile"] .m-rail button svg{width:14px;height:14px}
+[data-view="mobile"] .m-rail .ct{font-family:"Space Mono",monospace;font-size:.55rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--tx-mut);margin:0 auto;padding:0 8px;white-space:nowrap}
+[data-view="mobile"] .m-rail .ct b{color:var(--signal);font-weight:400}
+[data-view="mobile"] .m-rail .sp{flex:1}
+[data-view="mobile"] .paper .m-rail button{border-color:var(--paper-line);color:var(--tx-p-mut)}
+[data-view="mobile"] .paper .m-rail button:active{color:var(--signal-dim);border-color:var(--signal-dim)}
+[data-view="mobile"] .paper .m-rail .ct{color:var(--tx-p-mut)}
+[data-view="mobile"] .paper .m-rail .ct b{color:var(--signal-dim)}
+/* paused by hand reads differently from paused because you are holding it */
+[data-view="mobile"] .m-reel.stopped .m-rail .pp{color:var(--signal);border-color:var(--signal)}
+[data-view="mobile"] .paper .m-reel.stopped .m-rail .pp{color:var(--signal-dim);border-color:var(--signal-dim)}
+[data-view="mobile"] .m-reel.stopped .m-segs i.live b{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){
+  [data-view="mobile"] .m-segs i.live b{animation:none;width:100%;transform:none}}
 /* the curtain reveal fights horizontal scrolling — drop it inside strips */
 [data-view="mobile"] .g.reveal figure,[data-view="mobile"] .cat.reveal figure{clip-path:none!important}
 [data-view="mobile"] .reveal{transform:none;transition:opacity .45s ease}
@@ -192,13 +280,72 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
   border-color:var(--signal);color:var(--signal)}
 [data-view="mobile"] .m-sheet .tools .go{color:var(--signal)}
 
-/* ---- lightbox + 3D viewport: keep controls clear of the notch / home bar ---- */
-[data-view="mobile"] #lb .ui{top:calc(12px + env(safe-area-inset-top));right:12px}
-[data-view="mobile"] #lb .hint{top:calc(12px + env(safe-area-inset-top));left:12px;max-width:44vw;line-height:1.35}
-[data-view="mobile"] #lb .cap{bottom:calc(14px + env(safe-area-inset-bottom))}
+/* =====================================================================
+   THE ENLARGED VIEW  —  chrome that stops fighting its own captions
+   ---------------------------------------------------------------------
+   The viewer put its instructions top-left and its four buttons top-right.
+   On a 390 px screen those two claims add up to more than the width of the
+   phone, so the zoom controls were printed straight over the end of the
+   hint. The hint has moved to the foot of the screen, where it shares a
+   single scrim with the caption and cannot reach the buttons at all.
+   ===================================================================== */
+#lb .foot{display:none}
+[data-view="mobile"] #lb{background:#080C0E}
+[data-view="mobile"] #lb .ui{top:calc(10px + env(safe-area-inset-top));right:10px;gap:6px}
+[data-view="mobile"] #lb .ui button{width:40px;height:40px;font-size:.92rem}
+[data-view="mobile"] #lb .hint,
+[data-view="mobile"] #lb .cap{position:static;max-width:none}
+[data-view="mobile"] #lb .foot{display:block;position:fixed;left:0;right:0;
+  bottom:0;z-index:302;padding:26px 16px calc(12px + env(safe-area-inset-bottom));
+  background:linear-gradient(0deg,rgba(6,10,12,.94) 34%,rgba(6,10,12,0));pointer-events:none}
+[data-view="mobile"] #lb .foot .cap{display:block;font-size:.6rem;letter-spacing:.09em;line-height:1.45;
+  color:#DCE4E6}
+[data-view="mobile"] #lb .foot .hint{display:block;margin-top:6px;font-size:.52rem;letter-spacing:.14em;
+  color:var(--tx-mut)}
+
+/* ---- 3D viewport: keep controls clear of the notch / home bar ---- */
 [data-view="mobile"] #av .avtop{padding-top:calc(12px + env(safe-area-inset-top))}
 [data-view="mobile"] #av .avside{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
 [data-view="mobile"] #av .avclose{width:44px;height:44px}
+
+/* =====================================================================
+   FILM, ENLARGED  —  both builds
+   ---------------------------------------------------------------------
+   Every still on the page opens full-screen when you tap it; the films
+   did not, which made them the one thing on the page you could not look
+   at properly. Each clip now carries an expand control, and opens into
+   its own viewer with the transport bar the inline loops deliberately
+   hide. The clip carries on from where the inline one had reached.
+   ===================================================================== */
+.vx{position:absolute;z-index:5;right:10px;top:10px;width:38px;height:38px;display:flex;
+  align-items:center;justify-content:center;background:rgba(12,18,21,.72);border:1px solid rgba(255,255,255,.26);
+  color:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent;backdrop-filter:blur(6px);
+  opacity:.72;transition:opacity .2s ease,border-color .2s ease,background .2s ease}
+.vx svg{width:15px;height:15px;display:block}
+.vx:hover,.vx:focus-visible{opacity:1;border-color:var(--signal);color:var(--signal)}
+.vx:active{opacity:1;border-color:var(--signal);color:var(--signal)}
+.curon .vx{cursor:none}
+figure.vidfig:hover .vx{opacity:1}
+.moi-band .vx,.scrub .vx{top:auto;bottom:14px;right:clamp(20px,4vw,56px)}
+[data-view="mobile"] .vx{width:42px;height:42px;opacity:.9}
+[data-view="mobile"] .moi-band .vx,[data-view="mobile"] .scrub .vx{right:14px;bottom:auto;top:10px}
+
+#vlb{position:fixed;inset:0;z-index:320;background:#080C0E;display:none;
+  align-items:center;justify-content:center;padding:0}
+#vlb.on{display:flex}
+#vlb video{max-width:100%;max-height:100%;width:auto;height:auto;background:#000;display:block}
+#vlb .vui{position:fixed;top:16px;right:16px;z-index:322;display:flex;gap:8px}
+#vlb .vui button{font-family:"Space Mono",monospace;font-size:1rem;width:44px;height:44px;
+  border:1px solid var(--ink-4);background:rgba(19,28,33,.9);color:#fff;cursor:pointer;
+  transition:border-color .15s;-webkit-tap-highlight-color:transparent}
+#vlb .vui button:hover{border-color:var(--signal)}
+#vlb .vcap{position:fixed;left:16px;right:78px;top:20px;z-index:322;font-family:"Space Mono",monospace;
+  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-mut);line-height:1.45}
+[data-view="mobile"] #vlb .vui{top:calc(10px + env(safe-area-inset-top));right:10px}
+[data-view="mobile"] #vlb .vcap{position:fixed;left:0;right:0;top:auto;
+  bottom:0;padding:26px 16px calc(14px + env(safe-area-inset-bottom));
+  background:linear-gradient(0deg,rgba(6,10,12,.94) 34%,rgba(6,10,12,0));
+  font-size:.6rem;letter-spacing:.09em;color:#DCE4E6;pointer-events:none}
 
 /* ---- misc touch sizing ---- */
 [data-view="mobile"] .btn{min-height:48px;padding:0 20px;align-items:center}
@@ -217,6 +364,26 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
   [data-view="mobile"] #orbit h1{font-size:clamp(1.5rem,6vw,2.2rem)}
   [data-view="mobile"] .m-cue{display:none}
 }
+
+/* =====================================================================
+   THE DOCUMENT, AT THE END OF THE PAGE  —  both builds
+   The PDF used to be offered only on the gate, which is the one screen a
+   reader crosses before they have seen anything worth taking away.
+   ===================================================================== */
+.cdl{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:38px;
+  padding-top:26px;border-top:1px solid var(--ink-3);max-width:900px}
+.cdl .btn.dl{margin-top:0;border-color:var(--signal);color:var(--signal);gap:10px}
+.cdl .btn.dl:hover,.cdl .btn.dl:focus-visible{background:var(--signal);color:var(--ink)}
+.cdl .btn.dl.ghost{border-color:var(--ink-4);color:var(--tx-mut)}
+.cdl .btn.dl.ghost:hover,.cdl .btn.dl.ghost:focus-visible{background:none;
+  border-color:var(--tx);color:#fff}
+.cdl .btn.dl svg{width:14px;height:14px;flex:none}
+.cdl-n{font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--tx-mut);margin-left:auto}
+[data-view="mobile"] .cdl{flex-direction:column;align-items:stretch;gap:10px;margin-top:30px}
+[data-view="mobile"] .cdl .btn.dl{justify-content:center}
+[data-view="mobile"] .cdl-n{margin-left:0;text-align:center;padding-top:4px}
+html.lang-ar .cdl-n{margin-left:0;margin-right:auto}
 
 /* ---- the desktop build gets one quiet way back to the gate ---- */
 .m-switch{display:inline-flex;align-items:center;gap:9px;margin-top:26px;

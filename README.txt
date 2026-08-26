@@ -1,4 +1,4 @@
-MOHAMAD HASHEM DANKAR - ARCHITECTURE PORTFOLIO - v8.9
+MOHAMAD HASHEM DANKAR - ARCHITECTURE PORTFOLIO - v9.0
 =====================================================
 OPEN index.html. A gate asks every time whether you are on a desktop
 or a phone, and in which language, then loads the matching build.
@@ -9,10 +9,10 @@ CONTENTS
   index.html                        the site (both builds live in here)
   mobile-preview.html               the phone build in a device frame,
                                     for wide screens
-  Hashem-Dankar-Portfolio.pdf       45-page A4 landscape - share this
-                                    one (19 MB: WhatsApp, email)
-  Hashem-Dankar-Portfolio-print.pdf same 45 pages at print resolution
-                                    (37 MB) - use this one to print
+  Hashem-Dankar-Portfolio.pdf       47-page A4 landscape monograph -
+                                    share this one (34 MB: email, drive)
+  Hashem-Dankar-Portfolio-print.pdf the same 47 pages at print
+                                    resolution (69 MB) - print this one
   apple-touch-icon.png              home-screen icon
   assets/                           images, video, 3D models, CV
   _build/                           sources that generate index.html
@@ -22,6 +22,81 @@ CONTENTS
                                     and video re-encoded for the web,
                                     file:// fallbacks stripped, git
                                     repository already initialised
+
+v9.0 CHANGES
+  THE PDF, REDESIGNED FROM NOTHING
+  - 47 pages, and every one of them laid out again from the page up. The
+    old document had a contents list running underneath a band of
+    pictures, a folio printed across a panel of type, plates letterboxed
+    on grounds that did not match them, and the same Abu Dhabi marina
+    printed three times as three different projects. All of that is gone,
+    and none of it can come back: the document now checks itself.
+  - It refuses to build if anything is wrong. window.__audit() walks
+    every finished page and reports content that has grown out of its
+    box, anything that has left the page, and anything printed across the
+    folio; mkpdf.py will not render while any of the three is true.
+  - Every picture is checked against every other by perceptual hash. The
+    archive holds a dozen renders exported more than once under different
+    names - auh_gate, auh_marina and auh_tw4 are one picture - and every
+    one of those collisions has been resolved to a different view.
+  - Every picture is now sized to the box it is actually drawn into,
+    instead of every picture in the document being shrunk to the same
+    1250 px. A thumbnail no longer carries four times the pixels it can
+    show, and a full-bleed plate no longer carries a third of what it
+    needs. Nothing in the document is soft any more.
+  - Baked-in borders come off: plates that arrived letterboxed in black,
+    or floating in a field of studio grey, or inside 15 % of white
+    margin, were reading as a second frame drawn inside the first.
+  - The chrome the renders were captured with - the Unreal viewport's
+    axis gizmo, the editor toolbar along the top of one frame - is
+    trimmed rather than shipped in a portfolio.
+  - The statement page carries no pictures at all now, and the contents
+    page carries one. Both used to carry four, thrown along the foot.
+
+  DOWNLOAD IT FROM THE PAGE, NOT ONLY FROM THE GATE
+  - The PDF was offered on the gate, which is the one screen a reader
+    crosses before they have seen anything worth taking away. It now sits
+    under the contact block as well, in both builds, beside the CV.
+
+  GALLERIES ON A PHONE RUN THEMSELVES
+  - A gallery used to be a row of 87 %-wide cards you dragged through one
+    at a time, and the next card always peeked in from the right, so no
+    single image was ever whole. Each plate now takes the full width of
+    the screen and the reel walks itself, a segmented bar across the top
+    counting the plate down, the live plate drifting very slightly for as
+    long as it is live.
+  - It is still a real scroller underneath: a flick works and the snap
+    points are the browser's own. Hold a plate to freeze it, tap the
+    pause button to stop it for good, tap the plate to open it full
+    screen, or step through with the arrows.
+  - A plate carrying a film is given the film's own length to run in.
+    Reels stop while off-screen and while the tab is hidden.
+
+  THE FILM ENLARGES
+  - Every still on the page opened full screen when you tapped it. The
+    clips did not, which made the film the one thing on the page you
+    could not actually look at: a 16:9 band 200 px tall on a phone, with
+    no transport bar, because the inline loops are deliberately
+    chromeless. Each clip now carries an expand control and opens into a
+    viewer that has one - in both builds - and hands its position back on
+    the way out, so closing it does not rewind the band underneath.
+
+  THE ENLARGED VIEW STOPPED FIGHTING ITS OWN CAPTION
+  - The viewer put its instructions at the top left and its four zoom
+    buttons at the top right. On a 390 px screen those two claims add up
+    to more than the width of the phone, so the buttons were printed
+    straight across the end of the sentence. Both lines have moved to one
+    scrim along the foot, which nothing else occupies.
+
+  THE SCRUB BAND SWEEPS ON A PHONE TOO
+  - It used to collapse to one held frame, and the caption was rewritten
+    to admit it - which read as a band that had failed rather than one
+    that was never meant to move. Same sixty frames, same 300vh of
+    travel, same canvas, on both builds.
+  - On a phone the plate is letterboxed at 1.16 rather than filled to a
+    portrait screen. Filling threw away two thirds of every frame's width
+    and blew the remaining strip up three times over: the band moved, but
+    it moved as a smear.
 
 v8.9 CHANGES
   THE FILM ON A PHONE - PROPERLY THIS TIME

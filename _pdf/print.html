@@ -2,237 +2,418 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mohamad Hashem Dankar — Portfolio</title>
+<title>Mohamad Hashem Dankar — Selected Works</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Mono:wght@400;700&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=block" rel="stylesheet">
 <style>
+/* =====================================================================
+   MOHAMAD HASHEM DANKAR — SELECTED WORKS
+   A4 landscape monograph.  297 × 210 mm.
+
+   THE GRID
+   Margin 14 mm all round; the folio sits in the bottom margin. The
+   content measure is 269 mm, divided into 12 columns of 18.75 mm with a
+   4 mm gutter. Every layout on the following pages resolves to whole
+   columns, so a plate on page 9 lines up with a plate on page 41.
+
+   THE TWO GROUNDS
+   Ink and paper, and the choice is never decorative. Ink is the engine:
+   chapter openers, the twin, film, anything lit from inside a screen.
+   Paper is the drawing board: text, plans, sheets, documents, the record.
+
+   WHY EVERY BOX IS DECLARED
+   Nothing on a page is left to find its own height. A page is a fixed
+   canvas — text that grows has nowhere to grow into, so it must be
+   measured, not flowed and hoped for. audit() at the foot of pages.js
+   walks the finished document and reports any element that has escaped
+   its box, and the build refuses to ship a document that reports one.
+   ===================================================================== */
+
 :root{
-  --ink:#0E1417; --ink-2:#131C21; --ink-3:#1E2A31; --ink-4:#2A3840;
-  --paper:#EDE9E1; --paper-2:#E3DED2; --line:#C9C1B0;
-  --sig:#2C6A72; --br:#4FB7C4; --warm:#A9722F;
-  --tx:#1C2529; --mut:#5D5747;
-  --M:13mm;
+  /* ground */
+  --ink:#0D1216; --ink-2:#131C21; --ink-3:#1D272D; --ink-4:#2A363D;
+  --paper:#F1EEE7; --paper-2:#E6E1D6; --paper-3:#DAD3C4;
+  --rule-p:#CFC7B5; --rule-i:#28343B;
+  /* ink on ground */
+  --tx-p:#161D21;  --tx-p-2:#4A4638; --tx-p-3:#6E6857;
+  --tx-i:#EDF1F2;  --tx-i-2:#9FAEB4; --tx-i-3:#6F7F86;
+  /* accent: bright on ink, deep on paper — the same hue, twice */
+  --sig:#4FB7C4; --sig-d:#1F5A63; --warm:#A9722F;
+  /* page */
+  --M:14mm;
+  --col:18.75mm;
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
 @page{size:297mm 210mm;margin:0}
-html,body{background:#fff}
-body{font-family:"Spectral",Georgia,serif;color:var(--tx);
-     -webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{background:#8A8A8A}
+body{font-family:"Spectral",Georgia,serif;color:var(--tx-p);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  text-rendering:geometricPrecision}
 img{display:block;width:100%;height:100%;object-fit:cover}
 
-.pg{position:relative;width:297mm;height:210mm;overflow:hidden;background:var(--paper);
-    page-break-after:always;break-after:page;color:var(--tx)}
+.pg{position:relative;width:297mm;height:210mm;overflow:hidden;
+  background:var(--paper);color:var(--tx-p);
+  page-break-after:always;break-after:page}
 .pg:last-child{page-break-after:auto;break-after:auto}
-.pg.dk{background:var(--ink);color:#EDF2F3}
+.pg.dk{background:var(--ink);color:var(--tx-i)}
 
 /* ---------------------------------------------------------------- atoms */
-.mono{font-family:"Space Mono",monospace;letter-spacing:.16em;text-transform:uppercase}
-.disp{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;
-      letter-spacing:-.02em;line-height:.92}
+.mono{font-family:"Space Mono",monospace;letter-spacing:.18em;text-transform:uppercase}
+.disp{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 118;font-weight:900;
+  text-transform:uppercase;letter-spacing:-.022em;line-height:.90}
 
-figure{position:relative;overflow:hidden;background:var(--paper-2);margin:0;min-width:0;min-height:0}
+/* PICTURES — exactly two kinds, and the difference is meant.
+   .cov  fills its box and crops. Photography, renders, film.
+   .plt  is a mounted sheet: contained, centred, on its own ground with a
+         hairline round it. Drawings, documents, boards, certificates —
+         anything that would be lying if it were cropped. */
+figure{position:relative;overflow:hidden;background:var(--paper-2);margin:0;
+  min-width:0;min-height:0}
 .dk figure{background:var(--ink-2)}
-figcaption{position:absolute;left:0;bottom:0;z-index:2;max-width:100%;
-  font-family:"Space Mono",monospace;font-size:4.9pt;letter-spacing:.11em;text-transform:uppercase;
-  color:#EEF3F4;background:rgba(12,17,20,.80);padding:1.1mm 2.3mm;line-height:1.35}
-figure.fit{background:#fff}          /* drawings & documents: white ground */
-figure.fit img{object-fit:contain}
-figure.fitd{background:var(--ink)}   /* renders that are already on black */
-figure.fitd img{object-fit:contain}
-figure.fitp{background:var(--paper-2)}
-figure.fitp img{object-fit:contain}
-figure.sheet{background:#E9E8E4}
-figure.sheet img{object-fit:contain}
+figure.plt{background:#FBFAF7;padding:3.2mm;border:.25mm solid var(--rule-p)}
+figure.plt img{object-fit:contain}
+.dk figure.plt{background:#F7F6F3;border-color:transparent}
+/* pure black, not near-black: several of these plates are renders that carry
+   their own black ground, and a plate one shade off draws a rectangle round
+   the picture inside the picture */
+/* No mat: imgprep has already extended each of these to the exact shape of
+   its box in the picture's own ground colour, so there is nothing left to
+   letterbox and a plate colour would only reintroduce the seam it removed. */
+figure.pltd{background:#000;padding:0;border:.25mm solid var(--rule-i)}
+figure.pltd img{object-fit:contain}
+figure.pltp{background:var(--paper-2);padding:3.2mm;border:.25mm solid var(--rule-p)}
+figure.pltp img{object-fit:contain}
 
-/* ---------------------------------------------------------------- page furniture */
-.foot{position:absolute;left:var(--M);right:var(--M);bottom:6.5mm;z-index:6;
+figcaption{position:absolute;left:0;bottom:0;z-index:3;max-width:100%;
+  font-family:"Space Mono",monospace;font-size:5.4pt;letter-spacing:.10em;
+  text-transform:uppercase;color:#EDF2F3;background:rgba(9,13,16,.82);
+  padding:1.3mm 2.6mm;line-height:1.4}
+figure.plt figcaption,figure.pltp figcaption,figure.pltd figcaption{
+  left:0;bottom:0;background:rgba(9,13,16,.86)}
+
+/* a caption that must sit under the picture, not on it */
+.ucap{font-family:"Space Mono",monospace;font-size:5.4pt;letter-spacing:.10em;
+  text-transform:uppercase;color:var(--tx-p-3);padding-top:1.6mm;line-height:1.4}
+.dk .ucap{color:var(--tx-i-3)}
+
+/* ------------------------------------------------------------ furniture */
+.foot{position:absolute;left:var(--M);right:var(--M);bottom:6mm;z-index:8;
   display:flex;justify-content:space-between;align-items:baseline;
-  font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--mut)}
-.dk .foot{color:#66757C}
-.foot .pn{color:var(--sig)}
-.dk .foot .pn{color:var(--br)}
-.foot.over{color:rgba(255,255,255,.62);text-shadow:0 0 3mm rgba(0,0,0,.9)}
-.foot.over .pn{color:var(--br)}
+  font-family:"Space Mono",monospace;font-size:5pt;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--tx-p-3)}
+.dk .foot{color:var(--tx-i-3)}
+.foot .pn{color:var(--sig-d);font-weight:700}
+.dk .foot .pn{color:var(--sig)}
+/* over a full-bleed picture the folio needs its own darkness */
+.foot.over{color:rgba(255,255,255,.66);text-shadow:0 0 2.4mm rgba(0,0,0,.95)}
+.foot.over .pn{color:var(--sig)}
 
-.hd{position:absolute;left:var(--M);right:var(--M);top:11mm;z-index:5;
-    display:flex;align-items:baseline;gap:5mm}
-.hd .cd{font-family:"Space Mono",monospace;font-size:6.6pt;letter-spacing:.18em;color:var(--sig);flex:none}
-.dk .hd .cd{color:var(--br)}
-.hd h2{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:800;text-transform:uppercase;
-  font-size:13.5pt;line-height:1;letter-spacing:-.005em;color:var(--tx);flex:none}
+/* the title block: code, title, rule, right-hand meta — one baseline */
+.hd{position:absolute;left:var(--M);right:var(--M);top:12mm;z-index:6;
+  display:flex;align-items:baseline;gap:5mm;height:6mm}
+.hd .cd{font-family:"Space Mono",monospace;font-size:6.4pt;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sig-d);flex:none;min-width:11mm}
+.dk .hd .cd{color:var(--sig)}
+.hd h2{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 112;font-weight:800;
+  text-transform:uppercase;font-size:15pt;line-height:1;letter-spacing:-.012em;
+  color:var(--tx-p);flex:none;white-space:nowrap}
 .dk .hd h2{color:#fff}
-.hd .ln{flex:1;height:.3mm;background:var(--line)}
-.dk .hd .ln{background:var(--ink-4)}
-.hd .rt{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--mut);flex:none;text-align:right;max-width:96mm}
-.dk .hd .rt{color:#84969C}
+.hd .ln{flex:1;height:.25mm;background:var(--rule-p);align-self:center}
+.dk .hd .ln{background:var(--rule-i)}
+.hd .rt{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--tx-p-3);flex:none;text-align:right;max-width:92mm}
+.dk .hd .rt{color:var(--tx-i-3)}
 
-.lead{position:absolute;left:var(--M);right:var(--M);top:18.5mm;z-index:5;
-  font-size:7.8pt;line-height:1.5;max-width:215mm;color:var(--mut)}
-.dk .lead{color:#A9B8BE}
-.lead b{color:var(--tx);font-weight:500}
+/* The lead is a standfirst, and a standfirst set in two columns makes the
+   reader jump back up the page halfway through a sentence to finish it.
+   One measure, three lines at most; anything that will not fit in three
+   lines was never a standfirst. */
+.lead{position:absolute;left:var(--M);top:20.5mm;z-index:6;width:208mm;
+  font-size:8.4pt;line-height:1.52;color:var(--tx-p-2);
+  max-height:15.5mm;overflow:hidden}
+.dk .lead{color:var(--tx-i-2)}
+.lead b{color:var(--tx-p);font-weight:600}
 .dk .lead b{color:#fff}
 
-/* body box, optionally pushed down by a lead paragraph */
-.bd{position:absolute;left:var(--M);right:var(--M);top:24mm;bottom:12.5mm;z-index:4}
-.bd.low{top:31mm}
+/* the body box: the only place a page's content is allowed to live */
+.bd{position:absolute;left:var(--M);right:var(--M);top:22.5mm;bottom:12mm;z-index:5}
+.bd.low{top:39mm}
 
-/* ---------------------------------------------------------------- grid */
-.gr{display:grid;gap:3mm;align-content:start}
-.gr.fill{height:100%}
+/* ---------------------------------------------------------------- grids */
+.gr{display:grid;gap:3.4mm;align-content:center}
+.gr.fill{height:100%;align-content:stretch}
 .gr>figure{width:100%;height:100%}
 
-/* ---------------------------------------------------------------- full bleed + panel */
+/* ------------------------------------------------------- bleed + panels */
 .bleed{position:absolute;inset:0;z-index:0}
-.bleed>figure{width:100%;height:100%}
+.bleed>figure{width:100%;height:100%;background:var(--ink)}
 .bleed img{width:100%;height:100%;object-fit:cover}
 .veil{position:absolute;inset:0;z-index:1;pointer-events:none}
 
-.panel{position:absolute;z-index:3;left:0;bottom:0;width:118mm;
-  background:rgba(12,17,20,.90);color:#EDF2F3;padding:11mm 12mm 11mm var(--M)}
-.panel .cd{font-family:"Space Mono",monospace;font-size:6pt;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--br);display:flex;align-items:center;gap:2.6mm;margin-bottom:4mm}
-.panel .cd i{width:2.2mm;height:2.2mm;border:.3mm solid var(--br);transform:rotate(45deg);display:block;flex:none}
-.panel h2{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:800;text-transform:uppercase;
-  font-size:17pt;line-height:.98;letter-spacing:-.01em;color:#fff;margin-bottom:4mm}
-.panel .tags{display:flex;flex-wrap:wrap;gap:1.4mm;margin-bottom:4mm}
-.panel .tags span{font-family:"Space Mono",monospace;font-size:4.8pt;letter-spacing:.12em;text-transform:uppercase;
-  border:.25mm solid rgba(255,255,255,.30);padding:.9mm 1.9mm;color:#B9C6CB}
-.panel p{font-size:7.6pt;line-height:1.52;color:#D3DBDE;margin-bottom:2.8mm}
-.panel p b{color:#fff;font-weight:500}
-.panel dl{margin-top:4mm;border-top:.25mm solid rgba(255,255,255,.22)}
-.panel dl div{display:grid;grid-template-columns:19mm 1fr;gap:2mm;padding:1.3mm 0;
-  border-bottom:.25mm solid rgba(255,255,255,.14)}
-.panel dt{font-family:"Space Mono",monospace;font-size:4.7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--br)}
-.panel dd{font-size:6.8pt;line-height:1.3;color:#D3DBDE}
+/* a caption for a full-bleed picture, top right, out of everything's way */
+.bcap{position:absolute;right:var(--M);top:11.5mm;z-index:4;
+  font-family:"Space Mono",monospace;font-size:5pt;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(232,240,242,.9);
+  text-shadow:0 0 2.6mm rgba(0,0,0,.95);max-width:120mm;text-align:right}
 
-/* strip of small frames along the foot of a bleed page */
-.filmstrip{position:absolute;z-index:3;right:var(--M);bottom:12mm;display:grid;gap:2.5mm}
-.filmstrip figure{border:.3mm solid rgba(255,255,255,.22)}
+/* ================================================================ COVER */
+.ly-cover .art{position:absolute;left:0;right:0;top:0;height:147mm;z-index:0;overflow:hidden}
+.ly-cover .art img{width:100%;height:100%;object-fit:cover}
+.ly-cover .art .fade{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(9,13,16,.44) 0%,rgba(9,13,16,0) 24%,
+             rgba(9,13,16,0) 66%,rgba(9,13,16,.34) 100%)}
+.ly-cover .band{position:absolute;left:0;right:0;top:147mm;bottom:0;z-index:2;
+  background:var(--ink);color:var(--tx-i)}
+/* the three bands of the title block are stacked by declaration, not by
+   flow, so the name can never be printed across the address */
+/* the box is taller than the two lines need: Archivo at .85 line-height sets
+   its own ascenders outside the line box, and a tight box clips them */
+.ly-cover .bin{position:absolute;left:var(--M);right:var(--M);top:7mm;height:32mm;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:16mm}
+.ly-cover h1{font-size:36pt;color:#fff;line-height:.85;flex:none}
+.ly-cover h1 b{color:var(--sig);font-weight:900}
+.ly-cover .rt{text-align:right;flex:none;max-width:98mm;padding-bottom:1.5mm}
+.ly-cover .role{font-size:9.6pt;line-height:1.45;color:#D5DDE0;font-weight:300}
+.ly-cover .role em{font-style:italic;color:var(--sig)}
+.ly-cover .kick{position:absolute;left:var(--M);top:11mm;z-index:3;
+  font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.34em;
+  text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:3.4mm;
+  text-shadow:0 0 3mm rgba(0,0,0,.9)}
+.ly-cover .kick i{width:2.4mm;height:2.4mm;border:.3mm solid var(--sig);
+  transform:rotate(45deg);display:block;flex:none}
+.ly-cover .edge{position:absolute;right:var(--M);top:11mm;z-index:3;
+  font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.26em;
+  text-transform:uppercase;color:rgba(255,255,255,.82);
+  text-shadow:0 0 3mm rgba(0,0,0,.9)}
+.ly-cover .meta{position:absolute;left:var(--M);right:var(--M);bottom:8.5mm;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8mm;
+  border-top:.25mm solid rgba(255,255,255,.24);padding-top:3.6mm;
+  font-family:"Space Mono",monospace;font-size:5pt;letter-spacing:.15em;
+  text-transform:uppercase;color:#A9B7BC;line-height:1.8}
+.ly-cover .meta b{color:var(--sig);font-weight:400;display:block;margin-bottom:1.2mm}
 
-/* ---------------------------------------------------------------- cover */
-.ly-cover .in{position:absolute;inset:var(--M);z-index:3;display:flex;flex-direction:column;
-  justify-content:space-between;color:#fff}
-.ly-cover .kick{font-family:"Space Mono",monospace;font-size:6pt;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--br);display:flex;align-items:center;gap:3mm}
-.ly-cover .kick i{width:2.6mm;height:2.6mm;border:.3mm solid var(--br);transform:rotate(45deg);display:block}
-.ly-cover h1{font-size:46pt;text-shadow:0 1.5mm 10mm rgba(6,10,12,.75)}
-.ly-cover h1 b{color:var(--br);font-weight:900}
-.ly-cover .role{font-size:11.5pt;margin-top:5mm;color:#DCE4E6;font-weight:300;
-  text-shadow:0 1mm 7mm rgba(6,10,12,.85)}
-.ly-cover .role em{font-style:italic;color:var(--br)}
-.ly-cover .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;
-  border-top:.3mm solid rgba(255,255,255,.30);padding-top:4mm;
-  font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.16em;text-transform:uppercase;color:#C3CDD1}
-.ly-cover .meta b{color:#fff;font-weight:400;display:block;margin-bottom:1.4mm;color:var(--br)}
+/* ============================================================ MANIFESTO
+   One page of type and nothing else. A monograph is allowed — is obliged —
+   to stop once and simply say what the work is for, and a picture put here
+   would only be a picture put here. */
+.ly-stm{background:var(--ink)}
+.ly-stm .kick{position:absolute;left:var(--M);top:24mm;z-index:3;
+  font-family:"Space Mono",monospace;font-size:5.8pt;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--sig);display:flex;align-items:center;gap:3.4mm}
+.ly-stm .kick i{width:2.4mm;height:2.4mm;border:.3mm solid var(--sig);
+  transform:rotate(45deg);display:block;flex:none}
+.ly-stm .in{position:absolute;left:var(--M);right:var(--M);top:38mm;z-index:3;height:40mm}
+.ly-stm h1{font-size:33pt;color:#fff;max-width:262mm;line-height:.94}
+.ly-stm h1 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;
+  text-transform:none;color:var(--sig);letter-spacing:0}
+.ly-stm .rule{position:absolute;left:var(--M);right:var(--M);top:92mm;height:.25mm;
+  background:var(--rule-i);z-index:3}
+.ly-stm .cols{position:absolute;left:var(--M);right:var(--M);top:100mm;z-index:3;
+  height:50mm;column-count:3;column-gap:11mm;
+  font-size:8.8pt;line-height:1.58;color:#BFCBCF;font-weight:300}
+.ly-stm .cols b{color:#fff;font-weight:500}
+.ly-stm .tally{position:absolute;left:var(--M);right:var(--M);bottom:22mm;z-index:3;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:8mm;
+  border-top:.25mm solid var(--rule-i);padding-top:5mm}
+.ly-stm .tally b{display:block;font-family:"Archivo",sans-serif;
+  font-variation-settings:"wdth" 118;font-weight:800;font-size:20pt;line-height:1;
+  color:var(--sig)}
+.ly-stm .tally span{display:block;margin-top:2.2mm;font-family:"Space Mono",monospace;
+  font-size:5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--tx-i-3)}
 
-/* ---------------------------------------------------------------- statement */
-.ly-stm .in{position:absolute;left:var(--M);right:var(--M);top:26mm;z-index:3}
-.ly-stm h1{font-size:31pt;color:#fff;max-width:245mm}
-.ly-stm h1 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transform:none;
-  color:var(--br);letter-spacing:0}
-.ly-stm p{margin-top:9mm;font-size:10.6pt;line-height:1.55;color:#C3CFD3;max-width:238mm;font-weight:300;
-  column-count:2;column-gap:12mm}
-.ly-stm p b{color:#fff;font-weight:500}
-.ly-stm .band{position:absolute;left:var(--M);right:var(--M);bottom:12.5mm;height:66mm;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;z-index:3}
-
-/* ---------------------------------------------------------------- profile */
-.prof .two{display:grid;grid-template-columns:1fr 92mm;gap:11mm}
-.prof .big{font-size:13pt;line-height:1.42;font-weight:300;margin-bottom:7mm;max-width:230mm}
-.prof .big b{font-weight:500}
-.prof dl{border-top:.3mm solid var(--line)}
-.prof dl div{display:grid;grid-template-columns:25mm 1fr;gap:3mm;padding:1.8mm 0;
-  border-bottom:.3mm solid var(--line)}
-.prof dt{font-family:"Space Mono",monospace;font-size:5.3pt;letter-spacing:.14em;text-transform:uppercase;color:var(--sig)}
-.prof dd{font-size:7.7pt;line-height:1.38}
-.prof .kk{font-family:"Space Mono",monospace;font-size:5.3pt;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--sig);margin-bottom:3mm}
-.prof .chips{display:flex;flex-wrap:wrap;gap:1.5mm;margin-bottom:6mm}
-.prof .chips span{font-family:"Space Mono",monospace;font-size:5.3pt;letter-spacing:.1em;
-  border:.3mm solid var(--line);padding:1.1mm 2mm;color:var(--mut)}
-.prof .stats{display:grid;grid-template-columns:repeat(2,1fr);border:.3mm solid var(--line)}
-.prof .stats div{padding:3mm;border-right:.3mm solid var(--line);border-bottom:.3mm solid var(--line)}
-.prof .stats div:nth-child(2n){border-right:0}
-.prof .stats div:nth-child(n+3){border-bottom:0}
-.prof .stats b{display:block;font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;
-  font-size:15pt;line-height:1;color:var(--tx)}
-.prof .stats span{font-family:"Space Mono",monospace;font-size:4.9pt;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--mut);display:block;margin-top:1.4mm}
-.prof .band{margin-top:7mm;height:56mm;display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
-
-/* ---------------------------------------------------------------- contents */
-.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:11mm;height:99mm;align-content:start}
+/* ============================================================= CONTENTS */
+/* Two columns of entries in a box of a declared height, and a picture that
+   bleeds off the right edge. The list can never reach the picture, because
+   the picture is not underneath it. */
+.ly-toc .art{position:absolute;right:0;top:0;bottom:0;width:92mm;z-index:1}
+.ly-toc .art figure{width:100%;height:100%}
+.ly-toc .art .fade{position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--paper) 0%,rgba(241,238,231,.86) 14%,
+             rgba(241,238,231,.16) 40%,rgba(241,238,231,0) 62%)}
+.ly-toc .art .cap{position:absolute;left:20mm;bottom:9mm;right:var(--M);
+  font-family:"Space Mono",monospace;font-size:5pt;letter-spacing:.17em;
+  text-transform:uppercase;color:#fff;text-shadow:0 0 3mm rgba(0,0,0,.95);line-height:1.75;
+  text-align:right}
+.ly-toc .bd{right:100mm}
+.toc .cols{display:grid;grid-template-columns:1fr 1fr;gap:8mm;height:100%;align-content:start}
 .toc h3{display:flex;justify-content:space-between;align-items:baseline;gap:4mm;
-  font-family:"Space Mono",monospace;font-size:5.4pt;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--sig);margin:4mm 0 1.2mm;padding-bottom:1mm;border-bottom:.3mm solid var(--line)}
+  font-family:"Space Mono",monospace;font-size:5.6pt;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sig-d);margin:7mm 0 2mm;
+  padding-bottom:1.6mm;border-bottom:.35mm solid var(--rule-p)}
 .toc h3:first-child{margin-top:0}
-.toc .row{display:grid;grid-template-columns:11mm 1fr 8mm;gap:2mm;align-items:baseline;padding:1.05mm 0}
-.toc .n{font-family:"Space Mono",monospace;font-size:5.4pt;color:var(--mut);letter-spacing:.06em}
-.toc .t{font-family:"Archivo",sans-serif;font-weight:600;font-size:7.6pt}
-.toc .p{font-family:"Space Mono",monospace;font-size:5.6pt;color:var(--sig);text-align:right}
-.toc .band{height:58mm;display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:6mm}
-.toc .band figure .lbl{position:absolute;left:0;right:0;bottom:0;padding:3mm 3mm 2.4mm;
-  background:linear-gradient(0deg,rgba(12,17,20,.96) 0%,rgba(12,17,20,.72) 48%,rgba(12,17,20,0) 100%);
-  font-family:"Archivo",sans-serif;font-weight:700;font-size:7.4pt;text-transform:uppercase;
-  color:#fff;line-height:1.2;z-index:2}
-.toc .band figure .lbl b{display:block;font-family:"Space Mono",monospace;font-size:5pt;font-weight:400;
-  letter-spacing:.22em;color:var(--br);margin-bottom:1.2mm}
+.toc .row{display:grid;grid-template-columns:9.5mm 1fr 7mm;gap:2mm;
+  align-items:baseline;padding:1.72mm 0;border-bottom:.2mm solid rgba(207,199,181,.42)}
+.toc .n{font-family:"Space Mono",monospace;font-size:5.4pt;color:var(--tx-p-3);letter-spacing:.04em}
+.toc .t{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 100;
+  font-weight:600;font-size:7.8pt;letter-spacing:.002em;color:var(--tx-p)}
+.toc .p{font-family:"Space Mono",monospace;font-size:5.4pt;color:var(--sig-d);text-align:right}
 
-/* ---------------------------------------------------------------- divider */
-.ly-div .in{position:absolute;left:var(--M);top:var(--M);bottom:var(--M);width:158mm;z-index:3;
-  display:flex;flex-direction:column;justify-content:center;color:#fff}
-.ly-div .num{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:900;font-size:96pt;
-  line-height:.8;color:rgba(79,183,196,.20);letter-spacing:-.04em;margin-bottom:-6mm}
-.ly-div .cd{font-family:"Space Mono",monospace;font-size:6pt;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--br);margin-bottom:5mm;display:flex;align-items:center;gap:3mm}
-.ly-div .cd i{width:2.4mm;height:2.4mm;border:.3mm solid var(--br);transform:rotate(45deg);display:block}
-.ly-div h2{font-size:32pt;color:#fff}
-.ly-div p{margin-top:6mm;font-size:9.4pt;line-height:1.52;color:#D8E0E2;max-width:124mm;font-weight:300}
-.ly-div p b{color:#fff;font-weight:500}
-.ly-div .strip{position:absolute;left:var(--M);right:var(--M);bottom:11mm;z-index:3;display:flex;gap:9mm;
-  align-items:baseline;border-top:.3mm solid rgba(255,255,255,.26);padding-top:3.2mm;
-  font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.16em;text-transform:uppercase;color:#9FADB3}
-.ly-div .strip b{color:var(--br);font-weight:400}
-.ly-div .strip .pn{margin-left:auto;color:var(--br)}
+/* ============================================================== PROFILE */
+.ly-prof .bd{bottom:88mm}
+.prof .big{font-size:12pt;line-height:1.44;font-weight:300;max-width:240mm;
+  color:var(--tx-p);margin-bottom:8mm}
+.prof .big b{font-weight:600}
+.prof .two{display:grid;grid-template-columns:1fr 84mm;gap:11mm}
+.prof dl{border-top:.25mm solid var(--rule-p)}
+.prof dl div{display:grid;grid-template-columns:24mm 1fr;gap:3mm;padding:3.4mm 0;
+  border-bottom:.25mm solid var(--rule-p)}
+.prof dt{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--sig-d);padding-top:.4mm}
+.prof dd{font-size:8pt;line-height:1.4}
+.prof .kk{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sig-d);margin-bottom:3mm}
+.prof .chips{display:flex;flex-wrap:wrap;gap:1.5mm;margin-bottom:7mm}
+.prof .chips span{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.08em;
+  border:.25mm solid var(--rule-p);padding:1.2mm 2.1mm;color:var(--tx-p-2)}
+.prof .stats{display:grid;grid-template-columns:repeat(2,1fr);
+  border-top:.25mm solid var(--rule-p);border-left:.25mm solid var(--rule-p)}
+.prof .stats div{padding:3.2mm;border-right:.25mm solid var(--rule-p);
+  border-bottom:.25mm solid var(--rule-p)}
+.prof .stats b{display:block;font-family:"Archivo",sans-serif;
+  font-variation-settings:"wdth" 118;font-weight:800;font-size:15pt;line-height:1;
+  color:var(--tx-p)}
+.prof .stats span{font-family:"Space Mono",monospace;font-size:4.9pt;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tx-p-3);display:block;margin-top:1.5mm}
+.ly-prof .band{position:absolute;left:0;right:0;bottom:11mm;height:72mm;z-index:2;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.ly-prof .band figcaption{font-size:5pt;padding:1.2mm 2.2mm}
 
-/* ---------------------------------------------------------------- text + plates */
-.tp{display:grid;grid-template-columns:74mm minmax(0,1fr);grid-template-rows:minmax(0,1fr);
-     gap:5mm;height:100%}
-.tp>.col{min-height:0;overflow:hidden}
-.tp>.st{min-height:0}
-.tp .col p{font-size:7.9pt;line-height:1.5;margin-bottom:3.2mm}
-.tp .col p b{font-weight:500}
-.tp .col dl{margin-top:4mm;border-top:.3mm solid var(--line)}
-.dk .tp .col dl{border-color:var(--ink-4)}
-.tp .col dl div{display:grid;grid-template-columns:19mm 1fr;gap:2mm;padding:1.3mm 0;border-bottom:.3mm solid var(--line)}
-.dk .tp .col dl div{border-color:var(--ink-4)}
-.tp .col dt{font-family:"Space Mono",monospace;font-size:4.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--sig)}
-.dk .tp .col dt{color:var(--br)}
-.tp .col dd{font-size:6.9pt;line-height:1.32}
-.tp .st{display:grid;gap:3mm;height:100%;min-width:0}
+/* ======================================================= CHAPTER OPENER */
+.ly-ch .in{position:absolute;left:var(--M);top:52mm;width:150mm;z-index:3;color:#fff}
+.ly-ch .cd{font-family:"Space Mono",monospace;font-size:5.8pt;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--sig);margin-bottom:6mm;
+  display:flex;align-items:center;gap:3.4mm}
+.ly-ch .cd i{width:2.4mm;height:2.4mm;border:.3mm solid var(--sig);
+  transform:rotate(45deg);display:block;flex:none}
+.ly-ch h2{font-size:36pt;color:#fff}
+.ly-ch p{margin-top:7mm;font-size:9.4pt;line-height:1.54;color:#D4DDE0;
+  max-width:128mm;font-weight:300}
+.ly-ch p b{color:#fff;font-weight:500}
+/* An outlined numeral, not a ghosted one: at 10 % white it disappeared over
+   a bright sky and muddied a dark one. A stroke reads on either. */
+.ly-ch .num{position:absolute;right:var(--M);top:34mm;z-index:3;
+  font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 125;font-weight:900;
+  font-size:112pt;line-height:.78;letter-spacing:-.05em;
+  color:transparent;-webkit-text-stroke:.42mm rgba(79,183,196,.62)}
+.ly-ch .strip{position:absolute;left:var(--M);right:var(--M);bottom:15mm;z-index:3;
+  display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8mm;
+  border-top:.25mm solid rgba(255,255,255,.26);padding-top:3.6mm;
+  font-family:"Space Mono",monospace;font-size:5pt;letter-spacing:.15em;
+  text-transform:uppercase;color:#9DACB2;line-height:1.7}
+.ly-ch .strip b{color:var(--sig);font-weight:400;display:block}
 
-/* ---------------------------------------------------------------- process strip */
-.pipe{display:grid;grid-template-columns:repeat(6,1fr);gap:2.5mm}
-.pipe .st{border:.3mm solid var(--line);padding:2.8mm 2.4mm;background:var(--paper-2)}
-.pipe .st .n{font-family:"Space Mono",monospace;font-size:5pt;color:var(--sig);letter-spacing:.14em}
-.pipe .st h5{font-family:"Archivo",sans-serif;font-weight:700;font-size:6.6pt;text-transform:uppercase;margin:1.2mm 0 .9mm}
-.pipe .st p{font-family:"Space Mono",monospace;font-size:4.6pt;line-height:1.4;color:var(--mut);letter-spacing:0}
+/* ============================================================== FEATURE */
+/* The panel is a fixed box that stops 20 mm short of the foot, so the folio
+   has a lane of its own. Nothing is ever printed across anything. */
+.ly-ft .panel{position:absolute;z-index:3;left:0;bottom:0;width:116mm;
+  background:rgba(9,13,16,.90);color:var(--tx-i);
+  padding:10mm 11mm 12mm var(--M)}
+.ly-ft .panel .cd{font-family:"Space Mono",monospace;font-size:5.8pt;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--sig);display:flex;align-items:center;gap:2.8mm;
+  margin-bottom:4mm}
+.ly-ft .panel .cd i{width:2.2mm;height:2.2mm;border:.3mm solid var(--sig);
+  transform:rotate(45deg);display:block;flex:none}
+.ly-ft .panel h2{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 112;
+  font-weight:800;text-transform:uppercase;font-size:17pt;line-height:.98;
+  letter-spacing:-.015em;color:#fff;margin-bottom:4.5mm}
+.ly-ft .panel .tags{display:flex;flex-wrap:wrap;gap:1.4mm;margin-bottom:4.5mm}
+.ly-ft .panel .tags span{font-family:"Space Mono",monospace;font-size:4.7pt;
+  letter-spacing:.12em;text-transform:uppercase;border:.25mm solid rgba(255,255,255,.3);
+  padding:1mm 2mm;color:#B4C2C7}
+.ly-ft .panel p{font-size:7.9pt;line-height:1.54;color:#CFD9DC;margin-bottom:3mm}
+.ly-ft .panel p b{color:#fff;font-weight:500}
+.ly-ft .panel dl{margin-top:4.5mm;border-top:.25mm solid rgba(255,255,255,.22)}
+.ly-ft .panel dl div{display:grid;grid-template-columns:18mm 1fr;gap:2mm;padding:1.4mm 0;
+  border-bottom:.25mm solid rgba(255,255,255,.13)}
+.ly-ft .panel dt{font-family:"Space Mono",monospace;font-size:4.6pt;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sig);padding-top:.3mm}
+.ly-ft .panel dd{font-size:6.8pt;line-height:1.32;color:#CFD9DC}
+/* small frames along the foot of a feature, clear of the panel */
+.ly-ft .film{position:absolute;z-index:3;right:var(--M);bottom:11mm;display:grid;gap:2.6mm}
+.ly-ft .film figure{border:.25mm solid rgba(255,255,255,.24)}
+.ly-ft .film figcaption{font-size:4.5pt;padding:.9mm 1.6mm;letter-spacing:.07em}
 
-/* ---------------------------------------------------------------- back */
-.ly-back .in{position:absolute;inset:var(--M);z-index:3;display:flex;flex-direction:column;justify-content:space-between}
-.ly-back h2{font-size:34pt;color:#fff}
-.ly-back h2 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transform:none;color:var(--br)}
-.ly-back .links{display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;
-  border-top:.3mm solid rgba(255,255,255,.26);padding-top:5mm;margin-top:6mm}
-.ly-back .k{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.18em;text-transform:uppercase;
-  color:#8FA0A6;display:block;margin-bottom:1.6mm}
-.ly-back .v{font-family:"Archivo",sans-serif;font-weight:600;font-size:10.5pt;color:#fff}
-.ly-back .note{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.18em;text-transform:uppercase;
-  color:#7C8A91;line-height:2}
-.ly-back .note b{color:var(--br);font-weight:400}
+/* ================================================================ PLATE */
+/* One picture, the whole page, and a single line of type. A monograph
+   needs pages that say nothing.
+
+   Two kinds. Bleed: the picture fills the sheet and takes the crop. Held:
+   the picture is shown whole, full width, floated in the dark — for the
+   frames that carry their own lettering, where a crop would cut the word
+   REALITY in half and take DIGITAL TWIN off the page entirely. */
+.ly-plate.held{background:var(--ink)}
+.ly-plate.held .hold{position:absolute;left:0;right:0;top:50%;transform:translateY(-52%);z-index:2}
+.ly-plate.held .hold img{width:100%;height:auto;display:block}
+.ly-plate.held .veil{background:linear-gradient(0deg,rgba(8,11,14,.55) 0%,rgba(8,11,14,0) 22%)!important;
+  z-index:3}
+.ly-plate .cap{position:absolute;left:var(--M);bottom:14mm;z-index:4;max-width:200mm}
+.ly-plate .cap .t{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 112;
+  font-weight:800;text-transform:uppercase;font-size:13pt;letter-spacing:-.005em;
+  color:#fff;text-shadow:0 1mm 6mm rgba(0,0,0,.8);line-height:1.02}
+.ly-plate .cap .s{margin-top:2.6mm;font-family:"Space Mono",monospace;font-size:5.2pt;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(232,240,242,.88);
+  text-shadow:0 0 3mm rgba(0,0,0,.95)}
+.ly-plate .cd{position:absolute;left:var(--M);top:11.5mm;z-index:4;
+  font-family:"Space Mono",monospace;font-size:5.4pt;letter-spacing:.26em;
+  text-transform:uppercase;color:#fff;text-shadow:0 0 3mm rgba(0,0,0,1),0 0 1mm rgba(0,0,0,1)}
+
+/* ================================================================ ESSAY */
+/* A column of type and a stack of plates. The column is 4 grid columns; the
+   stack takes the rest and its rows are declared in mm, never `auto`. */
+.es{display:grid;grid-template-columns:80mm minmax(0,1fr);gap:6mm;height:100%}
+.es>.col{min-height:0;overflow:hidden}
+.es>.st{min-height:0;display:grid;gap:3.4mm}
+.es .col p{font-size:8.1pt;line-height:1.52;margin-bottom:3.4mm}
+.es .col p b{font-weight:600}
+.es .col .kk{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sig-d);margin-bottom:2.6mm}
+.dk .es .col .kk{color:var(--sig)}
+.es .col dl{margin-top:5mm;border-top:.25mm solid var(--rule-p)}
+.dk .es .col dl{border-color:var(--rule-i)}
+.es .col dl div{display:grid;grid-template-columns:18mm 1fr;gap:2mm;padding:1.4mm 0;
+  border-bottom:.25mm solid var(--rule-p)}
+.dk .es .col dl div{border-color:var(--rule-i)}
+.es .col dt{font-family:"Space Mono",monospace;font-size:4.7pt;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sig-d);padding-top:.3mm}
+.dk .es .col dt{color:var(--sig)}
+.es .col dd{font-size:6.9pt;line-height:1.34}
+
+/* ------------------------------------------------------- process ladder */
+.pipe{display:grid;grid-template-columns:repeat(6,1fr);gap:3mm}
+.pipe .st{border-top:.5mm solid var(--sig-d);padding:2.8mm 0 0}
+.pipe .st .n{font-family:"Space Mono",monospace;font-size:5.2pt;color:var(--sig-d);
+  letter-spacing:.16em}
+.pipe .st h5{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 105;
+  font-weight:700;font-size:7.2pt;text-transform:uppercase;margin:1.6mm 0 1.2mm;
+  letter-spacing:-.002em}
+.pipe .st p{font-size:6.4pt;line-height:1.42;color:var(--tx-p-3)}
+
+/* --------------------------------------------------------- closing note */
+.note{border-top:.25mm solid var(--rule-p);padding-top:3.6mm;
+  column-gap:9mm;font-size:7.3pt;line-height:1.5;color:var(--tx-p-2)}
+.dk .note{border-color:var(--rule-i);color:var(--tx-i-2)}
+.note p{margin-bottom:2.6mm;break-inside:avoid}
+.note b{color:var(--tx-p);font-weight:600}
+.dk .note b{color:#fff}
+
+/* ================================================================= BACK */
+.ly-back .in{position:absolute;left:var(--M);right:var(--M);top:var(--M);bottom:var(--M);z-index:3}
+.ly-back .top{position:absolute;left:0;right:0;top:50%;transform:translateY(-62%)}
+.ly-back .note2{position:absolute;left:0;right:0;bottom:0}
+.ly-back h2{font-size:30pt;color:#fff;max-width:200mm}
+.ly-back h2 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;
+  text-transform:none;color:var(--sig);letter-spacing:0}
+.ly-back .links{display:grid;grid-template-columns:repeat(4,1fr);gap:8mm;
+  border-top:.25mm solid rgba(255,255,255,.26);padding-top:5mm;margin-top:7mm}
+.ly-back .k{font-family:"Space Mono",monospace;font-size:5pt;letter-spacing:.2em;
+  text-transform:uppercase;color:#8B9BA1;display:block;margin-bottom:2mm}
+.ly-back .v{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 100;
+  font-weight:600;font-size:9.6pt;color:#fff;line-height:1.3}
+.ly-back .note2{font-family:"Space Mono",monospace;font-size:5.2pt;letter-spacing:.18em;
+  text-transform:uppercase;color:#7B898F;line-height:2.1}
+.ly-back .note2 b{color:var(--sig);font-weight:400}
 </style>
 </head>
 <body>

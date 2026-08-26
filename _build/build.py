@@ -254,7 +254,14 @@ sub("""function setBtn(btn,on,word){btn.classList.toggle('on',on);btn.setAttribu
   const i=btn.querySelector('i');if(i)i.textContent=on?(word||'ON'):'OFF'}""",
     "setBtn guard")
 
-# -------------------------------- 4. scroll-scrub band: desktop build only
+# --------------------------------- 4. scroll-scrub band: both builds now
+# It was held to the desktop build and the phone kept a single still frame,
+# which read as a band that had failed rather than one that was never meant
+# to move. Sixty 100 KB JPEGs painted to a canvas is not a desktop luxury —
+# it is less work than the film that plays two screens further down — and
+# the sequence only starts fetching once the band is within 2.5 screens.
+# The one thing that still has to wait is the gate: nothing may fetch while
+# the reader is still choosing a build.
 sub("""(()=>{
 const wrap=document.getElementById('twinScrub');if(!wrap)return;""",
     """const __hdScrubInit=()=>{
@@ -266,12 +273,32 @@ sub("""sizeCv();up();
 /* ================= BEFORE/AFTER DRAG SLIDER ================= */""",
     """sizeCv();up();
 };
-/* 60 pre-baked frames + a 16 ms timer is a desktop luxury; the phone keeps the still */
-if(window.__hdWhenView)window.__hdWhenView(v=>{if(v!=='mobile')__hdScrubInit()});
+/* the phone sweeps the grid too — same frames, same 300vh of travel */
+if(window.__hdWhenView)window.__hdWhenView(()=>__hdScrubInit());
 else __hdScrubInit();
 
 /* ================= BEFORE/AFTER DRAG SLIDER ================= */""",
     "scrub close")
+
+# ------------------------------- 4b. the document, offered where the page ends
+# The portfolio PDF was only ever offered on the gate — the one screen a reader
+# passes through before they have seen any of the work, and the last moment at
+# which they want to take a copy away. It now sits under the contact block as
+# well, in both builds, beside the CV that was already there.
+sub("""      <div><span class="k">Base</span><span class="v">Abu Dhabi · UAE</span></div>
+    </div>""",
+    """      <div><span class="k">Base</span><span class="v">Abu Dhabi · UAE</span></div>
+    </div>
+    <div class="cdl reveal">
+      <a class="btn dl" href="Hashem-Dankar-Portfolio.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></svg>
+        Download the portfolio — PDF</a>
+      <a class="btn dl ghost" href="assets/Hashem-Dankar-CV.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></svg>
+        Download the CV — PDF</a>
+      <span class="cdl-n">47 pages · A4 landscape · twenty-two projects</span>
+    </div>""",
+    "contact downloads")
 
 # -------------------- 5. film: the phone plays the same clips the desktop does
 # (the ambient bands and the .vidfig clips used to sit behind a "tap to play"
