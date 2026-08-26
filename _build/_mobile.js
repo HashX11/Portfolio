@@ -178,7 +178,34 @@ function initMobile(){
      than call scrollTo. Hold it to freeze it, tap ⏸ to stop it for good,
      tap the plate to open it full-screen. ------------------------------- */
   const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const DWELL=4200, DWELL_MAX=11000;
+  const DWELL=2500, DWELL_MIN=1250, DWELL_MAX=9000;
+  const INTRO=0.58, INTRO_MIN=850;      /* the opening plate, deliberately brief */
+
+  /* ------------------------------------------------------------------ *
+   *  THE READER SETS THE PACE
+   *  A fixed dwell is a guess about a stranger, and four seconds was the
+   *  wrong guess: readers were finishing with a plate and flicking past
+   *  it well before the timer came round, which turns the timer into an
+   *  obstacle rather than a convenience.
+   *
+   *  So the reel watches instead of guessing. Every plate advanced BY
+   *  HAND before its own timer fired is a measurement of how long that
+   *  reader actually wanted it, and the dwell eases halfway toward it.
+   *  Going back teaches it nothing — that is someone returning to look
+   *  again, not someone in a hurry.
+   *
+   *  One pace for the whole page, so a reader who has flicked through
+   *  the first gallery is not made to sit through the next thirty-two at
+   *  the old speed, and it is remembered for the rest of the visit.
+   * ------------------------------------------------------------------ */
+  let PACE = DWELL;
+  try{const v=+sessionStorage.getItem('hdpace');
+      if(v>=DWELL_MIN&&v<=DWELL)PACE=v}catch(e){}
+  function learn(ms){
+    if(!(ms>200))return;                    /* a stray scroll event, not a read */
+    PACE=Math.round(Math.min(DWELL,Math.max(DWELL_MIN,PACE*0.5+ms*0.5)));
+    try{sessionStorage.setItem('hdpace',PACE)}catch(e){}
+  }
 
   function storyReel(g,kids){
     const K=kids.length;
@@ -209,18 +236,22 @@ function initMobile(){
     const PAUSE=svg('<path d="M9 5v14M15 5v14"/>',1.7);
     const PLAY='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.2v13.6L19 12z"/></svg>';
 
-    let i=0,timer=null,stopped=false,holding=false,onScreen=false;
+    let i=0,timer=null,stopped=false,holding=false,onScreen=false,shownAt=0;
 
     const width=()=>g.clientWidth||1;
     const at=()=>Math.max(0,Math.min(K-1,Math.round(g.scrollLeft/width())));
 
     /* a plate holding a film is given the film's own length to run in */
     function dwellOf(n){
-      if(RM)return DWELL;
+      if(RM)return PACE;
       const v=kids[n].querySelector('video');
       if(v&&isFinite(v.duration)&&v.duration>1)
-        return Math.min(DWELL_MAX,Math.max(DWELL,v.duration*1000+400));
-      return DWELL;
+        return Math.min(DWELL_MAX,Math.max(PACE,v.duration*1000+400));
+      /* The opening plate goes sooner than the rest. It is the only one a
+         reader arrives at without having been shown that the strip moves at
+         all, so it has to make that first move early — a plate that sits
+         still on arrival reads as a picture, not as a reel. */
+      return n===0 ? Math.max(INTRO_MIN,Math.round(PACE*INTRO)) : PACE;
     }
 
     function paint(){
@@ -239,6 +270,7 @@ function initMobile(){
       void s.offsetWidth;            /* restart the fill and the drift from zero */
       s.classList.add('live');
       kids[i].classList.add('m-live');
+      shownAt=Date.now();
     }
 
     function clear(){if(timer){clearTimeout(timer);timer=null}}
@@ -255,10 +287,22 @@ function initMobile(){
       arm();
     }
 
-    /* a flick of the thumb is the reader taking over: re-sync, re-arm */
+    /* A flick of the thumb is the reader taking over: re-sync, re-arm — and,
+       if they went FORWARD before the timer did, take the length of time they
+       actually spent on that plate as the pace they want. */
     g.addEventListener('scroll',()=>{
       clearTimeout(g._t);
-      g._t=setTimeout(()=>{const k=at();if(k!==i){i=k;paint();arm()}},90);
+      g._t=setTimeout(()=>{
+        const k=at();
+        if(k===i)return;               /* the timer's own move: already counted */
+        const fwd=(k===i+1)||(k===0&&i===K-1);
+        const ms=Date.now()-shownAt;
+        /* only a plate the reader BEAT the timer to is a measurement of how
+           long they wanted it. Slower than the dwell means the timer had
+           already fired and something else moved the strip. */
+        if(fwd&&!stopped&&ms<dwellOf(i))learn(ms);
+        i=k;paint();arm();
+      },90);
     },{passive:true});
 
     /* hold the plate to freeze it, the way a story does */
@@ -280,10 +324,19 @@ function initMobile(){
       pp.innerHTML=PAUSE;pp.setAttribute('aria-label','Pause the reel');paint();arm()}
     if(RM)stop();
 
+    /* Repaint on arrival, not only at construction. Every reel is built while
+       it is still thousands of pixels down the page, so its opening progress
+       bar ran its animation out and finished long before anybody scrolled to
+       it: you reached the reel, found a bar already full, and waited a whole
+       dwell in front of a plate that looked finished. The bar and the timer
+       now start together, at the moment the reel is actually looked at. */
     if('IntersectionObserver' in window){
       new IntersectionObserver(es=>es.forEach(e=>{
+        const was=onScreen;
         onScreen=e.isIntersecting;
-        if(onScreen)arm();else clear();
+        if(!onScreen)return clear();
+        if(!was)paint();
+        arm();
       }),{threshold:.4}).observe(g);
     }else{onScreen=true;arm()}
 
