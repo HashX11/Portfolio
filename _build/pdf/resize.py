@@ -1,7 +1,7 @@
 import sys,os,re,base64,time,json,io
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import cdp
-SITE=r"C:\Users\X11\Documents\Claude\work\Hashem-Dankar-Portfolio-v8.6"
+SITE=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # the portfolio folder
 PDFDIR=os.path.join(SITE,"_pdf"); IMGDIR=os.path.join(PDFDIR,"img")
 os.makedirs(IMGDIR,exist_ok=True)
 

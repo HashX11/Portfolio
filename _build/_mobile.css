@@ -13,8 +13,7 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
 [data-view="mobile"] #orbit .reticle,
 [data-view="mobile"] #orbit .enter-hint,
 [data-view="mobile"] #orbit .grid-ov,
-[data-view="mobile"] .scrub .shint,
-[data-view="mobile"] .contact .cbg{display:none!important}
+[data-view="mobile"] .scrub .shint{display:none!important}
 [data-view="mobile"] *{cursor:auto}
 [data-view="mobile"] figure:hover img{transform:none}
 [data-view="mobile"] #grain{opacity:.035}
@@ -44,7 +43,7 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
 [data-view="mobile"] .m-burger .bars{display:flex;flex-direction:column;gap:3px}
 [data-view="mobile"] .m-burger .bars i{display:block;width:15px;height:1.5px;background:currentColor}
 
-/* ---- orbit intro: the same descent as desktop, cropped 9:16 for the phone ---- */
+/* ---- orbit intro: the desktop descent, unaltered, framed for the phone ---- */
 [data-view="mobile"] #orbit{height:88svh;min-height:480px}
 [data-view="mobile"] #orbit .stage{inset:0;transform:none!important;transition:none}
 [data-view="mobile"] #orbit video{opacity:1;transform:none;object-fit:cover}
@@ -113,42 +112,15 @@ html[data-view="mobile"]{--m-bar:54px;--m-chip:64px}
 [data-view="mobile"] .munigrid > .sheet img{position:static;width:100%;height:auto;object-fit:contain}
 [data-view="mobile"] .munistack figure img{aspect-ratio:16/9}
 
-/* ---- film: poster until tapped, then it plays ---- */
+/* ---- film: the same clips the desktop build plays, started on scroll ---- */
 [data-view="mobile"] .vidfig video{opacity:1}
-/* ambient bands stay a still on a phone — the clip alone is 2–8 MB of decoration */
 [data-view="mobile"] .moi-band video{opacity:1;transform:scale(1.14)}
 [data-view="mobile"] .moi-band.fullframe video{transform:scale(1.22)}
-.m-play{display:none}
-[data-view="mobile"] .m-play{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:12px;border:0;background:rgba(14,20,23,.28);
-  color:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent;padding:0;
-  font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase}
-[data-view="mobile"] .m-play .ring{width:62px;height:62px;border-radius:50%;border:1px solid var(--signal);
-  background:rgba(14,20,23,.55);display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 26px rgba(0,0,0,.45)}
-[data-view="mobile"] .m-play .ring svg{width:20px;height:20px;margin-left:3px;color:var(--signal)}
-[data-view="mobile"] .m-play:active .ring{border-color:#fff;transform:scale(.96)}
-[data-view="mobile"] .m-play.off{opacity:0;pointer-events:none;transition:opacity .35s ease}
-[data-view="mobile"] .m-play .sz{opacity:.7}
+/* the phone gets the ambient wash behind the contact block too */
+[data-view="mobile"] .contact .cbg{display:block}
 
-/* ---- photogrammetry scan: 7 MB stays put until it's asked for ---- */
-[data-view="mobile"] .pgscan{height:auto}
-[data-view="mobile"] .pgscan .pgsticky{position:relative;height:auto;min-height:0}
-[data-view="mobile"] .pgscan .pghint{display:none}
-.m-scan{display:none}
-[data-view="mobile"] .m-scan{display:block;position:relative;background:var(--ink-2);border:1px solid var(--ink-3)}
-[data-view="mobile"] .m-scan img{width:100%;height:auto;display:block;opacity:.62}
-[data-view="mobile"] .m-scan .in{position:absolute;inset:0;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:14px;text-align:center;padding:22px}
-[data-view="mobile"] .m-scan .t{font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.2em;
-  text-transform:uppercase;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7)}
-[data-view="mobile"] .m-scan button{min-height:46px;padding:0 20px;background:rgba(14,20,23,.8);
-  border:1px solid var(--signal);color:var(--signal);font-family:"Space Mono",monospace;font-size:.62rem;
-  letter-spacing:.16em;text-transform:uppercase;cursor:pointer;-webkit-tap-highlight-color:transparent}
-[data-view="mobile"] .m-scan button:active{background:var(--signal);color:var(--ink)}
-[data-view="mobile"] .pgscan.m-live{height:320vh}
-[data-view="mobile"] .pgscan.m-live .pgsticky{position:sticky;top:0;height:100svh}
-[data-view="mobile"] .pgscan.m-live .pghint{display:block}
+/* ---- photogrammetry scan: loads and plays exactly as it does on desktop ---- */
+[data-view="mobile"] .pgscan .pghint{display:block}
 
 /* ---- 3D tiles: bigger tap targets, badge always visible ---- */
 [data-view="mobile"] .cat figure.has3d .b3d{font-size:.56rem;padding:5px 8px;top:6px;right:6px}

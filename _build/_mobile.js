@@ -4,7 +4,6 @@
    ===================================================================== */
 (()=>{
 const R=document.documentElement;
-const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const svg=(d,w)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w||1.5}" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 
 /* ------------------------------------------------------------------ *
@@ -25,7 +24,7 @@ function addSwitch(view){
  *  MOBILE
  * ------------------------------------------------------------------ */
 function initMobile(){
-  document.body.classList.remove('curon');
+  document.documentElement.classList.remove('curon');   /* it is set on <html> */
 
   /* ---------- 1. contents: read the page's own structure ---------- */
   const CH=[
@@ -80,7 +79,7 @@ function initMobile(){
           <a href="Hashem-Dankar-Portfolio.pdf" download>Download the PDF portfolio <span class="go">↓</span></a>
           <a href="assets/Hashem-Dankar-CV.pdf" download>Download the CV <span class="go">↓</span></a>
           <a href="mailto:hashemx98@gmail.com">Email Hashem <span class="go">→</span></a>
-          <a href="https://wa.me/971509702901" target="_blank" rel="noopener">WhatsApp <span class="go">→</span></a>
+          <a href="https://wa.me/971509702011" target="_blank" rel="noopener">WhatsApp <span class="go">→</span></a>
           <button type="button" data-desktop>Switch to the desktop build <span class="go">⤢</span></button>
         </div>
       </div>
@@ -189,58 +188,35 @@ function initMobile(){
     sync();
   });
 
-  /* ---------- 6. film: nothing downloads until it's tapped ---------- */
-  window.__mGate=true;
-  document.querySelectorAll('.vidfig').forEach(fig=>{
-    const v=fig.querySelector('video');if(!v)return;
-    const btn=document.createElement('button');
-    btn.type='button';btn.className='m-play';
-    btn.setAttribute('aria-label','Play this clip');
-    btn.innerHTML='<span class="ring" aria-hidden="true">'+svg('<path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/>')+'</span>'+
-      '<span class="t">Tap to play</span>';
-    fig.appendChild(btn);
-    btn.addEventListener('click',()=>{
-      v.dataset.mok='1';
-      btn.classList.add('off');
-      setTimeout(()=>btn.remove(),420);
-      if(window.__hdStartBand)window.__hdStartBand(v);
-      else{v.preload='auto';try{v.load()}catch(e){}v.play().catch(()=>{})}
-    });
-  });
-  /* only one clip runs at a time, and none run off-screen */
-  const vids=[...document.querySelectorAll('.vidfig video')];
+  /* ---------- 6. film: every clip plays, on arrival, as on desktop ----------
+     The page's own band loader (startBand) fetches and loops each clip when it
+     comes near the viewport; that runs here unchanged. The only thing added on
+     a phone is that a clip stops while it is off-screen, which nobody can see
+     and which saves decoding seven films at once.
+
+     What is NOT done any more: pausing the *other* clips. An earlier version
+     allowed only one at a time, and it was wrong twice over. Two clips are
+     often on screen together — the two Al Tall walkthroughs sit in a pair —
+     and IntersectionObserver hands both to the same callback, so the second
+     one stopped the first the instant it arrived. Worse, a clip stopped at
+     t=0 is not merely still: the shared fade loop ramps opacity from zero over
+     the first 0.8 s, so a clip frozen at the start renders at 6 % and reads as
+     a black box. That is why the films looked absent on a phone rather than
+     merely paused. */
+  const vids=[...document.querySelectorAll(
+    '.vidfig video, .moi-band video, .contact .cbg video')];
   if('IntersectionObserver' in window){
     const vio=new IntersectionObserver(es=>es.forEach(e=>{
       const v=e.target;
-      if(!v.dataset.mok)return;
-      if(e.isIntersecting){vids.forEach(o=>{if(o!==v&&!o.paused)o.pause()});v.play().catch(()=>{})}
-      else v.pause();
-    }),{threshold:0.25});
+      if(e.isIntersecting){
+        if(window.__hdStartBand)window.__hdStartBand(v);
+        v.play().catch(()=>{});
+      }else v.pause();
+    }),{threshold:0});          /* any sliver on screen counts as arrived */
     vids.forEach(v=>vio.observe(v));
   }
 
-  /* ---------- 7. photogrammetry scan waits to be asked ---------- */
-  const pg=document.getElementById('pgscan');
-  if(pg){
-    const ph=document.createElement('div');
-    ph.className='m-scan';
-    ph.innerHTML=
-     '<img src="assets/img/at_massplan.jpg" alt="Drone photogrammetry scan of the Al Tall district" loading="lazy">'+
-     '<div class="in"><div class="t">Drone photogrammetry · the real district</div>'+
-     '<button type="button">Load the 3D scan · 7 MB</button>'+
-     '<div class="t" style="opacity:.65">Then scroll to orbit it</div></div>';
-    pg.parentNode.insertBefore(ph,pg);
-    pg.style.display='none';
-    ph.querySelector('button').addEventListener('click',()=>{
-      ph.remove();
-      pg.style.display='';
-      pg.classList.add('m-live');
-      if(window.__hdPgInit)window.__hdPgInit();
-      pg.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
-    });
-  }
-
-  /* ---------- 7b. the scrub band is a held frame here, so say so ---------- */
+  /* ---------- 7. the scrub band is a held frame here, so say so ---------- */
   const scap=document.querySelector('.scrub .cap .in');
   if(scap)scap.innerHTML='UPLINK ACQUIRED · <b>A COUNTRY AS LIVING DATA</b>';
 

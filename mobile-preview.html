@@ -10,7 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Spectral:ital,wght@0,300;0,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script>
 /* a real phone never needs the frame — send it straight into the mobile build */
-if(matchMedia('(max-width:899px)').matches) location.replace('index.html?view=mobile');
+/* carry the reader's language through the frame, and on to the full-width
+   links, so choosing Arabic on the gate is not undone by the preview */
+const LQ=(()=>{const l=new URLSearchParams(location.search).get('lang');
+  return (l==='ar'||l==='en')?('&lang='+l):''})();
+if(matchMedia('(max-width:899px)').matches) location.replace('index.html?view=mobile'+LQ);
 </script>
 <style>
 :root{--ink:#0E1417;--ink-2:#131C21;--ink-3:#1E2A31;--ink-4:#2A3840;
@@ -61,19 +65,19 @@ h1 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transf
   <p>You asked for the mobile build on a wide screen, so here it is at real phone width — every breakpoint honest, nothing faked.</p>
   <ul>
     <li>One column · swipe galleries</li>
-    <li>Tap-to-play film, nothing preloaded</li>
+    <li>Every clip plays on arrival, one at a time</li>
     <li>Contents sheet in thumb reach</li>
     <li>The 3D viewer, full screen</li>
   </ul>
   <div class="acts">
-    <a href="index.html?view=mobile&amp;frame=1" target="_blank" rel="noopener">Open it full width <span class="go">↗</span></a>
+    <a href="index.html?view=mobile&amp;frame=1" id="mpFull" target="_blank" rel="noopener">Open it full width <span class="go">↗</span></a>
     <button type="button" id="toDesktop">Go to the desktop build <span class="go">→</span></button>
     <a href="Hashem-Dankar-Portfolio.pdf" download>Download the PDF portfolio <span class="go">↓</span></a>
   </div>
 </div>
 
 <div class="device">
-  <iframe src="index.html?view=mobile&amp;frame=1" title="Mobile build of the portfolio"
+  <iframe id="mpFrame" src="index.html?view=mobile&amp;frame=1" title="Mobile build of the portfolio"
           allow="fullscreen"></iframe>
   <span class="cap">390 × 844 · iPhone class</span>
 </div>
@@ -81,8 +85,56 @@ h1 em{font-family:"Spectral",serif;font-style:italic;font-weight:300;text-transf
 <script>
 document.getElementById('toDesktop').addEventListener('click',()=>{
   try{localStorage.setItem('hdView','desktop')}catch(e){}
-  location.href='index.html?view=desktop';
+  location.href='index.html?view=desktop'+LQ;
 });
+</script>
+<script>
+(()=>{
+  if(!LQ)return;
+  const f=document.getElementById('mpFrame'), a=document.getElementById('mpFull');
+  if(f)f.src=f.getAttribute('src')+LQ;
+  if(a)a.href=a.getAttribute('href')+LQ;
+})();
+</script>
+
+<script>
+/* This helper page has eight strings of its own; the full dictionary would be
+   heavier than the page. They live here, keyed the same way. */
+(()=>{
+  if(LQ!=='&lang=ar')return;
+  const R=document.documentElement;R.lang='ar';R.dir='rtl';
+  const f=document.createElement('link');f.rel='stylesheet';
+  f.href='https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800'+
+         '&family=IBM+Plex+Sans+Arabic:wght@400;500;600'+
+         '&family=Noto+Naskh+Arabic:wght@400..700&display=swap';
+  document.head.appendChild(f);
+  const st=document.createElement('style');
+  st.textContent=
+    'body{font-family:"Noto Naskh Arabic","Segoe UI",Tahoma,serif}'+
+    'h1,.side h1{font-family:"Almarai","Segoe UI",Tahoma,sans-serif;font-stretch:normal}'+
+    '.k,li,.acts a,.acts button,.cap{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}'+
+    '*{letter-spacing:normal!important}.k,li,.acts a,.acts button,.cap{text-transform:none}';
+  document.head.appendChild(st);
+  const T={
+   'Mobile build · preview':'نسخة الهاتف · معاينة',
+   'This is the phoneversion.':'هذه هي نسخة<br><em>الهاتف.</em>',
+   'You asked for the mobile build on a wide screen, so here it is at real phone width — every breakpoint honest, nothing faked.':
+     'طلبت نسخة الهاتف على شاشة عريضة، وها هي بعرض هاتف حقيقي — كل نقطة تحوّل صادقة، ولا شيء مُصطنع.',
+   'One column · swipe galleries':'عمود واحد · معارض تُتصفَّح باللمس',
+   'Every clip plays on arrival, one at a time':'كل مقطع يعمل عند وصولك إليه، واحدًا تلو الآخر',
+   'Contents sheet in thumb reach':'قائمة المحتويات في متناول الإبهام',
+   'The 3D viewer, full screen':'عارض الأبعاد الثلاثة، بملء الشاشة',
+   'Open it full width ↗':'افتحها بالعرض الكامل ↖',
+   'Go to the desktop build →':'انتقل إلى نسخة سطح المكتب ←',
+   'Download the PDF portfolio ↓':'حمّل ملف الأعمال PDF ↓',
+   '390 × 844 · iPhone class':'390 × 844 · بمقاس iPhone'
+  };
+  document.title='محمد هاشم دنكر — نسخة الهاتف';
+  document.querySelectorAll('.k,h1,p,li,.acts a,.acts button,.cap').forEach(e=>{
+    const k=(e.textContent||'').replace(/\s+/g,' ').trim();
+    if(T[k])e.innerHTML=T[k];
+  });
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+/* =====================================================================
+   ANCHOR NAVIGATION — the CSS half (see _nav.js)
+   Belt and braces: _nav.js drives every in-page link itself, but a native
+   jump can still happen (a middle-click restore, a browser "find on page",
+   a reader with scripting off), and those must not land under the fixed
+   top bar either.
+   ===================================================================== */
+html{
+  /* the fixed top bar is ~54–62 px; keep a heading clear of it */
+  scroll-padding-top:76px;
+}
+@media(max-width:900px){html{scroll-padding-top:64px}}
+
+/* the sticky scenes own the whole viewport — they read right flush */
+#pgscan,.scrub{scroll-margin-top:0}
+
+/* a project heading is a two-line block; give it a little air above */
+.mv[id],section[id],.wrap[id]{scroll-margin-top:8px}

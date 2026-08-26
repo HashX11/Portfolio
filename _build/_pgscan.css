@@ -1,0 +1,56 @@
+/* =====================================================================
+   AL TALL PHOTOGRAMMETRY SCAN — the viewport dressing
+   The WebGL half lives in _pgscan.js. This is the glass in front of it:
+   capture brackets, a slow scan line, a live flight readout and a
+   vignette, so the section reads as an instrument rather than a canvas.
+   ===================================================================== */
+
+/* a longer track = a slower, more deliberate reveal. The scene is sticky,
+   so this is scroll distance, not page content. */
+.pgscan{height:560vh}
+
+/* corner brackets — the frame of the capture */
+.pgframe{position:absolute;inset:0;z-index:3;pointer-events:none;
+  padding:clamp(56px,9vh,96px) clamp(16px,3.5vw,46px)}
+.pgframe i{position:absolute;width:clamp(18px,2.2vw,30px);height:clamp(18px,2.2vw,30px);
+  border:1px solid rgba(79,183,196,.55);opacity:.9;transition:border-color .6s ease}
+.pgframe .tl{top:clamp(56px,9vh,96px);left:clamp(16px,3.5vw,46px);border-right:0;border-bottom:0}
+.pgframe .tr{top:clamp(56px,9vh,96px);right:clamp(16px,3.5vw,46px);border-left:0;border-bottom:0}
+.pgframe .bl{bottom:clamp(56px,9vh,96px);left:clamp(16px,3.5vw,46px);border-right:0;border-top:0}
+.pgframe .br{bottom:clamp(56px,9vh,96px);right:clamp(16px,3.5vw,46px);border-left:0;border-top:0}
+.pgscan.pg-built .pgframe i{border-color:rgba(255,255,255,.42)}
+
+/* one soft band travelling down the glass, slowly */
+.pgscanline{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.5;
+  background:linear-gradient(180deg,transparent 44%,rgba(79,183,196,.16) 50%,transparent 56%);
+  background-size:100% 260%;
+  animation:pgScanSweep 7.5s linear infinite;
+  mix-blend-mode:screen}
+@keyframes pgScanSweep{from{background-position:0 -130%}to{background-position:0 130%}}
+
+/* pull the corners of the frame down so the mesh sits in a pool of light */
+.pgsticky::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 82% 70% at 50% 46%,transparent 40%,rgba(6,10,12,.55) 100%)}
+
+/* live flight readout, next to the section name */
+.pgtel{display:flex;align-items:center;gap:clamp(10px,1.6vw,20px);margin-left:auto;
+  font-family:"Space Mono",monospace;font-size:.58rem;letter-spacing:.16em;
+  text-transform:uppercase;color:#8D9BA2;white-space:nowrap}
+.pgtel b{color:var(--signal);font-weight:400;font-variant-numeric:tabular-nums}
+.pgtel .ph{color:var(--signal);border:1px solid var(--signal-dim);padding:3px 8px;letter-spacing:.2em}
+.pgscan.pg-built .pgtel .ph{color:#fff;border-color:rgba(255,255,255,.3)}
+
+@media(max-width:900px){
+  .pgtel{width:100%;margin-left:0;justify-content:flex-start;font-size:.52rem;gap:12px}
+}
+@media(max-width:640px){
+  .pgscan{height:420vh}
+  .pgstats{font-size:.54rem;gap:12px}
+  .pgtel span:not(.ph){display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .pgscan{height:auto}
+  .pgsticky{position:relative;height:clamp(380px,62vh,620px)}
+  .pghint{display:none;animation:none}
+  .pgscanline{animation:none;opacity:.25}
+}

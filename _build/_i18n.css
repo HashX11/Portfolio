@@ -1,0 +1,250 @@
+/* =====================================================================
+   ARABIC — typography and right-to-left
+   Everything here is scoped to html.lang-ar; the English build is
+   untouched. See _i18n.js for how the text itself is swapped.
+   ===================================================================== */
+
+/* ---- the faces -----------------------------------------------------
+   Archivo / Spectral / Space Mono have no Arabic coverage at all, so every
+   element that asks for one of them needs a counterpart: a strong geometric
+   sans for display, a naskh for reading, and a clean sans standing in for the
+   mono - there is no monospace tradition in Arabic, and a faked one reads as
+   broken. The three lists below are generated from every selector in the base
+   stylesheet that names one of the Latin faces, so nothing is left behind
+   falling back to whatever the operating system happens to have. */
+html.lang-ar body,
+html.lang-ar .big,
+html.lang-ar .lede,
+html.lang-ar .mvp,
+html.lang-ar .sub,
+html.lang-ar .gsub,
+html.lang-ar #gate .gcard p,
+html.lang-ar .spec dd,
+html.lang-ar .dtable dd,
+html.lang-ar .clinks .v,
+html.lang-ar p,
+html.lang-ar li,
+html.lang-ar dd,
+html.lang-ar blockquote{
+  font-family:"Noto Naskh Arabic","Segoe UI",Tahoma,serif;
+}
+html.lang-ar body{font-size:17px;line-height:1.95}
+
+html.lang-ar .topbar .brand,
+html.lang-ar .hero-intro h1,
+html.lang-ar .hero-title h1,
+html.lang-ar .stat b,
+html.lang-ar .sec-head h2,
+html.lang-ar .p-head h3,
+html.lang-ar .mv h3,
+html.lang-ar .pipe .st h5,
+html.lang-ar .band b,
+html.lang-ar .idx2 .nm,
+html.lang-ar .flag .ov h4,
+html.lang-ar .contact h2,
+html.lang-ar .clinks .v,
+html.lang-ar #orbit h1,
+html.lang-ar #av .avtop h3,
+html.lang-ar .emname,
+html.lang-ar .pgname,
+html.lang-ar #gate h1,
+html.lang-ar #gate .gcard h2,
+html.lang-ar .m-sheet .head h2,
+html.lang-ar .m-chip .nm,
+html.lang-ar .m-sheet a.row .t,
+html.lang-ar .m-sheet a.row.chrow .t{
+  font-family:"Almarai","Segoe UI",Tahoma,sans-serif;
+  font-stretch:normal;
+}
+
+html.lang-ar .mono,
+html.lang-ar .topbar nav a,
+html.lang-ar .hero-split .lbl,
+html.lang-ar .stat span,
+html.lang-ar .kicker,
+html.lang-ar .datum,
+html.lang-ar .tag,
+html.lang-ar .spec dt,
+html.lang-ar figure figcaption,
+html.lang-ar .pair .plbl,
+html.lang-ar .pipe .st .n,
+html.lang-ar .pipe .st p,
+html.lang-ar .ba-cap,
+html.lang-ar .band span,
+html.lang-ar .idx2 h4,
+html.lang-ar .idx2 .code,
+html.lang-ar .idx2 .mt,
+html.lang-ar .flag .ov .code,
+html.lang-ar .dtable dt,
+html.lang-ar .chip,
+html.lang-ar .btn,
+html.lang-ar .clinks .k,
+html.lang-ar footer,
+html.lang-ar #lb .ui button,
+html.lang-ar #lb .cap,
+html.lang-ar #lb .hint,
+html.lang-ar .moi-band .cap .in,
+html.lang-ar .scrub .cap .in,
+html.lang-ar .scrub .shint,
+html.lang-ar .basld .ba-lbl,
+html.lang-ar #rail a,
+html.lang-ar #orbit .kick,
+html.lang-ar #orbit .enter-hint,
+html.lang-ar #orbit .tele,
+html.lang-ar .cat figure.has3d .b3d,
+html.lang-ar .strip .lab,
+html.lang-ar #av .avtop .sys,
+html.lang-ar #av .avtop .cd,
+html.lang-ar #av .avclose,
+html.lang-ar #av .avload,
+html.lang-ar #av .avhud,
+html.lang-ar #av .avctl button,
+html.lang-ar #av .avside .lab,
+html.lang-ar #boot .bwrap,
+html.lang-ar #ipv .ptag,
+html.lang-ar .emstage .emkick,
+html.lang-ar .emcoord,
+html.lang-ar .emtabs button,
+html.lang-ar .pgsys,
+html.lang-ar .pgstats,
+html.lang-ar .pghint,
+html.lang-ar .pgload,
+html.lang-ar .pgtel,
+html.lang-ar .pgcap,
+html.lang-ar .m-burger,
+html.lang-ar .m-chip .cd,
+html.lang-ar .m-dots .lab,
+html.lang-ar .m-sheet .tools a,
+html.lang-ar .m-sheet .tools button,
+html.lang-ar .m-sheet a.row .n,
+html.lang-ar .m-switch,
+html.lang-ar .m-cue,
+html.lang-ar .m-scan .t,
+html.lang-ar .m-play,
+html.lang-ar #gate .gkick,
+html.lang-ar #gate .gcard .gmeta,
+html.lang-ar #gate .gfoot,
+html.lang-ar #gate .gpdf,
+html.lang-ar #gate .glang{
+  font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+}
+
+/* the switch itself always names the OTHER language, in that language */
+html.lang-ar #hd-lang .lbl{font-family:"Space Mono",monospace}
+
+/* ---- the two things you must never do to Arabic --------------------
+   letter-spacing prises the cursive joins apart, and there is no case,
+   so uppercasing is a no-op that only costs you the tracking design. */
+html.lang-ar *{letter-spacing:normal!important}
+html.lang-ar *:not(:lang(en)){text-transform:none}
+html.lang-ar .mono,html.lang-ar .kicker,html.lang-ar .code,html.lang-ar .cd,
+html.lang-ar .datum,html.lang-ar figcaption,html.lang-ar .tag,html.lang-ar .plbl,
+html.lang-ar .pgsys,html.lang-ar .pgstats,html.lang-ar .pgtel,html.lang-ar .btn,
+html.lang-ar .m-burger,html.lang-ar dt,html.lang-ar .k,html.lang-ar .sys,
+html.lang-ar .hint,html.lang-ar .bline,html.lang-ar .bcoord,
+html.lang-ar .m-sheet .tools a,html.lang-ar .m-sheet .tools button,
+html.lang-ar .m-sheet a.row.chrow .t,html.lang-ar #gate .gkick,
+html.lang-ar #gate .gcard h2,html.lang-ar #gate .gcard .gmeta,
+html.lang-ar #gate .gfoot,html.lang-ar .m-chip .cd{text-transform:none}
+
+/* naskh sits small on the same body size; give the label sizes a nudge */
+html.lang-ar figcaption{font-size:.68rem}
+html.lang-ar .kicker,html.lang-ar .datum,html.lang-ar .tag{font-size:.7rem}
+html.lang-ar .cd{font-size:.66rem}
+html.lang-ar .chip{font-size:.78rem}
+html.lang-ar dt{font-size:.72rem}
+html.lang-ar .pgstats,html.lang-ar .pgtel{font-size:.68rem}
+html.lang-ar .m-sheet .tools a,html.lang-ar .m-sheet .tools button{font-size:.74rem}
+html.lang-ar .m-burger{font-size:.72rem}
+
+/* codes, coordinates and model names are Latin islands in an RTL line */
+html.lang-ar .code,html.lang-ar .bcoord,html.lang-ar .pgstats b,
+html.lang-ar .band b,html.lang-ar .stats b,html.lang-ar .pgtel b,
+html.lang-ar .m-sheet a.row .n,html.lang-ar .mv .n,html.lang-ar .idx2 .code{
+  direction:ltr;unicode-bidi:isolate;
+}
+
+/* ---- right to left -------------------------------------------------
+   The document flips. The art-directed scenes do not: a split hero whose
+   halves are labelled REAL and TWIN, a before/after wiper driven from the
+   left edge, and a horizontal swipe strip whose script reads scrollLeft
+   all break if the axis reverses under them. Those stay LTR and only
+   their text is flipped back. */
+html.lang-ar .hero-split,
+html.lang-ar .basld,
+html.lang-ar .mstrip,
+html.lang-ar .scrub .ss,
+html.lang-ar .pgsticky{direction:ltr}
+html.lang-ar .hero-split .lbl,
+html.lang-ar .basld .ba-lbl,
+html.lang-ar .mstrip > *,
+html.lang-ar .scrub .cap,
+html.lang-ar .pgui{direction:rtl}
+
+/* the chapter rail lives on the right in English; in Arabic that is the
+   start of the line, so it moves across */
+html.lang-ar #rail{right:auto;left:clamp(10px,2vw,26px);text-align:left}
+html.lang-ar #rail a{flex-direction:row-reverse}
+html.lang-ar #ipv{right:auto;left:clamp(16px,3vw,40px)}
+
+/* logical edges for the handful of rules pinned to a physical one */
+html.lang-ar figcaption{left:auto;right:0}
+html.lang-ar .pgtel{margin-left:0;margin-right:auto}
+html.lang-ar .b3d{right:auto;left:8px}
+html.lang-ar .m-sheet a.row{grid-template-columns:44px 1fr}
+html.lang-ar .hero-title,html.lang-ar #orbit .in{text-align:right}
+html.lang-ar .pgcap{text-shadow:0 2px 20px rgba(0,0,0,.6)}
+
+/* arrows point the other way when the reading direction does */
+html.lang-ar .go,html.lang-ar .lab{display:inline-block}
+
+/* ---- the language switch ------------------------------------------ */
+#hd-lang{
+  position:fixed;z-index:140;
+  left:clamp(14px,2.4vw,28px);bottom:clamp(14px,2.4vw,28px);
+  display:inline-flex;align-items:center;gap:9px;
+  min-height:42px;padding:0 15px 0 12px;
+  background:rgba(19,28,33,.9);backdrop-filter:blur(10px);
+  border:1px solid var(--ink-4);border-radius:999px;
+  color:var(--tx);cursor:pointer;
+  font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.14em;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+  transition:border-color .2s,color .2s,transform .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+#hd-lang:hover,#hd-lang:focus-visible{border-color:var(--signal);color:var(--signal);transform:translateY(-1px)}
+#hd-lang .glyph{width:15px;height:15px;flex:none;color:var(--signal)}
+#hd-lang .glyph svg{width:100%;height:100%;display:block}
+#hd-lang .lbl{white-space:nowrap}
+html.lang-ar #hd-lang{left:auto;right:clamp(14px,2.4vw,28px)}
+html.lang-ar #hd-lang .lbl{font-family:"Space Mono",monospace}
+/* the phone already has a chapter chip centred at the bottom */
+[data-view="mobile"] #hd-lang{
+  bottom:calc(12px + env(safe-area-inset-bottom));
+  left:12px;min-height:38px;padding:0 11px;font-size:.58rem;
+}
+html.lang-ar [data-view="mobile"] #hd-lang{left:auto;right:12px}
+[data-view="mobile"] #hd-lang .lbl{display:none}
+@media(prefers-reduced-motion:reduce){#hd-lang{transition:none}}
+
+/* ---- the gate's language row --------------------------------------- */
+#gate .glang{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin-top:clamp(16px,2.4vh,26px);
+  font-family:"Space Mono",monospace;font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tx-mut);
+}
+#gate .glang .gl{
+  min-height:38px;padding:0 16px;background:none;
+  border:1px solid var(--ink-4);color:var(--tx);cursor:pointer;
+  font:inherit;letter-spacing:.1em;text-transform:none;
+  transition:border-color .2s,color .2s,background .2s;
+}
+#gate .glang .gl[aria-pressed="true"]{border-color:var(--signal);color:var(--signal);background:#162126}
+#gate .glang .gl:hover{border-color:var(--signal)}
+html.lang-ar #gate .glang{text-transform:none;font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+
+/* the gate's cards are explicitly left-aligned in the English design */
+html.lang-ar #gate .gcard{text-align:right}
+html.lang-ar #gate .gcard .rec{right:auto;left:-1px}
+html.lang-ar #gate .gcard .rec.soft{border-right:1px solid var(--signal-dim);border-left:0}

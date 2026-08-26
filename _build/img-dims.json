@@ -1,0 +1,1894 @@
+{
+"assets/3d/ref/adnoc_1.jpg": [
+1156,
+615
+],
+"assets/3d/ref/adnoc_2.jpg": [
+1070,
+437
+],
+"assets/3d/ref/al_reem_bay_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/al_reem_bay_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/al_reem_bay_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/al_wifaq_1.jpg": [
+1400,
+934
+],
+"assets/3d/ref/al_wifaq_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/al_wifaq_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/amaya_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/amaya_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/amaya_3.jpg": [
+1400,
+933
+],
+"assets/3d/ref/barrel_1.jpg": [
+1536,
+1024
+],
+"assets/3d/ref/barrel_2.jpg": [
+1600,
+992
+],
+"assets/3d/ref/barrel_3.jpg": [
+1920,
+1191
+],
+"assets/3d/ref/damac_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/damac_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/damac_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/hydra_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/hydra_2.jpg": [
+1385,
+823
+],
+"assets/3d/ref/hydra_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/kite_1.jpg": [
+1400,
+934
+],
+"assets/3d/ref/kite_2.jpg": [
+478,
+831
+],
+"assets/3d/ref/kite_3.jpg": [
+1080,
+469
+],
+"assets/3d/ref/mangrove_1.jpg": [
+1400,
+1110
+],
+"assets/3d/ref/mangrove_2.jpg": [
+1400,
+1114
+],
+"assets/3d/ref/mangrove_3.jpg": [
+1400,
+1148
+],
+"assets/3d/ref/marina_rise_1.jpg": [
+1100,
+1400
+],
+"assets/3d/ref/marina_rise_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/marina_rise_3.jpg": [
+1000,
+1336
+],
+"assets/3d/ref/masjid_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/masjid_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/masjid_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/paragon_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/paragon_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/paragon_3.jpg": [
+1280,
+720
+],
+"assets/3d/ref/reem_hospital_1.jpg": [
+1400,
+937
+],
+"assets/3d/ref/reem_hospital_2.jpg": [
+1400,
+769
+],
+"assets/3d/ref/reem_hospital_3.jpg": [
+1280,
+958
+],
+"assets/3d/ref/reem_mall_1.jpg": [
+1400,
+788
+],
+"assets/3d/ref/reem_mall_2.jpg": [
+1400,
+1050
+],
+"assets/3d/ref/reem_mall_3.jpg": [
+1400,
+1050
+],
+"assets/3d/ref/repton_rose_1.jpg": [
+1000,
+488
+],
+"assets/3d/ref/repton_rose_2.jpg": [
+1400,
+555
+],
+"assets/3d/ref/repton_rose_3.jpg": [
+1280,
+720
+],
+"assets/3d/ref/shams_meera_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/shams_meera_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/shams_meera_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/sigma_omega_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/sigma_omega_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/sigma_omega_3.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/sorbonne_1.jpg": [
+1400,
+1050
+],
+"assets/3d/ref/sorbonne_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/sorbonne_3.jpg": [
+1400,
+1050
+],
+"assets/3d/ref/teapot_1.jpg": [
+1024,
+502
+],
+"assets/3d/ref/teapot_2.jpg": [
+1451,
+1084
+],
+"assets/3d/ref/teapot_3.jpg": [
+1198,
+896
+],
+"assets/3d/ref/y_tower_1.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/y_tower_2.jpg": [
+1050,
+1400
+],
+"assets/3d/ref/y_tower_3.jpg": [
+1050,
+1400
+],
+"assets/3d/tex/T_ADNOC_Gas_Station_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_ADNOC_Gas_Station_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_ADNOC_Gas_Station_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_ADNOC_Gas_Station_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Reem_Bay_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Reem_Bay_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Reem_Bay_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Reem_Bay_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Wifaq_Tower_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Wifaq_Tower_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Wifaq_Tower_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Al_Wifaq_Tower_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Amaya_Towers_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Amaya_Towers_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Amaya_Towers_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Amaya_Towers_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_DAMAC_Marina_Bay_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_DAMAC_Marina_Bay_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_DAMAC_Marina_Bay_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_DAMAC_Marina_Bay_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Hydra_Towers_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Hydra_Towers_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Hydra_Towers_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Hydra_Towers_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Mangrove_Place_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Mangrove_Place_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Mangrove_Place_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Mangrove_Place_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Marina_Rise_Tower_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Marina_Rise_Tower_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Marina_Rise_Tower_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Marina_Rise_Tower_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Masjid_Al_Reem_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Masjid_Al_Reem_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Masjid_Al_Reem_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Masjid_Al_Reem_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Paragon_Bay_Mall_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Paragon_Bay_Mall_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Paragon_Bay_Mall_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Paragon_Bay_Mall_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Hospital_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Hospital_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Hospital_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Hospital_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Mall_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Mall_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Mall_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Reem_Mall_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Repton_Rose_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Repton_Rose_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Repton_Rose_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Repton_Rose_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Shams_Meera_Towers_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Shams_Meera_Towers_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Shams_Meera_Towers_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Shams_Meera_Towers_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sigma_Omega_Towers_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sigma_Omega_Towers_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sigma_Omega_Towers_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sigma_Omega_Towers_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sorbonne_University_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sorbonne_University_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sorbonne_University_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Sorbonne_University_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_The_Kite_Residences_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_The_Kite_Residences_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_The_Kite_Residences_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_The_Kite_Residences_ORM.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Y_Tower_D.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Y_Tower_E.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Y_Tower_N.webp": [
+1024,
+1024
+],
+"assets/3d/tex/T_Y_Tower_ORM.webp": [
+1024,
+1024
+],
+"assets/img/[Originals]/y5_plans.jpg": [
+724,
+2600
+],
+"assets/img/ajm_ba.jpg": [
+1635,
+834
+],
+"assets/img/ajm_dhow.jpg": [
+1635,
+834
+],
+"assets/img/ajm_hero.jpg": [
+1617,
+842
+],
+"assets/img/ajm_muni.jpg": [
+1635,
+834
+],
+"assets/img/ajm_muni_real.jpg": [
+1156,
+682
+],
+"assets/img/ajm_resort.jpg": [
+1635,
+834
+],
+"assets/img/ajm_tw1.jpg": [
+1617,
+842
+],
+"assets/img/ajm_tw2.jpg": [
+1635,
+834
+],
+"assets/img/ajm_tw3.jpg": [
+1635,
+834
+],
+"assets/img/at_1.jpg": [
+2000,
+1125
+],
+"assets/img/at_2.jpg": [
+2000,
+1125
+],
+"assets/img/at_3.jpg": [
+2000,
+1125
+],
+"assets/img/at_4.jpg": [
+2000,
+1125
+],
+"assets/img/at_5.jpg": [
+2000,
+1125
+],
+"assets/img/at_6.jpg": [
+2000,
+1125
+],
+"assets/img/at_7.jpg": [
+2000,
+1125
+],
+"assets/img/at_annual.jpg": [
+1700,
+1137
+],
+"assets/img/at_cafe.jpg": [
+1700,
+1137
+],
+"assets/img/at_comfort.jpg": [
+1700,
+1137
+],
+"assets/img/at_heat.jpg": [
+1700,
+1137
+],
+"assets/img/at_massplan.jpg": [
+1645,
+1400
+],
+"assets/img/at_ped.jpg": [
+1700,
+1137
+],
+"assets/img/at_shadow.jpg": [
+1700,
+1137
+],
+"assets/img/at_wind.jpg": [
+1700,
+1137
+],
+"assets/img/at_x.jpg": [
+2000,
+1125
+],
+"assets/img/auh_cluster.jpg": [
+1617,
+842
+],
+"assets/img/auh_gate.jpg": [
+1600,
+834
+],
+"assets/img/auh_grid.jpg": [
+1600,
+834
+],
+"assets/img/auh_hero.jpg": [
+1617,
+842
+],
+"assets/img/auh_high.jpg": [
+1617,
+842
+],
+"assets/img/auh_marina.jpg": [
+1617,
+842
+],
+"assets/img/auh_maryah.jpg": [
+1600,
+834
+],
+"assets/img/auh_street.jpg": [
+1600,
+834
+],
+"assets/img/auh_tw1.jpg": [
+1740,
+904
+],
+"assets/img/auh_tw2.jpg": [
+1617,
+842
+],
+"assets/img/auh_tw3.jpg": [
+1617,
+842
+],
+"assets/img/auh_tw4.jpg": [
+1617,
+842
+],
+"assets/img/auh_tw5.jpg": [
+1617,
+842
+],
+"assets/img/auh_tw6.jpg": [
+1617,
+842
+],
+"assets/img/auh_tw7.jpg": [
+1617,
+842
+],
+"assets/img/cc_1.jpg": [
+1125,
+1500
+],
+"assets/img/cc_2.jpg": [
+1125,
+1500
+],
+"assets/img/cc_3.jpg": [
+1024,
+576
+],
+"assets/img/cert_acad.jpg": [
+1430,
+1105
+],
+"assets/img/cert_bau.jpg": [
+1523,
+1080
+],
+"assets/img/cert_callig.jpg": [
+1523,
+1080
+],
+"assets/img/cert_faihaa.jpg": [
+1523,
+1080
+],
+"assets/img/cert_fibrex.jpg": [
+1075,
+1520
+],
+"assets/img/cert_ic3.jpg": [
+1430,
+1105
+],
+"assets/img/cert_ldrs.jpg": [
+1075,
+1520
+],
+"assets/img/cert_max.jpg": [
+1430,
+1105
+],
+"assets/img/cert_ourcity.jpg": [
+1523,
+1080
+],
+"assets/img/cert_revfam.jpg": [
+1430,
+1105
+],
+"assets/img/cert_revit.jpg": [
+1430,
+1105
+],
+"assets/img/cert_rhino.jpg": [
+1430,
+1105
+],
+"assets/img/cert_riba.jpg": [
+1075,
+1521
+],
+"assets/img/cert_rome.jpg": [
+1523,
+1080
+],
+"assets/img/cert_zmerly.jpg": [
+1523,
+1080
+],
+"assets/img/fjr_center.jpg": [
+1582,
+842
+],
+"assets/img/fjr_coast.jpg": [
+1582,
+842
+],
+"assets/img/fjr_downtown.jpg": [
+1582,
+842
+],
+"assets/img/fjr_hero.jpg": [
+1691,
+930
+],
+"assets/img/fjr_mosque.jpg": [
+1582,
+842
+],
+"assets/img/fjr_novotel.jpg": [
+1582,
+842
+],
+"assets/img/fjr_plain.jpg": [
+1582,
+842
+],
+"assets/img/fjr_port.jpg": [
+1582,
+842
+],
+"assets/img/fjr_strip.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw1.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw2.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw3.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw4.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw5.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw6.jpg": [
+1582,
+842
+],
+"assets/img/fjr_tw7.jpg": [
+1582,
+842
+],
+"assets/img/fr_cinema1.jpg": [
+1800,
+900
+],
+"assets/img/fr_cinema2.jpg": [
+1800,
+799
+],
+"assets/img/fr_gas1.jpg": [
+1800,
+1013
+],
+"assets/img/fr_gas3.jpg": [
+1800,
+1013
+],
+"assets/img/fr_gascanopy.jpg": [
+1800,
+1013
+],
+"assets/img/fr_int_eur.jpg": [
+1800,
+918
+],
+"assets/img/fr_int_mall.jpg": [
+1200,
+804
+],
+"assets/img/fr_int_min.jpg": [
+1800,
+1213
+],
+"assets/img/fr_lib1.jpg": [
+1752,
+1400
+],
+"assets/img/fr_lib2.jpg": [
+1800,
+900
+],
+"assets/img/fr_lib3.jpg": [
+1800,
+1059
+],
+"assets/img/fx_amala_1.jpg": [
+2000,
+1125
+],
+"assets/img/fx_amala_gh.jpg": [
+946,
+738
+],
+"assets/img/fx_amala_v1.jpg": [
+960,
+679
+],
+"assets/img/fx_gug_3d1.jpg": [
+2000,
+1125
+],
+"assets/img/fx_gug_dwg_grc.jpg": [
+1600,
+1094
+],
+"assets/img/fx_gug_dwg_points.jpg": [
+1600,
+936
+],
+"assets/img/fx_gug_dwg_steel.jpg": [
+1600,
+966
+],
+"assets/img/fx_gug_dwg_table.jpg": [
+1600,
+1772
+],
+"assets/img/fx_gug_model.jpg": [
+1920,
+723
+],
+"assets/img/fx_gug_model2.jpg": [
+1920,
+1080
+],
+"assets/img/fx_gug_model3.jpg": [
+1024,
+618
+],
+"assets/img/fx_gug_panel.jpg": [
+2000,
+1125
+],
+"assets/img/fx_gug_prod3.jpg": [
+2000,
+1125
+],
+"assets/img/fx_gug_prod5.jpg": [
+2000,
+1125
+],
+"assets/img/fx_nhm_1.jpg": [
+1013,
+1487
+],
+"assets/img/fx_nhm_3.jpg": [
+1600,
+892
+],
+"assets/img/fx_nhm_dwg.jpg": [
+2400,
+3394
+],
+"assets/img/fx_nhm_f1.jpg": [
+1600,
+2133
+],
+"assets/img/fx_nhm_f2.jpg": [
+1600,
+2133
+],
+"assets/img/fx_nhm_f3.jpg": [
+1600,
+2133
+],
+"assets/img/fx_nhm_f4.jpg": [
+1600,
+2133
+],
+"assets/img/fx_nhm_hero.jpg": [
+1800,
+976
+],
+"assets/img/fx_nhm_render.jpg": [
+1566,
+1004
+],
+"assets/img/fx_zayed_all.jpg": [
+2000,
+1125
+],
+"assets/img/fx_zayed_anchor.jpg": [
+1920,
+1440
+],
+"assets/img/fx_zayed_brack.jpg": [
+2000,
+1125
+],
+"assets/img/fx_zayed_cnc.jpg": [
+1920,
+2560
+],
+"assets/img/fx_zayed_done.jpg": [
+1920,
+1080
+],
+"assets/img/fx_zayed_dwg.jpg": [
+2200,
+1556
+],
+"assets/img/fx_zayed_fact1.jpg": [
+1800,
+1350
+],
+"assets/img/fx_zayed_fact2.jpg": [
+1800,
+1350
+],
+"assets/img/fx_zayed_fact3.jpg": [
+1600,
+2133
+],
+"assets/img/fx_zayed_fact4.jpg": [
+1600,
+2133
+],
+"assets/img/fx_zayed_install.jpg": [
+1920,
+1440
+],
+"assets/img/fx_zayed_layout.jpg": [
+1920,
+1440
+],
+"assets/img/fx_zayed_panel.jpg": [
+1920,
+2560
+],
+"assets/img/fx_zayed_rows.jpg": [
+1920,
+1440
+],
+"assets/img/fx_zayed_struct.jpg": [
+2000,
+1125
+],
+"assets/img/hero_main.jpg": [
+1983,
+793
+],
+"assets/img/jana_1.jpg": [
+1500,
+1992
+],
+"assets/img/jana_2.jpg": [
+1500,
+1992
+],
+"assets/img/moi_city1.jpg": [
+1920,
+1080
+],
+"assets/img/moi_city2.jpg": [
+1920,
+1080
+],
+"assets/img/moi_cp_app.jpg": [
+2500,
+1407
+],
+"assets/img/moi_cp_crowd.jpg": [
+2500,
+1407
+],
+"assets/img/moi_cp_fm.jpg": [
+2500,
+1407
+],
+"assets/img/moi_dash_ad.jpg": [
+1920,
+1080
+],
+"assets/img/moi_dash_coast.jpg": [
+1920,
+1080
+],
+"assets/img/moi_dash_pen.jpg": [
+1920,
+1080
+],
+"assets/img/moi_dash_rak.jpg": [
+1920,
+1080
+],
+"assets/img/moi_mangroove.jpg": [
+1800,
+1200
+],
+"assets/img/moi_muni.jpg": [
+1244,
+1400
+],
+"assets/img/moi_post_int.jpg": [
+1920,
+1080
+],
+"assets/img/moi_post_street.jpg": [
+1920,
+1080
+],
+"assets/img/moi_realtwin.jpg": [
+1942,
+809
+],
+"assets/img/moi_sigma.jpg": [
+1800,
+1200
+],
+"assets/img/ms_1.jpg": [
+1125,
+1500
+],
+"assets/img/ms_2.jpg": [
+1125,
+1500
+],
+"assets/img/ms_3.jpg": [
+1125,
+1500
+],
+"assets/img/ms_4.jpg": [
+1125,
+1500
+],
+"assets/img/ms_5.jpg": [
+1800,
+1350
+],
+"assets/img/ms_6.jpg": [
+1125,
+1500
+],
+"assets/img/mw_1.jpg": [
+1536,
+1024
+],
+"assets/img/mw_2.jpg": [
+1537,
+1023
+],
+"assets/img/mw_3.jpg": [
+1537,
+1023
+],
+"assets/img/mw_p1.jpg": [
+1125,
+1500
+],
+"assets/img/mw_p2.jpg": [
+1125,
+1500
+],
+"assets/img/mw_site.jpg": [
+1059,
+1500
+],
+"assets/img/og-card.jpg": [
+1200,
+630
+],
+"assets/img/rak_air.jpg": [
+1582,
+842
+],
+"assets/img/rak_city.jpg": [
+1582,
+842
+],
+"assets/img/rak_corniche.jpg": [
+1637,
+842
+],
+"assets/img/rak_creek.jpg": [
+1600,
+822
+],
+"assets/img/rak_front.jpg": [
+1600,
+822
+],
+"assets/img/rak_hero.jpg": [
+1637,
+842
+],
+"assets/img/rak_high.jpg": [
+1715,
+849
+],
+"assets/img/rak_high2.jpg": [
+1600,
+792
+],
+"assets/img/rak_lagoon.jpg": [
+1637,
+842
+],
+"assets/img/rak_pen.jpg": [
+1600,
+822
+],
+"assets/img/rak_tw1.jpg": [
+1637,
+842
+],
+"assets/img/rak_tw2.jpg": [
+1637,
+842
+],
+"assets/img/rak_tw3.jpg": [
+1637,
+842
+],
+"assets/img/rak_tw4.jpg": [
+1637,
+842
+],
+"assets/img/rak_tw5.jpg": [
+1582,
+842
+],
+"assets/img/rak_tw6.jpg": [
+1582,
+842
+],
+"assets/img/rak_tw7.jpg": [
+1582,
+842
+],
+"assets/img/rak_tw8.jpg": [
+1582,
+842
+],
+"assets/img/rak_tw9.jpg": [
+1619,
+972
+],
+"assets/img/reem_c01.jpg": [
+1299,
+932
+],
+"assets/img/reem_c03.jpg": [
+1225,
+889
+],
+"assets/img/reem_c04.jpg": [
+1225,
+906
+],
+"assets/img/reem_c06.jpg": [
+1227,
+882
+],
+"assets/img/reem_c07.jpg": [
+1227,
+907
+],
+"assets/img/reem_c08.jpg": [
+1461,
+842
+],
+"assets/img/reem_c10.jpg": [
+1284,
+891
+],
+"assets/img/reem_c11.jpg": [
+1284,
+905
+],
+"assets/img/reem_c12.jpg": [
+1284,
+904
+],
+"assets/img/reem_c13.jpg": [
+1284,
+904
+],
+"assets/img/reem_c15.jpg": [
+1632,
+806
+],
+"assets/img/reem_c16.jpg": [
+1324,
+586
+],
+"assets/img/reem_c17.jpg": [
+1256,
+848
+],
+"assets/img/reem_c18.jpg": [
+1536,
+770
+],
+"assets/img/reem_c19.jpg": [
+1180,
+889
+],
+"assets/img/reem_c20.jpg": [
+905,
+931
+],
+"assets/img/reem_c21.jpg": [
+1091,
+582
+],
+"assets/img/reem_c22.jpg": [
+1137,
+730
+],
+"assets/img/reem_ue1.jpg": [
+1920,
+1080
+],
+"assets/img/reem_ue2.jpg": [
+1920,
+1080
+],
+"assets/img/rm_esc.jpg": [
+2000,
+1182
+],
+"assets/img/rm_hero.jpg": [
+1909,
+1080
+],
+"assets/img/rm_roof.jpg": [
+2000,
+1126
+],
+"assets/img/rm_towers.jpg": [
+2000,
+984
+],
+"assets/img/rome_1.jpg": [
+1800,
+1350
+],
+"assets/img/rome_2.jpg": [
+1800,
+1350
+],
+"assets/img/rome_3.jpg": [
+1800,
+1350
+],
+"assets/img/rome_4.jpg": [
+1040,
+780
+],
+"assets/img/rz_big.jpg": [
+936,
+1136
+],
+"assets/img/rz_bung_form.jpg": [
+1600,
+992
+],
+"assets/img/rz_bung_night.jpg": [
+1536,
+1024
+],
+"assets/img/rz_bungalow.jpg": [
+1619,
+971
+],
+"assets/img/rz_cafe.jpg": [
+1518,
+688
+],
+"assets/img/rz_fix.jpg": [
+1448,
+1086
+],
+"assets/img/rz_main1.jpg": [
+1920,
+818
+],
+"assets/img/rz_main2.jpg": [
+1920,
+1047
+],
+"assets/img/rz_main3.jpg": [
+1920,
+818
+],
+"assets/img/rz_master.jpg": [
+1200,
+895
+],
+"assets/img/rz_reception.jpg": [
+1920,
+818
+],
+"assets/img/rz_site.jpg": [
+1138,
+1600
+],
+"assets/img/rz_sketch.jpg": [
+1920,
+1435
+],
+"assets/img/rz_small.jpg": [
+958,
+1120
+],
+"assets/img/rz_tea.jpg": [
+784,
+434
+],
+"assets/img/rz_teahouse.jpg": [
+784,
+434
+],
+"assets/img/rz_teapot_3d.jpg": [
+1774,
+887
+],
+"assets/img/rz_top.jpg": [
+1600,
+1198
+],
+"assets/img/rz_updated.jpg": [
+1198,
+896
+],
+"assets/img/rz_workshop.jpg": [
+947,
+709
+],
+"assets/img/scrub/scrubf00.jpg": [
+900,
+506
+],
+"assets/img/scrub/scrubf01.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf02.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf03.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf04.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf05.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf06.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf07.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf08.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf09.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf10.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf11.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf12.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf13.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf14.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf15.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf16.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf17.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf18.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf19.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf20.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf21.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf22.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf23.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf24.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf25.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf26.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf27.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf28.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf29.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf30.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf31.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf32.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf33.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf34.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf35.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf36.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf37.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf38.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf39.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf40.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf41.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf42.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf43.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf44.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf45.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf46.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf47.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf48.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf49.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf50.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf51.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf52.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf53.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf54.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf55.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf56.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf57.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf58.jpg": [
+1280,
+720
+],
+"assets/img/scrub/scrubf59.jpg": [
+1280,
+720
+],
+"assets/img/sky_court.jpg": [
+2000,
+1233
+],
+"assets/img/sky_dark.jpg": [
+2000,
+1182
+],
+"assets/img/sky_ext.jpg": [
+2000,
+1165
+],
+"assets/img/sky_lawn.jpg": [
+2000,
+1134
+],
+"assets/img/sky_pano.jpg": [
+2200,
+870
+],
+"assets/img/tk_1.jpg": [
+1280,
+958
+],
+"assets/img/tk_3.jpg": [
+1280,
+709
+],
+"assets/img/tk_4.jpg": [
+1280,
+958
+],
+"assets/img/tk_5.jpg": [
+1280,
+546
+],
+"assets/img/tk_6.jpg": [
+1264,
+842
+],
+"assets/img/tk_7.jpg": [
+1280,
+591
+],
+"assets/img/tk_main.jpg": [
+1449,
+1085
+],
+"assets/img/tk_plan1.jpg": [
+1024,
+902
+],
+"assets/img/tk_plan2.jpg": [
+818,
+1024
+],
+"assets/img/y1_house.jpg": [
+1600,
+1200
+],
+"assets/img/y1_model1.jpg": [
+1600,
+1064
+],
+"assets/img/y1_model2.jpg": [
+1600,
+1200
+],
+"assets/img/y1_pod.jpg": [
+1600,
+1064
+],
+"assets/img/y2_draft.jpg": [
+1135,
+1600
+],
+"assets/img/y2_model.jpg": [
+1600,
+1064
+],
+"assets/img/y2_wood.jpg": [
+1135,
+1600
+],
+"assets/img/y3_poster.jpg": [
+2600,
+1950
+],
+"assets/img/y3_vr.jpg": [
+1800,
+1273
+],
+"assets/img/y3_vrp1.jpg": [
+2000,
+1414
+],
+"assets/img/y3_vrp2.jpg": [
+2000,
+1414
+],
+"assets/img/y4_av1.jpg": [
+2200,
+1170
+],
+"assets/img/y4_av2.jpg": [
+2181,
+1226
+],
+"assets/img/y4_av3.jpg": [
+2200,
+1172
+],
+"assets/img/y4_av_elev.jpg": [
+2600,
+547
+],
+"assets/img/y4_fatwa_a.jpg": [
+4590,
+2581
+],
+"assets/img/y4_fatwa_b.jpg": [
+1676,
+943
+],
+"assets/img/y4_fatwa_c.jpg": [
+2430,
+1366
+],
+"assets/img/y4_fatwa_d.jpg": [
+2652,
+1491
+],
+"assets/img/y4_fatwa_e.jpg": [
+1754,
+987
+],
+"assets/img/y4_fatwa_f.jpg": [
+2359,
+1326
+],
+"assets/img/y4_fatwaposter.jpg": [
+3000,
+2124
+],
+"assets/img/y4_mosque_hero.jpg": [
+1536,
+1024
+],
+"assets/img/y4_mosqueposter.jpg": [
+2800,
+1960
+],
+"assets/img/y4_sky_hero.jpg": [
+1494,
+1052
+],
+"assets/img/y4_sky_persp.jpg": [
+1392,
+1130
+],
+"assets/img/y5_bposter.jpg": [
+1857,
+2600
+],
+"assets/img/y5_braer.jpg": [
+1920,
+1080
+],
+"assets/img/y5_brown.jpg": [
+1800,
+1013
+],
+"assets/img/y5_brown2.jpg": [
+1800,
+1013
+],
+"assets/img/y5_plans.jpg": [
+694,
+2600
+],
+"assets/img/y5_poster.jpg": [
+3000,
+1699
+],
+"assets/img/y5_th1.jpg": [
+2000,
+1000
+],
+"assets/img/y5_th2.jpg": [
+1468,
+2400
+],
+"assets/img/y5_th3.jpg": [
+1800,
+900
+],
+"assets/img/y5_th4.jpg": [
+1800,
+1397
+],
+"assets/video/hero-orbit-mobile.jpg": [
+540,
+960
+],
+"assets/video/museum-track_poster.jpg": [
+1280,
+720
+],
+"assets/video/tall_square_poster.jpg": [
+1440,
+810
+],
+"assets/video/tall_street_poster.jpg": [
+1280,
+720
+],
+"assets/video/twin_ajm_museum_poster.jpg": [
+1280,
+652
+],
+"assets/video/twin_ajm_poster.jpg": [
+1280,
+652
+],
+"assets/video/twin_ajm_souk_poster.jpg": [
+1280,
+652
+],
+"assets/video/twin_auh_poster.jpg": [
+1280,
+672
+],
+"assets/video/twin_fjr_poster.jpg": [
+1280,
+682
+],
+"assets/video/twin_rak_poster.jpg": [
+1280,
+634
+]
+}

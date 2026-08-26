@@ -1,7 +1,9 @@
-MOHAMAD HASHEM DANKAR - ARCHITECTURE PORTFOLIO - v8.6
+MOHAMAD HASHEM DANKAR - ARCHITECTURE PORTFOLIO - v8.9
 =====================================================
 OPEN index.html. A gate asks every time whether you are on a desktop
-or a phone, then loads the matching build.
+or a phone, and in which language, then loads the matching build.
+The language can be changed at any point from the floating button in
+the bottom corner.
 
 CONTENTS
   index.html                        the site (both builds live in here)
@@ -20,6 +22,128 @@ CONTENTS
                                     and video re-encoded for the web,
                                     file:// fallbacks stripped, git
                                     repository already initialised
+
+v8.9 CHANGES
+  THE FILM ON A PHONE - PROPERLY THIS TIME
+  - v8.8 let the phone build play every clip, but added a rule that only
+    one could run at a time. That was wrong twice over. Two clips are
+    often on screen together - the two Al Tall walkthroughs sit in a pair
+    - and the browser hands both to the same callback, so the second one
+    stopped the first the instant it arrived. And a clip stopped at the
+    very start is not merely still: the shared fade ramps opacity up over
+    its first 0.8 seconds, so a film frozen at zero renders at 6% and
+    reads as a black box. That is why the films looked absent on a phone
+    rather than merely paused, and why one Al Tall film moved and the
+    other did not.
+  - Clips no longer stop each other. Everything on screen plays, exactly
+    as on desktop. A clip still stops while it is entirely off-screen,
+    which nobody can see and which saves the phone decoding nine films at
+    once. Verified: all nine play, at full opacity, in both languages.
+
+  CHANGING LANGUAGE NO LONGER SENDS YOU BACK TO THE CHOOSER
+  - Picking desktop or mobile on the gate does not write anything into
+    the address - it just applies the choice and removes the chooser - so
+    reloading for a language change arrived with no build in the URL and
+    was met by the gate all over again. The switch now carries the build
+    across with the language, and still returns you to the chapter you
+    were reading.
+
+v8.8 CHANGES
+  ARABIC AND ENGLISH
+  - The whole site now reads in Arabic: every heading, paragraph, caption,
+    label, spec row and alt text - about 4 800 words. The gate asks for a
+    language alongside the build, and a floating button in the bottom
+    corner switches at any point, returning you to the chapter you were
+    reading. The choice is remembered.
+  - Arabic is a real right-to-left build, not a mirrored English one. The
+    document flips, but four scenes deliberately do not, because their
+    scripts or their art direction depend on the axis: the REAL | TWIN
+    split hero, the before-and-after wiper, the mobile swipe strips and
+    the sticky scan viewport. Only their text flips back.
+  - The three Latin faces have no Arabic coverage, so every element that
+    used one has a counterpart: Almarai for display, Noto Naskh Arabic
+    for reading, IBM Plex Sans Arabic where the mono used to be. Three
+    things the English design does that Arabic must never inherit are
+    switched off: letter-spacing, which prises the cursive joins apart;
+    uppercasing, which does nothing in a script with no case; and the two
+    effects that wrap every character in its own span - the headline
+    stagger and the read-along profile reveal - which would stop the
+    letters joining. Both now stagger word by word.
+  - Codes, coordinates, software names and the model counters stay Latin
+    and stay left-to-right inside the Arabic line, which is how they are
+    written in practice.
+  - Live readouts keep working through the translation: the scan's
+    altitude and azimuth, the triangle counters, the viewer's material
+    and light toggles. Anything a script writes later is translated as it
+    appears.
+  - Not translated, and not meant to be: the two PDFs and the CV, which
+    are English documents; and the software names.
+
+  THE CURSOR ON THE FIRST SCREEN
+  - The site hides the real pointer and draws its own, but the chooser
+    sits above the drawn one, so the very first screen had no pointer at
+    all. The custom cursor now arms only once a build has been picked;
+    until then the chooser behaves like an ordinary page.
+
+v8.7 CHANGES
+  CONTENTS LINKS NOW LAND WHERE THEY SAY
+  - Clicking anything in any of the three tables of contents - the top
+    bar, the right-hand rail, the index section, and the phone's
+    contents sheet - used to drop you a project or three above the one
+    you asked for. Two causes, both fixed.
+    1. None of the 172 pictures declared its size, and all but a
+       handful are lazy, so an unloaded picture was a zero-height box.
+       A link resolved its destination against a page several thousand
+       pixels shorter than the real one; the jump landed, the imagery
+       decoded, everything below slid down, and you were left staring
+       at the wrong heading. Every <img> now carries its real pixel
+       size, so the page is the right height from the first paint.
+       Measured: the page used to grow 7 035 px while it loaded, and
+       #contact moved by exactly that much. It now grows by zero.
+    2. The scroll is driven in JavaScript and re-resolves its target on
+       every frame, then holds it still for a moment after arrival, so
+       anything that does still settle - a font, a late decode - is
+       absorbed instead of shifting the reader. The fixed top bar is
+       subtracted too, which a native anchor jump never did.
+  - The index numbered the first chapter's projects 1 to 4 while the
+    page itself numbered them 1.2 to 1.5. They now agree, and "The
+    Pipeline" is listed rather than skipped.
+
+  PHONE NUMBER
+  - +971 50 970 2011 everywhere: the site, both PDFs and the CV.
+
+  AL TALL PHOTOGRAMMETRY CAPTURE - MORE OF IT
+  - The scan now arrives as a capture rather than a model. It opens as
+    the raw point cloud, still dispersed, with the drone's own orbit
+    drawn around it and its position ticking along the path. As you
+    scroll, the reconstruction line climbs and the solid mesh grows up
+    out of the cloud - each point flares as the line reaches it, then
+    hands itself to the surface. A survey grid and a pool of light land
+    the district on a ground plane, and fog takes the ragged edge of
+    the capture into the dark instead of ending on a rectangle.
+  - The camera makes most of a full turn instead of a quarter, the lens
+    eases from 52mm-wide to long as it descends, and there is a hair of
+    hand-held drift and roll throughout. The track is longer, so all of
+    it reads slower. The elevation is still deliberately high the whole
+    way - it never drops below about 46 degrees, because the capture is
+    clean from above and ragged from the side.
+  - Corner brackets, a slow scan line and a live CAPTURE / RECONSTRUCT /
+    SURVEY readout with altitude and azimuth sit over the glass.
+  - On a phone the point budget and pixel ratio drop and the camera
+    steps back for the taller frame; the choreography is identical.
+
+  THE PHONE BUILD NOW GETS THE DESKTOP FILM
+  - The hero is the full desktop descent, not a 9:16 re-cut.
+  - Every clip plays on arrival. The ambient bands, the twenty-two
+    project films and the wash behind the contact block used to be
+    posters waiting for a tap; they now start as they scroll into view,
+    exactly as they do on desktop. One at a time, and nothing runs
+    off-screen, so the battery still survives it.
+  - The Al Tall scan loads and plays by itself too - no "load the 3D
+    scan, 7 MB" button in front of it any more.
+  - Worth knowing: the phone build now pulls roughly 70 MB of video and
+    a 7 MB scan across a full read, where before it pulled almost none
+    until tapped. That is the trade for parity.
 
 v8.6 CHANGES
   THE PDF, REBUILT

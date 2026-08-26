@@ -2,7 +2,7 @@ import sys,os,time
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import cdp
 SP=os.path.dirname(os.path.abspath(__file__)); OUT=os.path.join(SP,"shots")
-SITE=r"C:\Users\X11\Documents\Claude\work\Hashem-Dankar-Portfolio-v8.6"
+SITE=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # the portfolio folder
 c=cdp.Chrome(width=1400,height=990)
 try:
     c.goto("http://localhost:8777/_pdf/print.html", wait=6.0)

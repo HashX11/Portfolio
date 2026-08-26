@@ -1,0 +1,3367 @@
+{
+ "units": {
+  "Mohamad Hashem Dankar — Architect · Digital Twin Specialist": {
+   "html": "Mohamad Hashem Dankar — Architect · Digital Twin Specialist",
+   "n": 1,
+   "tag": "title",
+   "cls": ""
+  },
+  "Mohamad Hashem Dankar · Architect · Portfolio": {
+   "html": "<span class=\"tick\"></span>Mohamad Hashem Dankar · Architect · Portfolio",
+   "n": 1,
+   "tag": "div",
+   "cls": "gkick"
+  },
+  "Before you go in,how are you reading this?": {
+   "html": "Before you go in,<br><em>how are you reading this?</em>",
+   "n": 1,
+   "tag": "h1",
+   "cls": ""
+  },
+  "The same twenty-two projects, two builds. The desktop build is the fuller experience — best on a wide screen. The mobile build is rebuilt for a phone, not shrunk into one.": {
+   "html": "The same twenty-two projects, two builds. <b>The desktop build is the fuller experience — best on a wide screen.</b> The mobile build is rebuilt for a phone, not shrunk into one.",
+   "n": 1,
+   "tag": "p",
+   "cls": "gsub"
+  },
+  "Desktop experience": {
+   "html": "Desktop experience",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "The full cinematic build — the approach from orbit, cursor parallax, scroll-driven scans and the 3D asset viewer at full size.": {
+   "html": "The full cinematic build — the approach from orbit, cursor parallax, scroll-driven scans and the 3D asset viewer at full size.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Best on a laptop or larger": {
+   "html": "Best on a laptop or larger",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Enter →": {
+   "html": "Enter →",
+   "n": 2,
+   "tag": "span",
+   "cls": "go"
+  },
+  "Mobile experience": {
+   "html": "Mobile experience",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "Rebuilt for a phone — one column, swipe-through galleries, tap-to-play film, a contents sheet always in thumb reach, and nothing heavy loaded until you ask.": {
+   "html": "Rebuilt for a phone — one column, swipe-through galleries, tap-to-play film, a contents sheet always in thumb reach, and nothing heavy loaded until you ask.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Light on data · built for touch": {
+   "html": "Light on data · built for touch",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Language": {
+   "html": "Language",
+   "n": 1,
+   "tag": "span",
+   "cls": "gl-q"
+  },
+  "English": {
+   "html": "English",
+   "n": 1,
+   "tag": "button",
+   "cls": "gl"
+  },
+  "Or take it with you": {
+   "html": "Or take it with you",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Download the PDF portfolio": {
+   "html": "{{0}} Download the PDF portfolio",
+   "n": 1,
+   "tag": "a",
+   "cls": "gpdf"
+  },
+  "TAHALUF UPLINK · ESTABLISHING CONNECTION": {
+   "html": "TAHALUF UPLINK <b>·</b> ESTABLISHING CONNECTION",
+   "n": 1,
+   "tag": "div",
+   "cls": "bline"
+  },
+  "N 24.4539° · E 54.3773° · ABU DHABI · UAE": {
+   "html": "N 24.4539° · E 54.3773° · ABU DHABI · UAE",
+   "n": 1,
+   "tag": "div",
+   "cls": "bcoord"
+  },
+  "MOHAMAD HASHEM DANKAR": {
+   "html": "MOHAMAD HASHEM <b>DANKAR</b>",
+   "n": 1,
+   "tag": "a",
+   "cls": "brand"
+  },
+  "Profile": {
+   "html": "Profile",
+   "n": 2,
+   "tag": "a",
+   "cls": ""
+  },
+  "Index": {
+   "html": "Index",
+   "n": 1,
+   "tag": "a",
+   "cls": ""
+  },
+  "UAE Digital Twin": {
+   "html": "UAE Digital Twin",
+   "n": 5,
+   "tag": "a",
+   "cls": ""
+  },
+  "Museums": {
+   "html": "Museums",
+   "n": 1,
+   "tag": "a",
+   "cls": ""
+  },
+  "Freelance": {
+   "html": "Freelance",
+   "n": 3,
+   "tag": "a",
+   "cls": ""
+  },
+  "Practice Years": {
+   "html": "Practice Years",
+   "n": 4,
+   "tag": "a",
+   "cls": ""
+  },
+  "Contact": {
+   "html": "Contact",
+   "n": 2,
+   "tag": "a",
+   "cls": ""
+  },
+  "Move your cursor to descend": {
+   "html": "Move your cursor to descend",
+   "n": 1,
+   "tag": "div",
+   "cls": "big"
+  },
+  "Entering Abu Dhabi airspace": {
+   "html": "Entering Abu Dhabi airspace",
+   "n": 1,
+   "tag": "div",
+   "cls": "sm"
+  },
+  "Architect · VR & digital twin specialist": {
+   "html": "Architect · VR &amp; digital twin specialist",
+   "n": 1,
+   "tag": "p",
+   "cls": "sub"
+  },
+  "ABU DHABI · UAE": {
+   "html": "ABU DHABI · UAE",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "About": {
+   "html": "About",
+   "n": 1,
+   "tag": "span",
+   "cls": "kicker"
+  },
+  "Profile & credentials": {
+   "html": "Profile &amp; credentials",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "Mohamad Hashem Dankar — architect (BAU, RIBA Part I), based in Abu Dhabi. Six years across design practice, museum fabrication and government simulation, working in English and Arabic, at every scale from a GRC bracket to a national twin.": {
+   "html": "Mohamad Hashem Dankar — architect (BAU, RIBA Part I), based in Abu Dhabi. Six years across design practice, museum fabrication and government simulation, working in English and Arabic, at every scale from a GRC bracket to a national twin.",
+   "n": 1,
+   "tag": "p",
+   "cls": "big reveal"
+  },
+  "Current": {
+   "html": "Current",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "VR Content Creator — UAE Ministry of Interior (Tahaluf Al Emarat), Abu Dhabi": {
+   "html": "VR Content Creator — UAE Ministry of Interior (Tahaluf Al Emarat), Abu Dhabi",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Previously": {
+   "html": "Previously",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Fibrex Construction Group (Saadiyat museums) · LDRS Chehab & Partners, Beirut–Tripoli · freelance practice": {
+   "html": "Fibrex Construction Group (Saadiyat museums) · LDRS Chehab &amp; Partners, Beirut–Tripoli · freelance practice",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Education": {
+   "html": "Education",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "B.Arch, Beirut Arab University — validated at RIBA Part 1 level": {
+   "html": "B.Arch, Beirut Arab University — validated at RIBA Part 1 level",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Credentials": {
+   "html": "Credentials",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Autodesk Certified User — 3ds Max & AutoCAD · IC3 GS5 · Sapienza Rome parametric program": {
+   "html": "Autodesk Certified User — 3ds Max &amp; AutoCAD · IC3 GS5 · Sapienza Rome parametric program",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Languages": {
+   "html": "Languages",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Arabic · English · French": {
+   "html": "Arabic · English · French",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Email": {
+   "html": "Email",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "hashemx98@gmail.com": {
+   "html": "hashemx98@gmail.com",
+   "n": 2,
+   "tag": "a",
+   "cls": ""
+  },
+  "Phone / WhatsApp": {
+   "html": "Phone / WhatsApp",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Base": {
+   "html": "Base",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Abu Dhabi · United Arab Emirates": {
+   "html": "Abu Dhabi · United Arab Emirates",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Toolchain": {
+   "html": "Toolchain",
+   "n": 1,
+   "tag": "b",
+   "cls": ""
+  },
+  "Unreal Engine": {
+   "html": "Unreal Engine",
+   "n": 3,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "3ds Max": {
+   "html": "3ds Max",
+   "n": 3,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Datasmith": {
+   "html": "Datasmith",
+   "n": 3,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Substance": {
+   "html": "Substance",
+   "n": 2,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Rhino + Grasshopper": {
+   "html": "Rhino + Grasshopper",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Revit": {
+   "html": "Revit",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "AutoCAD": {
+   "html": "AutoCAD",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Corona / V-Ray": {
+   "html": "Corona / V-Ray",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Twinmotion": {
+   "html": "Twinmotion",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Unity": {
+   "html": "Unity",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Ladybug / Honeybee": {
+   "html": "Ladybug / Honeybee",
+   "n": 2,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Photoshop": {
+   "html": "Photoshop",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "GIS workflows": {
+   "html": "GIS workflows",
+   "n": 1,
+   "tag": "span",
+   "cls": "chip"
+  },
+  "Download CV — PDF ↓": {
+   "html": "Download CV — PDF ↓",
+   "n": 1,
+   "tag": "a",
+   "cls": "btn"
+  },
+  "Saadiyat museums": {
+   "html": "Saadiyat museums",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Emirates in engine": {
+   "html": "Emirates in engine",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Buildings · Reem Island": {
+   "html": "Buildings · Reem Island",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Years in practice": {
+   "html": "Years in practice",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Selected works · 2016 — present": {
+   "html": "Selected works · 2016 — present",
+   "n": 1,
+   "tag": "span",
+   "cls": "kicker"
+  },
+  "Four chapters,twenty-two projects": {
+   "html": "Four chapters,<br>twenty-two projects",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "P·01 — MOI · UNREAL ENGINE": {
+   "html": "P·01 — MOI · UNREAL ENGINE",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "P·02 — FIBREX · SAADIYAT ISLAND": {
+   "html": "P·02 — FIBREX · SAADIYAT ISLAND",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Museums, Fabricated": {
+   "html": "Museums, Fabricated",
+   "n": 3,
+   "tag": "h4",
+   "cls": ""
+  },
+  "P·03 — INDEPENDENT CLIENTS": {
+   "html": "P·03 — INDEPENDENT CLIENTS",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "P·04 — LDRS & THE FORMATIVE ARC": {
+   "html": "P·04 — LDRS &amp; THE FORMATIVE ARC",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Projects": {
+   "html": "Projects",
+   "n": 1,
+   "tag": "h4",
+   "cls": ""
+  },
+  "P·01": {
+   "html": "P·01",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "MOI · Unreal Engine": {
+   "html": "MOI · Unreal Engine",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·01·1": {
+   "html": "P·01·1",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "The Pipeline": {
+   "html": "The Pipeline",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Capture → engine": {
+   "html": "Capture → engine",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·01·2": {
+   "html": "P·01·2",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Abu Dhabi": {
+   "html": "Abu Dhabi",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "117 buildings · Reem": {
+   "html": "117 buildings · Reem",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·01·3": {
+   "html": "P·01·3",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Ajman": {
+   "html": "Ajman",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Real vs twin": {
+   "html": "Real vs twin",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·01·4": {
+   "html": "P·01·4",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Ras Al Khaimah": {
+   "html": "Ras Al Khaimah",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Coastal strip": {
+   "html": "Coastal strip",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·01·5": {
+   "html": "P·01·5",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Fujairah": {
+   "html": "Fujairah",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Grand mosque axis": {
+   "html": "Grand mosque axis",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·02": {
+   "html": "P·02",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Fibrex · Saadiyat": {
+   "html": "Fibrex · Saadiyat",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·02·1": {
+   "html": "P·02·1",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Zayed National Museum": {
+   "html": "Zayed National Museum",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Fibrex": {
+   "html": "Fibrex",
+   "n": 4,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·02·2": {
+   "html": "P·02·2",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Guggenheim Abu Dhabi": {
+   "html": "Guggenheim Abu Dhabi",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "P·02·3": {
+   "html": "P·02·3",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Natural History Museum": {
+   "html": "Natural History Museum",
+   "n": 1,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "P·02·4": {
+   "html": "P·02·4",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Amaala Red Sea Village": {
+   "html": "Amaala Red Sea Village",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "P·03": {
+   "html": "P·03",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Design-build clients": {
+   "html": "Design-build clients",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·03·1": {
+   "html": "P·03·1",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Bungalow Resort — Rize, Türkiye": {
+   "html": "Bungalow Resort — Rize, Türkiye",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Hospitality": {
+   "html": "Hospitality",
+   "n": 2,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·03·2": {
+   "html": "P·03·2",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Cinema": {
+   "html": "Cinema",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Design + viz": {
+   "html": "Design + viz",
+   "n": 2,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·03·3": {
+   "html": "P·03·3",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Library": {
+   "html": "Library",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "P·03·4": {
+   "html": "P·03·4",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Interiors": {
+   "html": "Interiors",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Living · retail": {
+   "html": "Living · retail",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04": {
+   "html": "P·04",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "P·04·1": {
+   "html": "P·04·1",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Skyfall Pavilion": {
+   "html": "Skyfall Pavilion",
+   "n": 3,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Competition": {
+   "html": "Competition",
+   "n": 4,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·2": {
+   "html": "P·04·2",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Royal Complex — Mall & Twin Towers": {
+   "html": "Royal Complex — Mall &amp; Twin Towers",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "P·04·3": {
+   "html": "P·04·3",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Al Tall Regeneration — UNDP": {
+   "html": "Al Tall Regeneration — UNDP",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Tripoli": {
+   "html": "Tripoli",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·4": {
+   "html": "P·04·4",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Al Mawlawiya & Old Souks": {
+   "html": "Al Mawlawiya &amp; Old Souks",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Heritage": {
+   "html": "Heritage",
+   "n": 3,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·5": {
+   "html": "P·04·5",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Mar Semaan Monastery — Diagnosis": {
+   "html": "Mar Semaan Monastery — Diagnosis",
+   "n": 1,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "P·04·6": {
+   "html": "P·04·6",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Virtual Reality Complex — Senior Project": {
+   "html": "Virtual Reality Complex — Senior Project",
+   "n": 1,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "BAU": {
+   "html": "BAU",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·7": {
+   "html": "P·04·7",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Antalya Skyscraper — The Cliff Edge": {
+   "html": "Antalya Skyscraper — The Cliff Edge",
+   "n": 1,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "High-rise": {
+   "html": "High-rise",
+   "n": 2,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·8": {
+   "html": "P·04·8",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Green Mosque": {
+   "html": "Green Mosque",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "El Mina": {
+   "html": "El Mina",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·9": {
+   "html": "P·04·9",
+   "n": 2,
+   "tag": "span",
+   "cls": "code"
+  },
+  "Algoritm Rome — Kinetic Façade Lab": {
+   "html": "Algoritm Rome — Kinetic Façade Lab",
+   "n": 2,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "Sapienza": {
+   "html": "Sapienza",
+   "n": 1,
+   "tag": "span",
+   "cls": "mt"
+  },
+  "P·04·10": {
+   "html": "P·04·10",
+   "n": 1,
+   "tag": "span",
+   "cls": "code"
+  },
+  "The Paper Trail": {
+   "html": "The Paper Trail",
+   "n": 1,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "SCROLL ▾ SWEEP": {
+   "html": "SCROLL ▾ SWEEP",
+   "n": 1,
+   "tag": "div",
+   "cls": "shint"
+  },
+  "UPLINK ACQUIRED · A COUNTRY AS LIVING DATA · SCROLL TO SWEEP THE GRID": {
+   "html": "UPLINK ACQUIRED · <b>A COUNTRY AS LIVING DATA</b> · SCROLL TO SWEEP THE GRID",
+   "n": 1,
+   "tag": "div",
+   "cls": "in"
+  },
+  "MINISTRY OF INTERIOR · 2023 — PRESENT": {
+   "html": "MINISTRY OF INTERIOR · 2023 — PRESENT",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Flagship · Tahaluf Al Emarat · Future Simulation": {
+   "html": "Flagship · Tahaluf Al Emarat · Future Simulation",
+   "n": 1,
+   "tag": "span",
+   "cls": "kicker"
+  },
+  "A national-scale digital twin of the United Arab Emirates, running in real time in Unreal Engine. I build the cities themselves — modeled in 3ds Max, textured in Substance, delivered through Datasmith, geolocated with GIS data.": {
+   "html": "A national-scale digital twin of the United Arab Emirates, running in real time in <b>Unreal Engine</b>. I build the cities themselves — modeled in <b>3ds Max</b>, textured in <b>Substance</b>, delivered through <b>Datasmith</b>, geolocated with <b>GIS</b> data.",
+   "n": 1,
+   "tag": "p",
+   "cls": "lede"
+  },
+  "GIS": {
+   "html": "GIS",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Arabic / English UI": {
+   "html": "Arabic / English UI",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "My role: the 3D city pipeline end-to-end — footprint extraction, low-poly modeling, UV mapping, texturing, geolocation, naming and tagging, collision, optimization, and delivery into engine, at LOD 100–200 across the seven Emirates.": {
+   "html": "<b>My role: the 3D city pipeline end-to-end</b> — footprint extraction, low-poly modeling, UV mapping, texturing, geolocation, naming and tagging, collision, optimization, and delivery into engine, at LOD 100–200 across the seven Emirates.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Client": {
+   "html": "Client",
+   "n": 3,
+   "tag": "dt",
+   "cls": ""
+  },
+  "UAE Ministry of Interior": {
+   "html": "UAE Ministry of Interior",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Scope": {
+   "html": "Scope",
+   "n": 5,
+   "tag": "dt",
+   "cls": ""
+  },
+  "7 Emirates · national scale": {
+   "html": "7 Emirates · national scale",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Role": {
+   "html": "Role",
+   "n": 3,
+   "tag": "dt",
+   "cls": ""
+  },
+  "VR Content Creator · 3D city pipeline": {
+   "html": "VR Content Creator · 3D city pipeline",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Engine": {
+   "html": "Engine",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Unreal Engine · real time": {
+   "html": "Unreal Engine · real time",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Layers": {
+   "html": "Layers",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Dashboards · events · assets": {
+   "html": "Dashboards · events · assets",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Status": {
+   "html": "Status",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "In active development": {
+   "html": "In active development",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Every city in the twin goes through the same disciplined route — built for speed, consistency and real-time performance at urban scale.": {
+   "html": "Every city in the twin goes through the same disciplined route — built for <b>speed, consistency and real-time performance</b> at urban scale.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Satellite / GIS": {
+   "html": "Satellite / GIS",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
+  "Imagery + footprints, georeferenced": {
+   "html": "Imagery + footprints, georeferenced",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "2D Extraction": {
+   "html": "2D Extraction",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
+  "Clean building outlines per district": {
+   "html": "Clean building outlines per district",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "3D Low-Poly": {
+   "html": "3D Low-Poly",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
+  "LOD 100–200 massing in 3ds Max": {
+   "html": "LOD 100–200 massing in 3ds Max",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "UV + Texture": {
+   "html": "UV + Texture",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
+  "Box mapping · custom + emissive maps": {
+   "html": "Box mapping · custom + emissive maps",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Pivots, naming, tags, collisions": {
+   "html": "Pivots, naming, tags, collisions",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Geolocation · blueprints · events": {
+   "html": "Geolocation · blueprints · events",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "When a landmark matters, it is rebuilt properly — from grey massing to fully textured, night-lit asset. The same building, twice.": {
+   "html": "When a landmark matters, it is rebuilt properly — from grey massing to <b>fully textured, night-lit asset</b>. The same building, twice.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Sigma & Omega towers · massing → textured night asset": {
+   "html": "Sigma &amp; Omega towers · massing → textured night asset",
+   "n": 1,
+   "tag": "p",
+   "cls": "ba-cap"
+  },
+  "Mangrove complex · exploded texture set → assembled": {
+   "html": "Mangrove complex · exploded texture set → assembled",
+   "n": 1,
+   "tag": "p",
+   "cls": "ba-cap"
+  },
+  "Abu Dhabi · Reem & Al Maryah command flyover · recorded in engine": {
+   "html": "Abu Dhabi · Reem &amp; Al Maryah command flyover · recorded in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "One island, delivered like a specimen archive. I built Reem Island's fabric building by building — each one modeled, textured, named, tagged and collision-ready — from Repton School to Reem Mall to the mosque on the corner.": {
+   "html": "One island, delivered like a specimen archive. I built Reem Island's fabric building by building — <b>each one modeled, textured, named, tagged and collision-ready</b> — from Repton School to Reem Mall to the mosque on the corner.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Finished buildings": {
+   "html": "Finished buildings",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Painted · + finished layouts": {
+   "html": "Painted · + finished layouts",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "km²": {
+   "html": "km²",
+   "n": 1,
+   "tag": "i",
+   "cls": ""
+  },
+  "Landscape · roads · parks": {
+   "html": "Landscape · roads · parks",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Named main towers · Part One": {
+   "html": "Named main towers · Part One",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "The island in engine · Gate Towers quarter": {
+   "html": "The island in engine · Gate Towers quarter",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Waterfront & marina · in engine": {
+   "html": "Waterfront &amp; marina · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Reem & Al Maryah · in engine": {
+   "html": "Reem &amp; Al Maryah · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Reem Mall & Gate Towers": {
+   "html": "Reem Mall &amp; Gate Towers",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The tower quarter": {
+   "html": "The tower quarter",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Marina quarter": {
+   "html": "Marina quarter",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Mangrove quarter": {
+   "html": "Mangrove quarter",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Island districts": {
+   "html": "Island districts",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The whole city · high pass": {
+   "html": "The whole city · high pass",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The Asset Vault — every building, live in 3D": {
+   "html": "The Asset Vault — every building, live in 3D",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "Eighteen of Reem Island's named buildings, pulled straight from the delivery archive. Tap any tile to open the real engine asset — orbit it, switch its materials, turn on the night lights.": {
+   "html": "Eighteen of Reem Island's named buildings, pulled straight from the delivery archive. <b>Tap any tile to open the real engine asset — orbit it, switch its materials, turn on the night lights.</b>",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Al Wifaq Tower ASSET": {
+   "html": "Al Wifaq Tower <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Amaya Towers ASSET": {
+   "html": "Amaya Towers <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Shams Meera Towers ASSET": {
+   "html": "Shams Meera Towers <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The Kite Residences ASSET": {
+   "html": "The Kite Residences <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Marina Rise Tower ASSET": {
+   "html": "Marina Rise Tower <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Hydra Towers ASSET": {
+   "html": "Hydra Towers <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Mangrove Place ASSET": {
+   "html": "Mangrove Place <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Reem Hospital ASSET": {
+   "html": "Reem Hospital <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Repton School · Rose Campus ASSET": {
+   "html": "Repton School · Rose Campus <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Sigma Omega Towers ASSET": {
+   "html": "Sigma Omega Towers <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Al Reem Bay Towers ASSET": {
+   "html": "Al Reem Bay Towers <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "DAMAC Marina Bay ASSET": {
+   "html": "DAMAC Marina Bay <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Reem Mosque ASSET": {
+   "html": "Reem Mosque <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Paragon Bay Mall ASSET": {
+   "html": "Paragon Bay Mall <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Reem Mall ASSET": {
+   "html": "Reem Mall <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Sorbonne University ASSET": {
+   "html": "Sorbonne University <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Y Tower ASSET": {
+   "html": "Y Tower <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "ADNOC Station ASSET": {
+   "html": "ADNOC Station <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Ajman · heritage quarter & corniche orbit · recorded in engine": {
+   "html": "Ajman · heritage quarter &amp; corniche orbit · recorded in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The proof, one seam apart: the real Ajman corner on the left — and the same corner inside the engine on the right. Same buildings, same signage lines, same curb geometry, now simulation-ready with traffic splines and asset markers.": {
+   "html": "The proof, one seam apart: the real Ajman corner on the left — and the same corner inside the engine on the right. <b>Same buildings, same signage lines, same curb geometry</b>, now simulation-ready with traffic splines and asset markers.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Reality | digital twin · one seam apart": {
+   "html": "Reality | digital twin · one seam apart",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The city from the air · in engine": {
+   "html": "The city from the air · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Resort & marina quarter · in engine": {
+   "html": "Resort &amp; marina quarter · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Dhow monument · street level": {
+   "html": "Dhow monument · street level",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Ajman Post Office · traffic simulation layer": {
+   "html": "Ajman Post Office · traffic simulation layer",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "…and inside it — interiors are in the twin too": {
+   "html": "…and inside it — interiors are in the twin too",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Deeper than façades: the Ajman Museum fort and its heritage souk are walkable spaces in the twin — this is a walk through them, recorded inside the engine.": {
+   "html": "Deeper than façades: <b>the Ajman Museum fort and its heritage souk are walkable spaces in the twin</b> — this is a walk through them, recorded inside the engine.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Ajman Museum · the fort & heritage souk · walked in engine": {
+   "html": "Ajman Museum · the fort &amp; heritage souk · walked in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "And the same discipline, building by building. One municipality building, three ways: the before-and-after rebuild sheet, the building as it really stands, and the finished asset inside the twin.": {
+   "html": "And the same discipline, building by building. One municipality building, three ways: <b>the before-and-after rebuild sheet, the building as it really stands, and the finished asset inside the twin.</b>",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "The rebuild sheet · before & after": {
+   "html": "The rebuild sheet · before &amp; after",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Reality · photographed on the street": {
+   "html": "Reality · photographed on the street",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The twin · standing in engine": {
+   "html": "The twin · standing in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Ras Al Khaimah · the coastal strip under clouds · recorded in engine": {
+   "html": "Ras Al Khaimah · the coastal strip under clouds · recorded in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The northern emirate, rebuilt from the mountains to the lagoon. The corniche, the market district and the coastal strip — every block extracted from GIS footprints, massed, textured and pinned to its real latitude.": {
+   "html": "The northern emirate, rebuilt from the mountains to the lagoon. <b>The corniche, the market district and the coastal strip</b> — every block extracted from GIS footprints, massed, textured and pinned to its real latitude.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "The coastal strip · high-altitude pass": {
+   "html": "The coastal strip · high-altitude pass",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The lagoon & corniche · in engine": {
+   "html": "The lagoon &amp; corniche · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Waterfront row": {
+   "html": "Waterfront row",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The peninsula · creek & Gulf": {
+   "html": "The peninsula · creek &amp; Gulf",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The lagoon": {
+   "html": "The lagoon",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Fujairah · grand mosque axis into the city center · recorded in engine": {
+   "html": "Fujairah · grand mosque axis into the city center · recorded in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The east-coast emirate, from the Hajar foothills to the port. The Grand Mosque axis, the Hamad Bin Abdullah boulevard and the oil terminal — modeled, textured and running in the same national world.": {
+   "html": "The east-coast emirate, from the Hajar foothills to the port. <b>The Grand Mosque axis, the Hamad Bin Abdullah boulevard and the oil terminal</b> — modeled, textured and running in the same national world.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "The boulevard · in engine": {
+   "html": "The boulevard · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Grand Mosque axis · in engine": {
+   "html": "Grand Mosque axis · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The boulevard · street level": {
+   "html": "The boulevard · street level",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "City center · in engine": {
+   "html": "City center · in engine",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The coastline": {
+   "html": "The coastline",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Across the coastal plain": {
+   "html": "Across the coastal plain",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The oil terminal": {
+   "html": "The oil terminal",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "SAADIYAT ISLAND · WHERE THE MUSEUMS LAND": {
+   "html": "SAADIYAT ISLAND · <b>WHERE THE MUSEUMS LAND</b>",
+   "n": 1,
+   "tag": "div",
+   "cls": "in"
+  },
+  "FIBREX · SAADIYAT ISLAND · 2022 — 23": {
+   "html": "FIBREX · SAADIYAT ISLAND · 2022 — 23",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Flagship · Production engineering": {
+   "html": "Flagship · Production engineering",
+   "n": 1,
+   "tag": "span",
+   "cls": "kicker"
+  },
+  "Three museums,panel by panel": {
+   "html": "Three museums,<br>panel by panel",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "Before the digital twin, the physical ones. At Fibrex Construction Group, Mohamad Hashem worked on production 3D and shop-drawing packages for the façade and structure elements of Saadiyat Island's cultural district — turning signature geometry by Foster + Partners, Gehry Partners and Mecanoo into buildable, castable, deliverable pieces.": {
+   "html": "Before the digital twin, the physical ones. At Fibrex Construction Group, Mohamad Hashem worked on production 3D and shop-drawing packages for the façade and structure elements of Saadiyat Island's cultural district — turning signature geometry by Foster + Partners, Gehry Partners and Mecanoo into buildable, castable, deliverable pieces.",
+   "n": 1,
+   "tag": "p",
+   "cls": "lede"
+  },
+  "Production 3D": {
+   "html": "Production 3D",
+   "n": 2,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Steel wings": {
+   "html": "Steel wings",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "GRC": {
+   "html": "GRC",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Shop drawings": {
+   "html": "Shop drawings",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "The museum's falcon-wing towers pass through the factory as thousands of unique elements. Mohamad Hashem produced the production 3D models, panel breakdowns and steel shop-drawing sheets — the geometry that lets a curved monument be cast flat, tracked, trucked and re-assembled on site. The museum opened on Saadiyat in 2025.": {
+   "html": "The museum's falcon-wing towers pass through the factory as thousands of unique elements. Mohamad Hashem produced the <b>production 3D models, panel breakdowns and steel shop-drawing sheets</b> — the geometry that lets a curved monument be cast flat, tracked, trucked and re-assembled on site. The museum opened on Saadiyat in 2025.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Architect": {
+   "html": "Architect",
+   "n": 3,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Foster + Partners": {
+   "html": "Foster + Partners",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Employer": {
+   "html": "Employer",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Fibrex Construction Group": {
+   "html": "Fibrex Construction Group",
+   "n": 2,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Production 3D · panels · steel sheets": {
+   "html": "Production 3D · panels · steel sheets",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Built · open": {
+   "html": "Built · open",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Standing on Saadiyat · the finished museum": {
+   "html": "Standing on Saadiyat · the finished museum",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Wing steel · production model": {
+   "html": "Wing steel · production model",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Steel shop sheet · Z8-018": {
+   "html": "Steel shop sheet · Z8-018",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Bracket system": {
+   "html": "Bracket system",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Panel mapping · full fabric": {
+   "html": "Panel mapping · full fabric",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Then the same panel, all the way down the line — from the numbered layout, to the saw, to the finished faceted stone:": {
+   "html": "Then the same panel, all the way down the line — <b>from the numbered layout, to the saw, to the finished faceted stone</b>:",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "01 · The panel layout": {
+   "html": "01 · The panel layout",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "02 · Cut on the CNC saw": {
+   "html": "02 · Cut on the CNC saw",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "03 · The finished panel": {
+   "html": "03 · The finished panel",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Racked in rows": {
+   "html": "Racked in rows",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Onto the stud frame": {
+   "html": "Onto the stud frame",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Anchor sizing · marked in review": {
+   "html": "Anchor sizing · marked in review",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Factory · wing assemblies": {
+   "html": "Factory · wing assemblies",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Steel assembly": {
+   "html": "Steel assembly",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Ready for delivery": {
+   "html": "Ready for delivery",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Triangulation take-offs": {
+   "html": "Triangulation take-offs",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "GRC panels": {
+   "html": "GRC panels",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Point verification": {
+   "html": "Point verification",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "For Gehry's colliding cones, Mohamad Hashem prepared panel production models and point-cloud verification geometry — the survey-grade 3D that proves each cast GRC panel matches the design surface before it leaves the yard.": {
+   "html": "For Gehry's colliding cones, Mohamad Hashem prepared <b>panel production models and point-cloud verification geometry</b> — the survey-grade 3D that proves each cast GRC panel matches the design surface before it leaves the yard.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Gehry Partners": {
+   "html": "Gehry Partners",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "GRC panel production · verification": {
+   "html": "GRC panel production · verification",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Gehry's colliding cones · the presentation model": {
+   "html": "Gehry's colliding cones · the presentation model",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Production massing": {
+   "html": "Production massing",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Panel rows · fixings": {
+   "html": "Panel rows · fixings",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Fixing detail": {
+   "html": "Fixing detail",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Cone geometry · panel segmentation": {
+   "html": "Cone geometry · panel segmentation",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The cone mouths · model detail": {
+   "html": "The cone mouths · model detail",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "And the paperwork behind a single panel — the GRC sheet, its steel sub-frame, the fixing points and the survey table that proves the cast piece lands exactly where the design surface says it should:": {
+   "html": "And the paperwork behind a single panel — <b>the GRC sheet, its steel sub-frame, the fixing points and the survey table</b> that proves the cast piece lands exactly where the design surface says it should:",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "GRC panel sheet": {
+   "html": "GRC panel sheet",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Steel sub-frame": {
+   "html": "Steel sub-frame",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Fixing points": {
+   "html": "Fixing points",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Survey table": {
+   "html": "Survey table",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Natural History Museum Abu Dhabi": {
+   "html": "Natural History Museum Abu Dhabi",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "GRC production": {
+   "html": "GRC production",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Panel drawings": {
+   "html": "Panel drawings",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Saadiyat": {
+   "html": "Saadiyat",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Mecanoo's crystalline museum, taken through the mill panel by panel — Mohamad Hashem worked on the production 3D models and GRC panel drawing sheets behind the faceted rock-like fabric, then followed the panels onto the factory floor: molds, demolding, checking, shipping.": {
+   "html": "Mecanoo's crystalline museum, taken through the mill panel by panel — Mohamad Hashem worked on the <b>production 3D models and GRC panel drawing sheets</b> behind the faceted rock-like fabric, then followed the panels onto the factory floor: molds, demolding, checking, shipping.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Mecanoo": {
+   "html": "Mecanoo",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Production 3D · GRC panel sheets": {
+   "html": "Production 3D · GRC panel sheets",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Site": {
+   "html": "Site",
+   "n": 7,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Saadiyat Island · Abu Dhabi": {
+   "html": "Saadiyat Island · Abu Dhabi",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "From the water · the stepped terraces": {
+   "html": "From the water · the stepped terraces",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Panel study": {
+   "html": "Panel study",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Production model": {
+   "html": "Production model",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Demolded panel": {
+   "html": "Demolded panel",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Molds in production": {
+   "html": "Molds in production",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Casting works": {
+   "html": "Casting works",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Checked in the yard": {
+   "html": "Checked in the yard",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "GRC panel sheet · tap to zoom in": {
+   "html": "GRC panel sheet · tap to zoom in",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Grasshopper": {
+   "html": "Grasshopper",
+   "n": 2,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Cellular pods": {
+   "html": "Cellular pods",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "KSA": {
+   "html": "KSA",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "On the Red Sea coast, a village of cellular pods — a Grasshopper definition drives the cluster from design surface to castable production units, so every pod can vary while staying buildable from the same family of molds.": {
+   "html": "On the Red Sea coast, a village of cellular pods — a <b>Grasshopper definition drives the cluster</b> from design surface to castable production units, so every pod can vary while staying buildable from the same family of molds.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Amaala · Red Sea coast · KSA": {
+   "html": "Amaala · Red Sea coast · KSA",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Tooling": {
+   "html": "Tooling",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Grasshopper · Rhino · 3ds Max": {
+   "html": "Grasshopper · Rhino · 3ds Max",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Pod cluster": {
+   "html": "Pod cluster",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Shoreline aerial": {
+   "html": "Shoreline aerial",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The Grasshopper definition": {
+   "html": "The Grasshopper definition",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Freelance Practice": {
+   "html": "Freelance Practice",
+   "n": 1,
+   "tag": "span",
+   "cls": "nm"
+  },
+  "DESIGN-BUILD CLIENTS · INDEPENDENT": {
+   "html": "DESIGN-BUILD CLIENTS · INDEPENDENT",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Independent practice": {
+   "html": "Independent practice",
+   "n": 1,
+   "tag": "span",
+   "cls": "kicker"
+  },
+  "Professionalfreelance": {
+   "html": "Professional<br>freelance",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "Design and visualisation commissions carried alone from brief to final image — each with its own client, site and character.": {
+   "html": "Design and visualisation commissions carried alone from brief to final image — each with its own client, site and character.",
+   "n": 1,
+   "tag": "p",
+   "cls": "lede"
+  },
+  "Mountain site": {
+   "html": "Mountain site",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Concept → client": {
+   "html": "Concept → client",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "A mountain resort on a working tea plantation above Rize, and the whole scheme is drawn from the tea service itself. The main lodge is a teapot; every guest unit is a Turkish teacup cut in half lengthwise and laid on its side — not a barrel — its curved shell stepped along the terraced slope so each roof reads as another contour of the hillside. Developed from drone site survey through concept alternatives and eight client submissions to full presentation visuals.": {
+   "html": "A mountain resort on a working tea plantation above Rize, and the whole scheme is drawn from the tea service itself. The main lodge is a teapot; every guest unit is <b>a Turkish teacup cut in half lengthwise and laid on its side</b> — not a barrel — its curved shell stepped along the terraced slope so each roof reads as another contour of the hillside. Developed from drone site survey through concept alternatives and eight client submissions to full presentation visuals.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Tea terraces · Rize, Türkiye": {
+   "html": "Tea terraces · Rize, Türkiye",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Program": {
+   "html": "Program",
+   "n": 4,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Teacup bungalows · teapot lodge · tea workshop": {
+   "html": "Teacup bungalows · teapot lodge · tea workshop",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Design · visualisation": {
+   "html": "Design · visualisation",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Stage": {
+   "html": "Stage",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Concept → client presentation": {
+   "html": "Concept → client presentation",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The resort · on the tea terraces": {
+   "html": "The resort · on the tea terraces",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The same hillside, twice — the works as they stand on site, and the schematic that set them out:": {
+   "html": "The same hillside, twice — <b>the works as they stand on site, and the schematic that set them out:</b>",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "WORKS ON SITE": {
+   "html": "WORKS ON SITE",
+   "n": 1,
+   "tag": "span",
+   "cls": "plbl"
+  },
+  "SCHEMATIC SKETCH": {
+   "html": "SCHEMATIC SKETCH",
+   "n": 1,
+   "tag": "span",
+   "cls": "plbl"
+  },
+  "THE SITE AS FOUND": {
+   "html": "THE SITE AS FOUND",
+   "n": 1,
+   "tag": "span",
+   "cls": "plbl"
+  },
+  "UNITS PLOTTED ON IT": {
+   "html": "UNITS PLOTTED ON IT",
+   "n": 1,
+   "tag": "span",
+   "cls": "plbl"
+  },
+  "Tea workshop · on the river terrace": {
+   "html": "Tea workshop · on the river terrace",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The teapot lodge and the half-teacup unit are real 3D models — tap a tile to walk around them.": {
+   "html": "The teapot lodge and the half-teacup unit are real 3D models — tap a tile to walk around them.",
+   "n": 1,
+   "tag": "b",
+   "cls": ""
+  },
+  "The Teapot Lodge ASSET": {
+   "html": "The Teapot Lodge <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The Teacup Bungalow ASSET": {
+   "html": "The Teacup Bungalow <i>ASSET</i>",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "A cinema drum with a glowing crown — the night identity does the marketing.": {
+   "html": "A cinema drum with a glowing crown — the night identity does the marketing.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Night crown": {
+   "html": "Night crown",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "From the boulevard": {
+   "html": "From the boulevard",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "A winter library scheme in two structural characters — cantilevered entry against a pitched reading hall.": {
+   "html": "A winter library scheme in two structural characters — cantilevered entry against a pitched reading hall.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Winter set": {
+   "html": "Winter set",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Cantilever entry": {
+   "html": "Cantilever entry",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Across the lawn": {
+   "html": "Across the lawn",
+   "n": 2,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Residential and retail interiors — two living-room characters and a mall atrium.": {
+   "html": "Residential and retail interiors — two living-room characters and a mall atrium.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Living · minimal": {
+   "html": "Living · minimal",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Living · European": {
+   "html": "Living · European",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Retail atrium": {
+   "html": "Retail atrium",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "LDRS CHEHAB & PARTNERS · BAU · 2015 — 22": {
+   "html": "LDRS CHEHAB &amp; PARTNERS · BAU · 2015 — 22",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "The formative arc": {
+   "html": "The formative arc",
+   "n": 1,
+   "tag": "span",
+   "cls": "kicker"
+  },
+  "The practiceyears": {
+   "html": "The practice<br>years",
+   "n": 1,
+   "tag": "h2",
+   "cls": ""
+  },
+  "Before the Gulf: architectural engineer at LDRS Chehab & Partners, and the university flagships that pointed straight at real time — regeneration for UNDP, heritage diagnosis, competitions for Erbil, and a virtual-reality complex before VR was the job.": {
+   "html": "Before the Gulf: architectural engineer at LDRS Chehab &amp; Partners, and the university flagships that pointed straight at real time — regeneration for UNDP, heritage diagnosis, competitions for Erbil, and a virtual-reality complex before VR was the job.",
+   "n": 1,
+   "tag": "p",
+   "cls": "lede"
+  },
+  "VVIP palace": {
+   "html": "VVIP palace",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Perforated canopy": {
+   "html": "Perforated canopy",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "A VVIP palace beneath a single perforated canopy — \"a waterfall of sky\" — filtering Kurdistan's light into a palm court. Sixteen boards carried the philosophy, sun studies, terraced gardens and plans; the centrepiece court render below is the argument in one image.": {
+   "html": "A VVIP palace beneath a single perforated canopy — \"a waterfall of sky\" — filtering Kurdistan's light into a palm court. Sixteen boards carried the philosophy, sun studies, terraced gardens and plans; the centrepiece court render below is the argument in one image.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Concept": {
+   "html": "Concept",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "شلال السماء · waterfall of sky": {
+   "html": "شلال السماء · waterfall of sky",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Palace · gardens · reception": {
+   "html": "Palace · gardens · reception",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The court · light through the canopy": {
+   "html": "The court · light through the canopy",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Over the water": {
+   "html": "Over the water",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Night aerial": {
+   "html": "Night aerial",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Dusk panorama": {
+   "html": "Dusk panorama",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Royal Complex — mall & twin towers": {
+   "html": "Royal Complex — mall &amp; twin towers",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "44-page book": {
+   "html": "44-page book",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Retail + towers": {
+   "html": "Retail + towers",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "A lakeside \"eyelid\" mall crowned by a cable-stayed canopy, paired with twin perforated towers holding a suspended sphere — delivered as a full 44-page competition book: masterplan, program acts, structure studies and the renders below.": {
+   "html": "A lakeside \"eyelid\" mall crowned by a cable-stayed canopy, paired with twin perforated towers holding a suspended sphere — delivered as a full 44-page competition book: masterplan, program acts, structure studies and the renders below.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Iraq Head of Ministry": {
+   "html": "Iraq Head of Ministry",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Mall · towers · waterfront": {
+   "html": "Mall · towers · waterfront",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Deliverable": {
+   "html": "Deliverable",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Competition book · visuals": {
+   "html": "Competition book · visuals",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Across the lake · dusk": {
+   "html": "Across the lake · dusk",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Atrium · under the canopy": {
+   "html": "Atrium · under the canopy",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Roof garden": {
+   "html": "Roof garden",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The twin towers · night": {
+   "html": "The twin towers · night",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "A UNDP-backed regeneration of the Ottoman clock-tower square at the heart of Tripoli. Mohamad Hashem authored the full 3D reconstruction and every visualisation, then ran the science underneath: solar comfort, wind, shadow and pedestrian simulations that shaped where people would actually sit, walk and stay.": {
+   "html": "A UNDP-backed regeneration of the Ottoman clock-tower square at the heart of Tripoli. Mohamad Hashem authored the full 3D reconstruction and every visualisation, then ran the science underneath: solar comfort, wind, shadow and pedestrian simulations that shaped where people would actually sit, walk and stay.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Corona": {
+   "html": "Corona",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Photogrammetry": {
+   "html": "Photogrammetry",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "The model was rebuilt from drone photogrammetry of the real district; proposals were tested against annual comfort and wind data before a single render was framed. All modeling and all renders on this page are Mohamad Hashem's.": {
+   "html": "The model was rebuilt from drone photogrammetry of the real district; proposals were tested against annual comfort and wind data before a single render was framed. <b>All modeling and all renders on this page are Mohamad Hashem's.</b>",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "UNDP · Municipality of Tripoli": {
+   "html": "UNDP · Municipality of Tripoli",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Practice": {
+   "html": "Practice",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "LDRS Architects": {
+   "html": "LDRS Architects",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Full 3D · visualisation · analysis": {
+   "html": "Full 3D · visualisation · analysis",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Al Tall square · Tripoli, Lebanon": {
+   "html": "Al Tall square · Tripoli, Lebanon",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The square, regenerated · clock-tower axis": {
+   "html": "The square, regenerated · clock-tower axis",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Fountain colonnade": {
+   "html": "Fountain colonnade",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Evening · tower & pool": {
+   "html": "Evening · tower &amp; pool",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Heritage frontage": {
+   "html": "Heritage frontage",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Terraced gardens": {
+   "html": "Terraced gardens",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Promenade": {
+   "html": "Promenade",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Walking it": {
+   "html": "Walking it",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "The scheme was delivered to UNDP as a full walkthrough film — the square at eye level, the way a Tuesday afternoon would actually feel. Two passes from it: down the relaid tram street, and up the new water garden to the foot of the clock tower.": {
+   "html": "The scheme was delivered to UNDP as a full walkthrough film — <b>the square at eye level, the way a Tuesday afternoon would actually feel</b>. Two passes from it: down the relaid tram street, and up the new water garden to the foot of the clock tower.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Down the tram street · walkthrough film": {
+   "html": "Down the tram street · walkthrough film",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Up the water garden to the clock tower · walkthrough film": {
+   "html": "Up the water garden to the clock tower · walkthrough film",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The evidence layer": {
+   "html": "The evidence layer",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "Design decisions were argued with data — annual comfort zones, solstice shadows, wind velocity, pedestrian stay-places, commercial heat — down to algorithmically placed café locations scored against the comfort map. Some layers were built the slow way — walking the site, counting, measuring, then turning the field notes into diagrams; others were simulated computationally in Grasshopper with Ladybug and Honeybee.": {
+   "html": "Design decisions were argued with data — annual comfort zones, solstice shadows, wind velocity, pedestrian stay-places, commercial heat — down to <b>algorithmically placed café locations</b> scored against the comfort map. Some layers were built the slow way — walking the site, counting, measuring, then turning the field notes into diagrams; others were simulated computationally in Grasshopper with Ladybug and Honeybee.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Comfort zones · summer": {
+   "html": "Comfort zones · summer",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Annual comfort": {
+   "html": "Annual comfort",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Wind velocity": {
+   "html": "Wind velocity",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Shadow hours · solstice": {
+   "html": "Shadow hours · solstice",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Pedestrian stay-places": {
+   "html": "Pedestrian stay-places",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Auto-placed cafés": {
+   "html": "Auto-placed cafés",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Commercial heatmap": {
+   "html": "Commercial heatmap",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Photogrammetry base · the real district": {
+   "html": "Photogrammetry base · the real district",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Photogrammetry capture": {
+   "html": "Photogrammetry capture",
+   "n": 1,
+   "tag": "span",
+   "cls": "pgsys"
+  },
+  "Al Tall · Tripoli": {
+   "html": "Al Tall · Tripoli",
+   "n": 1,
+   "tag": "span",
+   "cls": "pgname"
+  },
+  "Drone photogrammetry of the real district": {
+   "html": "Drone photogrammetry of the real district",
+   "n": 1,
+   "tag": "p",
+   "cls": "pgcap"
+  },
+  "MESH —": {
+   "html": "MESH {{0}}",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "SOURCE 12.9M TRIS": {
+   "html": "SOURCE <b>12.9M TRIS</b>",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "METHOD PHOTOGRAMMETRY": {
+   "html": "METHOD <b>PHOTOGRAMMETRY</b>",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "SCROLL TO ORBIT ▾": {
+   "html": "SCROLL TO ORBIT ▾",
+   "n": 1,
+   "tag": "div",
+   "cls": "pghint"
+  },
+  "Reconstructing scan…": {
+   "html": "Reconstructing scan…",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Before a single line of the proposal was drawn, the existing district was flown and rebuilt by photogrammetry — the real stone, the real slopes, the real roofline. Every render above sits on top of this scan, which is why the new square lands so exactly on the old one.": {
+   "html": "Before a single line of the proposal was drawn, the existing district was <b>flown and rebuilt by photogrammetry</b> — the real stone, the real slopes, the real roofline. Every render above sits on top of this scan, which is why the new square lands so exactly on the old one.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "Rehabilitation": {
+   "html": "Rehabilitation",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Site works": {
+   "html": "Site works",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Rehabilitation of the Mevlevi lodge gardens and the old souk edge in Tripoli — stone terraces, water channels and planting brought back around the historic tekke. Mohamad Hashem worked the project from drawings to the ground: detailed design, BOQs, and supervision of the works on site.": {
+   "html": "Rehabilitation of the Mevlevi lodge gardens and the old souk edge in Tripoli — stone terraces, water channels and planting brought back around the historic tekke. Mohamad Hashem worked the project from drawings to the ground: detailed design, BOQs, and supervision of the works on site.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "LDRS Chehab & Partners": {
+   "html": "LDRS Chehab &amp; Partners",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Design drawings · BOQ · supervision": {
+   "html": "Design drawings · BOQ · supervision",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Al Mawlawiya · Tripoli": {
+   "html": "Al Mawlawiya · Tripoli",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Type": {
+   "html": "Type",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Heritage garden rehabilitation": {
+   "html": "Heritage garden rehabilitation",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The garden · restoration study": {
+   "html": "The garden · restoration study",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Terraces · study view": {
+   "html": "Terraces · study view",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Garden court": {
+   "html": "Garden court",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Site overview": {
+   "html": "Site overview",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "On site · works record": {
+   "html": "On site · works record",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "On site · taking shape": {
+   "html": "On site · taking shape",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Mar Semaan Monastery — diagnosis": {
+   "html": "Mar Semaan Monastery — diagnosis",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "Structural diagnosis": {
+   "html": "Structural diagnosis",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "A field diagnosis of the 1878 Monastery of Mar Semaan in Zghorta — walking the vaults and walls to document cracks, settlement, water infiltration and fire damage, then mapping the pathologies and recommending anchoring and tie-rod interventions to hold the stone together.": {
+   "html": "A field diagnosis of the 1878 Monastery of Mar Semaan in Zghorta — walking the vaults and walls to document cracks, settlement, water infiltration and fire damage, then mapping the pathologies and recommending anchoring and tie-rod interventions to hold the stone together.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Building": {
+   "html": "Building",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Monastery of Mar Semaan · 1878": {
+   "html": "Monastery of Mar Semaan · 1878",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Zghorta · North Lebanon": {
+   "html": "Zghorta · North Lebanon",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Output": {
+   "html": "Output",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Pathology map · intervention plan": {
+   "html": "Pathology map · intervention plan",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Method": {
+   "html": "Method",
+   "n": 2,
+   "tag": "dt",
+   "cls": ""
+  },
+  "On-foot survey · photo record": {
+   "html": "On-foot survey · photo record",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The monastery": {
+   "html": "The monastery",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The vaults": {
+   "html": "The vaults",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Masonry record": {
+   "html": "Masonry record",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Cracks & settlement": {
+   "html": "Cracks &amp; settlement",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Interior survey": {
+   "html": "Interior survey",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The grounds": {
+   "html": "The grounds",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Virtual Reality Complex — senior project": {
+   "html": "Virtual Reality Complex — senior project",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "ARCH540": {
+   "html": "ARCH540",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Mixed use": {
+   "html": "Mixed use",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Data-driven": {
+   "html": "Data-driven",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "97 pages": {
+   "html": "97 pages",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "A VR entertainment and education complex — the first of its scale proposed in the region — argued with a 60-person survey, demographic infographics and program analysis before a line was drawn, then delivered as a full urban set-piece with towers, arena ring and public realm.": {
+   "html": "A VR entertainment and education complex — the first of its scale proposed in the region — argued with a 60-person survey, demographic infographics and program analysis before a line was drawn, then delivered as a full urban set-piece with towers, arena ring and public realm.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Course": {
+   "html": "Course",
+   "n": 3,
+   "tag": "dt",
+   "cls": ""
+  },
+  "ARCH540 · Senior Project": {
+   "html": "ARCH540 · Senior Project",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Survey · data · then design": {
+   "html": "Survey · data · then design",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Extras": {
+   "html": "Extras",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Animation · research booklet": {
+   "html": "Animation · research booklet",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The complex · night aerial": {
+   "html": "The complex · night aerial",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Arena bowl": {
+   "html": "Arena bowl",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Boulevard · dusk": {
+   "html": "Boulevard · dusk",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Street approach": {
+   "html": "Street approach",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Plans · basement → fourth floor": {
+   "html": "Plans · basement → fourth floor",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The full board · tap to zoom in": {
+   "html": "The full board · tap to zoom in",
+   "n": 2,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Antalya Skyscraper — the cliff edge": {
+   "html": "Antalya Skyscraper — the cliff edge",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "Design VI": {
+   "html": "Design VI",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Sea + sky tower": {
+   "html": "Sea + sky tower",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Antalya's cliffs, missing their marker. The tower fuses a sky tower and a sea tower into one stratified monolith grown out of the rock face — anchored horizontally back into the cliff, drawn to 1/800 below the waterline in sea elevation and sea section.": {
+   "html": "Antalya's cliffs, missing their marker. The tower fuses a sky tower and a sea tower into one stratified monolith grown out of the rock face — anchored horizontally back into the cliff, drawn to 1/800 below the waterline in sea elevation and sea section.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "ARCH432 · Design VI": {
+   "html": "ARCH432 · Design VI",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "Structure": {
+   "html": "Structure",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Core shell + cliff anchors": {
+   "html": "Core shell + cliff anchors",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "In-site shot · Düden cliffs": {
+   "html": "In-site shot · Düden cliffs",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Perspectives": {
+   "html": "Perspectives",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Design V": {
+   "html": "Design V",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "El Mina waterfront": {
+   "html": "El Mina waterfront",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "A mosque folded into a green star on the El Mina corniche — prayer hall, amphitheatre plaza and landscape terraces resolved in one faceted ground between the road and the sea.": {
+   "html": "A mosque folded into a green star on the El Mina corniche — prayer hall, amphitheatre plaza and landscape terraces resolved in one faceted ground between the road and the sea.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "ARCH431 · Design V": {
+   "html": "ARCH431 · Design V",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "El Mina · Tripoli": {
+   "html": "El Mina · Tripoli",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The star on the corniche · aerial": {
+   "html": "The star on the corniche · aerial",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Algoritm Rome — kinetic façade lab": {
+   "html": "Algoritm Rome — kinetic façade lab",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "Arturo Tedeschi · AAD": {
+   "html": "Arturo Tedeschi · AAD",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Fabrication": {
+   "html": "Fabrication",
+   "n": 1,
+   "tag": "span",
+   "cls": "tag"
+  },
+  "Two weeks at Sapienza University of Rome: forty hours of Algorithmic-Aided Design under Arturo Tedeschi, then forty hours designing and physically fabricating a smart kinetic façade — the first contact with the computational tools that now anchor the national twin.": {
+   "html": "Two weeks at Sapienza University of Rome: forty hours of Algorithmic-Aided Design under Arturo Tedeschi, then forty hours designing and physically fabricating a <b>smart kinetic façade</b> — the first contact with the computational tools that now anchor the national twin.",
+   "n": 1,
+   "tag": "p",
+   "cls": ""
+  },
+  "Host": {
+   "html": "Host",
+   "n": 1,
+   "tag": "dt",
+   "cls": ""
+  },
+  "Sapienza University of Rome": {
+   "html": "Sapienza University of Rome",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "AAD + kinetic design · 8 credit hrs": {
+   "html": "AAD + kinetic design · 8 credit hrs",
+   "n": 1,
+   "tag": "dd",
+   "cls": ""
+  },
+  "The studio": {
+   "html": "The studio",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Fabricating the façade": {
+   "html": "Fabricating the façade",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Prototype assembly": {
+   "html": "Prototype assembly",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Final jury": {
+   "html": "Final jury",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "The paper trail": {
+   "html": "The paper trail",
+   "n": 1,
+   "tag": "h3",
+   "cls": ""
+  },
+  "Verifiable, dated, signed — tap any document to read it in full.": {
+   "html": "Verifiable, dated, signed — tap any document to read it in full.",
+   "n": 1,
+   "tag": "p",
+   "cls": "mvp reveal"
+  },
+  "RIBA · Part 1 statement": {
+   "html": "RIBA · Part 1 statement",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "BAU · B.Arch certificate": {
+   "html": "BAU · B.Arch certificate",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Fibrex · experience certificate": {
+   "html": "Fibrex · experience certificate",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "LDRS · employment reference": {
+   "html": "LDRS · employment reference",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Autodesk · 3ds Max": {
+   "html": "Autodesk · 3ds Max",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Autodesk · AutoCAD": {
+   "html": "Autodesk · AutoCAD",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Sapienza Rome · parametric program": {
+   "html": "Sapienza Rome · parametric program",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "IC3 GS5 · digital literacy": {
+   "html": "IC3 GS5 · digital literacy",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Revit 2023 · course": {
+   "html": "Revit 2023 · course",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Revit Families · course": {
+   "html": "Revit Families · course",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Rhino 7 · course": {
+   "html": "Rhino 7 · course",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Al-Faihaa · computer languages": {
+   "html": "Al-Faihaa · computer languages",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Zmerly · heating technology": {
+   "html": "Zmerly · heating technology",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Our City Our Way · design-build": {
+   "html": "Our City Our Way · design-build",
+   "n": 1,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "AVAILABLE FOR SELECT ROLES": {
+   "html": "AVAILABLE FOR SELECT ROLES",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Let's build it twice.": {
+   "html": "Let's build it <em>twice.</em>",
+   "n": 1,
+   "tag": "h2",
+   "cls": "reveal"
+  },
+  "Abu Dhabi · UAE": {
+   "html": "Abu Dhabi · UAE",
+   "n": 1,
+   "tag": "span",
+   "cls": "v"
+  },
+  "© 2026 Mohamad Hashem Dankar": {
+   "html": "© 2026 Mohamad Hashem Dankar",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Real · Twin · N 24.4539° E 54.3773°": {
+   "html": "Real · Twin · N 24.4539° E 54.3773°",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "◆ PROFILE": {
+   "html": "◆ PROFILE",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "◆ INDEX": {
+   "html": "◆ INDEX",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "P·01 UAE DIGITAL TWIN": {
+   "html": "P·01 UAE DIGITAL TWIN",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "P·02 MUSEUMS": {
+   "html": "P·02 MUSEUMS",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "P·03 FREELANCE": {
+   "html": "P·03 FREELANCE",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "P·04 PRACTICE YEARS": {
+   "html": "P·04 PRACTICE YEARS",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "✉ CONTACT": {
+   "html": "✉ CONTACT",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "SCROLL / PINCH TO ZOOM · DRAG TO PAN · DOUBLE-TAP TO RESET": {
+   "html": "SCROLL / PINCH TO ZOOM · DRAG TO PAN · DOUBLE-TAP TO RESET",
+   "n": 1,
+   "tag": "span",
+   "cls": "hint"
+  },
+  "Asset viewport": {
+   "html": "Asset viewport",
+   "n": 1,
+   "tag": "span",
+   "cls": "sys"
+  },
+  "RI·00": {
+   "html": "RI·00",
+   "n": 1,
+   "tag": "span",
+   "cls": "cd"
+  },
+  "Loading asset": {
+   "html": "Loading asset",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "Materials ON": {
+   "html": "Materials <i>ON</i>",
+   "n": 1,
+   "tag": "button",
+   "cls": "on"
+  },
+  "Lights OFF": {
+   "html": "Lights <i>OFF</i>",
+   "n": 1,
+   "tag": "button",
+   "cls": ""
+  },
+  "Auto-rotate ON": {
+   "html": "Auto-rotate <i>ON</i>",
+   "n": 1,
+   "tag": "button",
+   "cls": "on"
+  },
+  "TRIS —": {
+   "html": "TRIS {{0}}",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "PBR D·E·N·ORM 1K": {
+   "html": "PBR <b>D·E·N·ORM 1K</b>",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "PIPELINE 3DS MAX → UNREAL": {
+   "html": "PIPELINE <b>3DS MAX → UNREAL</b>",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "DRAG ORBIT · SCROLL ZOOM": {
+   "html": "DRAG <b>ORBIT</b> · SCROLL <b>ZOOM</b>",
+   "n": 1,
+   "tag": "span",
+   "cls": ""
+  },
+  "In the real world →": {
+   "html": "In the real world →",
+   "n": 1,
+   "tag": "span",
+   "cls": "lab"
+  }
+ },
+ "attrs": {
+  "Cinematic approach from orbit into Abu Dhabi": null,
+  "MOHAMAD HASHEM |DANKAR": null,
+  "The same block twice — real photograph on the left blending seamlessly into the Unreal Engine digital twin on the right": null,
+  "The digital twin command view — the city in engine under an Arabic-first dashboard of live readiness data": null,
+  "Guggenheim Abu Dhabi presentation model — colliding cones on the Saadiyat waterfront": null,
+  "The Rize resort seen whole from the air — teapot lodge, half-teacup bungalows and tea workshop on the terraces": null,
+  "Aerial of the complete Al Tall regeneration scheme, Tripoli": null,
+  "Sigma and Omega towers — grey massing beside the fully textured night version": null,
+  "Mangrove complex — exploded texture set above the assembled model": null,
+  "Al Reem Island in Unreal Engine — Gate Towers and the surrounding district": null,
+  "Reem Island waterfront towers and marina inside the twin": null,
+  "Reem and Al Maryah islands in the engine — towers, bridges and waterways from the air": null,
+  "Reem Mall and the Gate Towers seen from street level inside the twin": null,
+  "Reem Island tower quarter rebuilt in Unreal Engine": null,
+  "Abu Dhabi — marina and towers on the waterfront in the engine": null,
+  "Abu Dhabi — tower cluster and mangroves from the air": null,
+  "Island districts and turquoise water rebuilt in the engine": null,
+  "The whole of Abu Dhabi from high altitude inside the engine, under clouds": null,
+  "Al Wifaq Tower — Reem Island digital twin asset": null,
+  "Amaya Towers — Reem Island digital twin asset": null,
+  "Shams Meera Towers — Reem Island digital twin asset": null,
+  "The Kite Residences — Reem Island digital twin asset": null,
+  "Marina Rise Tower — Reem Island digital twin asset": null,
+  "Hydra Towers — Reem Island digital twin asset": null,
+  "Mangrove Place — Reem Island digital twin asset": null,
+  "Reem Hospital — Reem Island digital twin asset": null,
+  "Repton School · Rose Campus — Reem Island digital twin asset": null,
+  "Sigma Omega Towers — Reem Island digital twin asset": null,
+  "Al Reem Bay Towers — Reem Island digital twin asset": null,
+  "DAMAC Marina Bay — Reem Island digital twin asset": null,
+  "Reem Mosque — Reem Island digital twin asset": null,
+  "Paragon Bay Mall — Reem Island digital twin asset": null,
+  "Reem Mall — Reem Island digital twin asset": null,
+  "Sorbonne University — Reem Island digital twin asset": null,
+  "Y Tower — Reem Island digital twin asset": null,
+  "ADNOC Station — Reem Island digital twin asset": null,
+  "Reality versus digital twin — the same Ajman corner photographed and rebuilt in Unreal Engine, split down the middle": null,
+  "Ajman from the air inside the engine — towers, mosque and open ground toward the coast": null,
+  "Ajman resort and marina quarter with mosque, rebuilt in the engine": null,
+  "The dhow monument roundabout at street level inside the twin": null,
+  "Ajman Post Office in the twin with traffic simulation splines": null,
+  "Inside the same post office — full interior modeled in Unreal Engine": null,
+  "Municipality and Planning building — before and after rebuild sheet, untextured massing above, finished asset below": null,
+  "The municipality building photographed in the real street in Ajman": null,
+  "The municipality building standing finished in the Unreal Engine twin": null,
+  "Ras Al Khaimah from high altitude inside the engine — the coastal strip and lagoon under clouds": null,
+  "Ras Al Khaimah lagoon and corniche district in the engine": null,
+  "Ras Al Khaimah corniche towers row with palms": null,
+  "The Ras Al Khaimah peninsula from the air — creek on one side, open Gulf on the other": null,
+  "Ras Al Khaimah lagoon waterfront rebuilt in the engine": null,
+  "Fujairah — main boulevard towers in the engine": null,
+  "Fujairah Grand Mosque and its plaza from the air inside the engine, city towers behind": null,
+  "Hotel towers on the Fujairah boulevard at street level inside the twin": null,
+  "Fujairah city center towers rising over the low-rise fabric in the engine": null,
+  "Fujairah coastline and city fabric inside the twin": null,
+  "Fujairah spread across the coastal plain with the mosque minarets on the skyline": null,
+  "Fujairah — oil terminal tank farm by the port": null,
+  "Zayed National Museum standing complete — five steel wing towers against the sky": null,
+  "Zayed National Museum wing steel structure production model": null,
+  "Steel shop drawing sheet for wing element Z8-018": null,
+  "Bracket connection system 3D detail": null,
+  "Full panel mapping of the museum fabric, color-coded": null,
+  "Isometric panel layout drawing for the museum mound, colour-coded by panel type": null,
+  "CNC bridge saw cutting stone blanks in the factory": null,
+  "The finished faceted GRC panel standing on its steel frame in the yard": null,
+  "Faceted panels racked in rows across the production hall": null,
+  "A panel being craned onto its steel stud frame": null,
+  "Steel frame shop drawing marked up on screen — gravity and flex anchor sizes called out in red": null,
+  "Steel wing rib assemblies in the production hall": null,
+  "Steel assembly in the production hall": null,
+  "Wrapped elements ready for delivery": null,
+  "Hand-annotated triangulation sheets beside a ruler": null,
+  "Guggenheim Abu Dhabi presentation model — the colliding steel cones and stone blocks on the Saadiyat waterfront": null,
+  "Guggenheim Abu Dhabi massing production model": null,
+  "Cone panel rows with fixing points": null,
+  "Panel fixing detail model": null,
+  "Segmented cone geometry, color-coded by panel": null,
+  "The Guggenheim model seen closer — cone mouths and the entrance canopy": null,
+  "GRC panel production sheet for panel B01-CL2-ES2-04-E8": null,
+  "Steel sub-frame drawing for the same Guggenheim panel": null,
+  "Fixing point layout for the same panel": null,
+  "Survey coordinate table for the same panel": null,
+  "Natural History Museum Abu Dhabi seen from the water — stepped white terraces hung with planting": null,
+  "Panel production study model, full sheet": null,
+  "Production model of the faceted museum geometry": null,
+  "Demolded GRC panel on the factory floor": null,
+  "Panel molds in production": null,
+  "GRC casting works in the factory": null,
+  "Finished panels checked in the yard": null,
+  "GRC panel production drawing sheet — tap to zoom": null,
+  "Amaala cellular pod cluster 3D": null,
+  "Amaala village on the shoreline, aerial": null,
+  "Grasshopper definition driving the pod geometry": null,
+  "The resort on the terraced slope — teapot lodge above, half-teacup bungalows stepping down, tea workshop by the river": null,
+  "Works on site — retaining walls rising on the terraced slope above the stream": null,
+  "Schematic sketch of the full site — teacup exhibition hall, eco-pod accommodation, boardwalks and terraced tea cultivation": null,
+  "Drone view straight down onto the bare site above Rize before construction": null,
+  "The same drone frame with the bungalow rows and lodge plotted onto the terraces": null,
+  "The tea workshop on the lower terraces — curved timber roofs stepping down to the riverfront path": null,
+  "The teapot-shaped main lodge — 3D model": null,
+  "The teacup bungalow unit — a Turkish teacup halved lengthwise and laid on its side — 3D model": null,
+  "Cinema drum glowing red at night": null,
+  "Cinema at dusk from the boulevard": null,
+  "Library scheme in winter landscape": null,
+  "Library cantilever entrance": null,
+  "Library across the lawn": null,
+  "Minimal living room interior render": null,
+  "European style living room render": null,
+  "Retail mall interior with red core": null,
+  "Palm court beneath the perforated canopy, light falling through": null,
+  "Exterior render across the lawn": null,
+  "Pavilion elevation over the water": null,
+  "Night aerial of the pavilion, canopy as a glowing eye": null,
+  "Wide panorama of the pavilion at dusk": null,
+  "The mall across the lake at dusk, canopy glowing": null,
+  "Interior atrium with escalators under the ribbed canopy": null,
+  "Roof garden with planting and seating": null,
+  "Twin perforated towers with suspended sphere at night": null,
+  "Al Tall clock tower square, regenerated — day view down the main axis": null,
+  "Square panorama with fountain colonnade": null,
+  "Clock tower and pool, evening": null,
+  "Street-level view with heritage facades and jacaranda": null,
+  "Terraced gardens toward the clock tower": null,
+  "Pedestrian promenade render": null,
+  "Comfort zone analysis, summer solstice": null,
+  "Annual sunlight comfort chart": null,
+  "Wind speed and pressure analysis": null,
+  "Sunlight shadow analysis, summer solstice": null,
+  "Pedestrian analysis — stay places and connections": null,
+  "Auto-generated cafeteria locations from comfort data": null,
+  "Commercial-to-residential heatmap of the district": null,
+  "Drone photogrammetry mass plan of the real district": null,
+  "Photogrammetry scan of the Al Tall district, revealed by scrolling": null,
+  "Al Mawlawiya garden restoration study view": null,
+  "Terraces and planting restoration study": null,
+  "Garden court restoration study": null,
+  "Site overview of the Mawlawiya complex": null,
+  "Works on site — stone terraces": null,
+  "Works on site — garden taking shape": null,
+  "Approach to Mar Semaan monastery": null,
+  "Stone vaults during the survey": null,
+  "Masonry condition record": null,
+  "Crack and settlement documentation": null,
+  "Interior survey of the monastery": null,
+  "Monastery grounds during the visit": null,
+  "VR complex aerial at night — arena ring and tower, full frame": null,
+  "Arena interior bowl, full frame": null,
+  "Complex from the boulevard at dusk, full frame": null,
+  "Street approach to the complex, full frame": null,
+  "Floor plans column — basement to fourth floor": null,
+  "Complete senior project presentation board — tap to zoom": null,
+  "The skyscraper rising from the Antalya cliff beside the Düden waterfall": null,
+  "Two perspectives of the stratified tower — snowfield and waterfall wall": null,
+  "Aerial of the Green Mosque — faceted star plan on the waterfront point": null,
+  "Complete Green Mosque presentation board — tap to zoom": null,
+  "Workshop studio at Sapienza": null,
+  "Kinetic facade prototype in fabrication": null,
+  "Prototype assembly": null,
+  "Final presentation evening": null,
+  "RIBA statement of recognised architectural qualification, Part 1": null,
+  "Beirut Arab University Bachelor of Architecture certificate": null,
+  "Fibrex Contracting experience certificate": null,
+  "LDRS Chehab and Partners employment reference letter": null,
+  "Autodesk Certified User 3ds Max certificate": null,
+  "Autodesk Certified User AutoCAD certificate": null,
+  "Algoritm Rome Summer School certificate hosted by Sapienza University": null,
+  "IC3 GS5 Digital Literacy certification": null,
+  "LinkedIn Learning Revit 2023 certificate": null,
+  "LinkedIn Learning Revit Families certificate": null,
+  "Rhino 7 Essential Training certificate": null,
+  "Al-Faihaa Vocational Center computer languages certificate": null,
+  "Zmerly Academy heating technology certificate": null,
+  "Our City Our Way design-build workshop certificate": null,
+  "Chapters": null,
+  "Image viewer": null,
+  "Zoom out": null,
+  "Zoom in": null,
+  "Reset": null,
+  "Close": null,
+  "3D asset viewport": null,
+  "Close 3D viewer": null
+ }
+}
