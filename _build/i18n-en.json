@@ -1362,6 +1362,42 @@
    "tag": "figcaption",
    "cls": ""
   },
+  "From model to textured asset": {
+   "html": "From model to textured asset",
+   "n": 1,
+   "tag": "h4",
+   "cls": "reveal"
+  },
+  "Municipality and Planning": {
+   "html": "Municipality and Planning",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
+  "Exploded view": {
+   "html": "Exploded view",
+   "n": 3,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Textured asset": {
+   "html": "Textured asset",
+   "n": 3,
+   "tag": "figcaption",
+   "cls": ""
+  },
+  "Liwara Building": {
+   "html": "Liwara Building",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
+  "Lulu Hypermarket": {
+   "html": "Lulu Hypermarket",
+   "n": 1,
+   "tag": "h5",
+   "cls": ""
+  },
   "Ras Al Khaimah · the coastal strip under clouds · recorded in engine": {
    "html": "Ras Al Khaimah · the coastal strip under clouds · recorded in engine",
    "n": 1,
@@ -3227,6 +3263,12 @@
   "Municipality and Planning building — before and after rebuild sheet, untextured massing above, finished asset below": null,
   "The municipality building photographed in the real street in Ajman": null,
   "The municipality building standing finished in the Unreal Engine twin": null,
+  "Exploded model of the Municipality and Planning building, with roof and façade panels separated": null,
+  "Finished Municipality and Planning asset with textured roofs, façades and glazing": null,
+  "Exploded model of Liwara Building, with its roof and façades separated from the central mass": null,
+  "Finished Liwara Building asset with stone façades and rooftop equipment": null,
+  "Exploded model of Lulu Hypermarket, with separated roof and storefront components": null,
+  "Finished Lulu Hypermarket asset with a textured roof and blue glazed entrances": null,
   "Ras Al Khaimah from high altitude inside the engine — the coastal strip and lagoon under clouds": null,
   "Ras Al Khaimah lagoon and corniche district in the engine": null,
   "Ras Al Khaimah corniche towers row with palms": null,
